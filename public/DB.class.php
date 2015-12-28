@@ -91,13 +91,25 @@ class DB
     {
         $_limit = '';
         $_order = '';
+        $_where = '';
+
         if(Validate::isArray($_param) && !Validate::isNullArray($_param))
         {
-            $_limit = isset($_param['limit'])?$_param['limit']:'';
-            $_order = isset($_param['order'])?$_param['order']:'';
+            $_limit = isset($_param['limit'])?'LIMIT '.$_param['limit']:'';
+            $_order = isset($_param['order'])?'ORDER BY '.$_param['order']:'';
+            $_where = '';
+            if(isset($_param['where']))
+            {
+                $_isAnd = '';
+                foreach ($_param['where'] as $_key=>$_value)
+                {
+                    $_isAnd .= "$_key='$_value' AND ";
+                }
+                $_where = 'WHERE '.substr($_isAnd, 0, -4);
+            }
         }
         $_selectFields = implode(',',$_field);
-        $_sql = "SELECT $_selectFields FROM {$this->_tables[0]} $_order $_limit";
+        $_sql = "SELECT $_selectFields FROM {$this->_tables[0]} $_where $_order $_limit";
         $_stmt = $this->execute($_sql);
         $_result = array();
         while(!!$_objs = $_stmt->fetchObject())

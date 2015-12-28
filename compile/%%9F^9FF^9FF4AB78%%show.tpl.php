@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-26 10:44:21
+<?php /* Smarty version 2.6.26, created on 2015-12-28 19:11:39
          compiled from admin/manage/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,7 +23,8 @@
 </td><td><?php echo $this->_tpl_vars['value']->login_count; ?>
 </td><td><?php echo $this->_tpl_vars['value']->last_ip; ?>
 </td><td><?php echo $this->_tpl_vars['value']->last_time; ?>
-</td><td><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /><a href="?a=manage&m=delete&id=<?php echo $this->_tpl_vars['value']->id; ?>
+</td><td><a href="?a=manage&m=update&id=<?php echo $this->_tpl_vars['value']->id; ?>
+"><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a><a href="?a=manage&m=delete&id=<?php echo $this->_tpl_vars['value']->id; ?>
 " onclick="return confirm('你真的要删除这个管理员吗?')?true:false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
 		<?php endforeach; else: ?>
 			<tr><td colspan="6">没有任何管理员</td></tr>

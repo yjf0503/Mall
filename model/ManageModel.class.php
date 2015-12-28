@@ -11,13 +11,19 @@ class ManageModel extends Model{
     {
         $this->_fields = array('id','user','pass','level','login_count','last_ip','last_time','reg_time');
         $this->_tables = array(DB_PREFIX.'manage');
-        parent::__construct($this,Factory::setCheck(), $this->_tables);
+        parent::__construct();
     }
 
     public function findAll()
     {
         return parent::select(array('id','user','level','login_count','last_ip','last_time'),
-                              array('limit'=>$this->_limit,'order'=>'ORDER BY id ASC'));
+                              array('limit'=>$this->_limit,'order'=>'id ASC'));
+    }
+
+    public function findOne()
+    {
+        return parent::select(array('id','user','level'),
+                              array('where'=>array('id'=>$_GET['id'],),'limit'=>'1'));
     }
 
     public function total()

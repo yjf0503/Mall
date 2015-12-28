@@ -10,13 +10,13 @@ class ManageAction extends Action
 {
     public function __construct()
     {
-        parent::__construct(Factory::setModel());
+        parent::__construct();
     }
 
     //管理员列表
     public function index()
     {
-        parent::page($this->_model->total());
+        parent::page();
         $this->_tpl->assign('AllManage',$this->_model->findAll());
         $this->_tpl->display(SMARTY_ADMIN.'manage/show.tpl');
     }
@@ -57,7 +57,12 @@ class ManageAction extends Action
     //修改管理员
     public function update()
     {
-        $this->_tpl->display(SMARTY_ADMIN.'manage/update.tpl');
+        if(isset($_GET['id']))
+        {
+            $this->_tpl->assign('OneManage', $this->_model->findOne());
+            $this->_tpl->display(SMARTY_ADMIN.'manage/update.tpl');
+        }
+
     }
 
     //ajax

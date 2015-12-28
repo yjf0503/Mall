@@ -14,7 +14,7 @@
 	<table>
 		<tr><th>用户名</th><th>登录</th><th>登录次数</th><th>最后登录ip</th><th>最后登录时间</th><th>操作</th></tr>
 		{foreach from=$AllManage key=key item=value}
-		<tr><td>{$value->user}</td><td>{$value->level}</td><td>{$value->login_count}</td><td>{$value->last_ip}</td><td>{$value->last_time}</td><td><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /><a href="?a=manage&m=delete&id={$value->id}" onclick="return confirm('你真的要删除这个管理员吗?')?true:false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
+		<tr><td>{$value->user}</td><td>{$value->level}</td><td>{$value->login_count}</td><td>{$value->last_ip}</td><td>{$value->last_time}</td><td><a href="?a=manage&m=update&id={$value->id}"><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a><a href="?a=manage&m=delete&id={$value->id}" onclick="return confirm('你真的要删除这个管理员吗?')?true:false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
 		{foreachelse}
 			<tr><td colspan="6">没有任何管理员</td></tr>
 		{/foreach}

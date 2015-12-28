@@ -14,11 +14,11 @@ class Model extends DB
     protected $_request = null;
     protected $_limit = '';
 
-    protected function __construct(&$_model,&$_check,&$_tables)
+    protected function __construct()
     {
-        $this->_db = parent::getInstance($_tables);
-        $this->_check = $_check;
-        $this->_request = Request::getInstance($_model,$_check);
+        $this->_db = parent::getInstance($this->_tables);
+        $this->_check = Factory::setCheck();
+        $this->_request = Request::getInstance($this,$this->_check);
     }
 
     protected function add($_addData)
