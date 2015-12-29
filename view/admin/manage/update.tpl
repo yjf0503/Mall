@@ -5,13 +5,13 @@
 <title>在线商城后台管理</title>
 <link rel="stylesheet" type="text/css" href="view/admin/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/admin/style/manage.css" />
+    <script type="text/javascript" src="view/admin/js/manage.js"></script>
 </head>
 <body>
 
 <h2><a href="?a=manage">返回管理员列表</a>系统 -- 修改管理员</h2>
 
-<form method="post" name="add" action="?a=manage&m=update">
-    <input type="hidden" name="flag" id="flag" />
+<form method="post" name="update" action="?a=manage&m=update&id={$OneManage[0]->id}">
     <dl class="form">
         <dd>用 户 名：{$OneManage[0]->user}</dd>
         <dd>密　　码：<input type="password" name="pass" class="text" /> ( * 大于6位 )</dd>

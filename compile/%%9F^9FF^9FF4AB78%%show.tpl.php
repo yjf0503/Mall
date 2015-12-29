@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-28 19:11:39
+<?php /* Smarty version 2.6.26, created on 2015-12-29 12:22:53
          compiled from admin/manage/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,7 +14,7 @@
 
 <div id="list">
 	<table>
-		<tr><th>用户名</th><th>登录</th><th>登录次数</th><th>最后登录ip</th><th>最后登录时间</th><th>操作</th></tr>
+		<tr><th>用户名</th><th>等级</th><th>登录次数</th><th>最后登录ip</th><th>最后登录时间</th><th>操作</th></tr>
 		<?php $_from = $this->_tpl_vars['AllManage']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>

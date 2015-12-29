@@ -60,16 +60,23 @@ class DB
         return $this->execute($_sql)->rowCount();
     }
 
-    //验证一条数据
-    protected function isOne($_isOneData)
+    //修改
+    protected function update($_oneData,$_updateData)
     {
         $_isAnd = '';
-        foreach ($_isOneData as $_key=>$_value)
+        foreach($_oneData as $_key=>$_value)
         {
             $_isAnd .= "$_key='$_value' AND ";
         }
-        $_isAnd = substr($_isAnd, 0, -4);
-        $_sql = "SELECT id FROM {$this->_tables[0]} WHERE $_isAnd LIMIT 1";
+        $_isAnd = substr($_isAnd,0,-4);
+
+        $_setData = '';
+        foreach($_updateData as $_key=>$_value)
+        {
+            $_setData .= "$_key='$_value',";
+        }
+        $_setData = substr($_setData,0,-1);
+        $_sql = "UPDATE {$this->_tables[0]} SET $_setData WHERE $_isAnd LIMIT 1";
         return $this->execute($_sql)->rowCount();
     }
 
@@ -117,6 +124,19 @@ class DB
             $_result[] = $_objs;
         }
         return Tool::setHtmlString($_result);
+    }
+
+    //验证一条数据
+    protected function isOne($_oneData)
+    {
+        $_isAnd = '';
+        foreach ($_oneData as $_key=>$_value)
+        {
+            $_isAnd .= "$_key='$_value' AND ";
+        }
+        $_isAnd = substr($_isAnd, 0, -4);
+        $_sql = "SELECT id FROM {$this->_tables[0]} WHERE $_isAnd LIMIT 1";
+        return $this->execute($_sql)->rowCount();
     }
 
     //总记录

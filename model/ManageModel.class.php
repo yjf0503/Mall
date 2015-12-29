@@ -22,8 +22,9 @@ class ManageModel extends Model{
 
     public function findOne()
     {
+        $_oneData = $this->_request->one($this->_fields);
         return parent::select(array('id','user','level'),
-                              array('where'=>array('id'=>$_GET['id'],),'limit'=>'1'));
+                              array('where'=>$_oneData,'limit'=>'1'));
     }
 
     public function total()
@@ -41,6 +42,15 @@ class ManageModel extends Model{
         return parent::add($_addData);
     }
 
+    public function update()
+    {
+        $_oneData = $this->_request->one($this->_fields);
+        $_updateData = $this->_request->update($this->_fields);
+        $_updateData['pass'] = sha1($_updateData['pass']);
+
+        return parent::update($_oneData,$_updateData);
+    }
+
     public function delete()
     {
         $_deleteData = $this->_request->delete($this->_fields);
@@ -48,9 +58,9 @@ class ManageModel extends Model{
     }
 
     //判断输入是否为一
-    public function isOne($_isOneData)
+    public function isOne($_OneData)
     {
-        return parent::isOne($_isOneData);
+        return parent::isOne($_OneData);
     }
 
     public function isUser()

@@ -51,6 +51,23 @@ class Request{
         return $_addData;
     }
 
+    //处理修改数据请求
+    public function update($_fields)
+    {
+        $_updateData = array();
+        if (Validate::isArray($_POST) && !Validate::isNullArray($_POST))
+        {
+            //验证数据的合法性
+            if (!$this->_check->updateCheck($this->_model,$_POST))
+            {
+                $this->check();
+            }
+            //筛选准备入库的字段和数据
+            $_updateData = $this->selectData($_POST,$_fields);
+        }
+        return $_updateData;
+    }
+
     public function delete($_fields)
     {
         $_deleteData = array();
@@ -63,10 +80,26 @@ class Request{
             {
                 $this->check();
             }
-        return $_deleteData;
         }
+        return $_deleteData;
     }
 
+    //处理一条数据请求
+    public function one($_fields)
+    {
+        $_oneData = array();
+        if(Validate::isArray($_GET) && !Validate::isNullArray($_GET))
+        {
+            //筛选准备入库的字段和数据
+            $_oneData = $this->selectData($_GET,$_fields);
+            //验证数据合法性
+            if(!$this->_check->oneCheck($this->_model,$_oneData))
+            {
+                $this->check();
+            }
+        }
+        return $_oneData;
+    }
     //筛选数据
     private function selectData($_requestData,$_fields)
     {
