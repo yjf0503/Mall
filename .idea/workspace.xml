@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff74b8f1-beb9-4b44-8f33-e146cb5e2be7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%06^061^06106A66%%update.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%13^133^1335A384%%add.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%44^44F^44FB663C%%main.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%75^75C^75C3D8F0%%index.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%9D^9D5^9D5091B5%%manage.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%9F^9FF^9FF4AB78%%show.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%E3^E38^E38EEECA%%admin.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%E6^E66^E669F2D3%%error.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compile/%%E7^E75^E7501A2F%%succ.tpl.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/ManageCheck.class.php" afterPath="$PROJECT_DIR$/check/ManageCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ManageAction.class.php" afterPath="$PROJECT_DIR$/controller/ManageAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/ManageModel.class.php" afterPath="$PROJECT_DIR$/model/ManageModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Model.class.php" afterPath="$PROJECT_DIR$/model/Model.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/DB.class.php" afterPath="$PROJECT_DIR$/public/DB.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Tool.class.php" afterPath="$PROJECT_DIR$/public/Tool.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/manage/add.tpl" afterPath="$PROJECT_DIR$/view/admin/manage/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/manage/update.tpl" afterPath="$PROJECT_DIR$/view/admin/manage/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/admin.tpl" afterPath="$PROJECT_DIR$/view/admin/public/admin.tpl" />
     </list>
     <ignored path="Mall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,17 +27,19 @@
       <file leaf-file-name="LevelModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/LevelModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7142856">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding />
+            <state vertical-scroll-proportion="-6.107143">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding>
+                <element signature="e#6#92#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManageAction.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManageAction.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/ManageAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.554295">
+            <state vertical-scroll-proportion="-12.214286">
               <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
               <folding>
                 <element signature="e#6#99#0#PHP" expanded="true" />
@@ -74,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManageModel.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManageModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/ManageModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="20.178572">
-              <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.43393147">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding>
                 <element signature="e#6#98#0#PHP" expanded="true" />
               </folding>
@@ -102,15 +86,15 @@
         <entry file="file://$PROJECT_DIR$/public/DB.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="4.892857">
-              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+              <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding>
-                <marker date="1451393369859" expanded="true" signature="1264:1324" placeholder="INSERT INTO $... " />
-                <marker date="1451393369859" expanded="true" signature="1836:1890" placeholder="UPDATE ${{$t... " />
-                <marker date="1451393369859" expanded="true" signature="2215:2260" placeholder="DELETE FROM " />
-                <marker date="1451393369859" expanded="true" signature="3113:3168" placeholder="SELECT ${$_s... $" />
-                <marker date="1451393369859" expanded="true" signature="3662:3710" placeholder="SELECT id FR... $" />
-                <marker date="1451393369859" expanded="true" signature="3842:3872" placeholder="SELECT COUNT... " />
-                <marker date="1451393369859" expanded="true" signature="3842:3880" placeholder="SELECT COUNT... " />
+                <marker date="1451393983219" expanded="true" signature="1264:1324" placeholder="INSERT INTO $... " />
+                <marker date="1451393983219" expanded="true" signature="1835:1889" placeholder="UPDATE ${{$t... " />
+                <marker date="1451393983219" expanded="true" signature="2214:2259" placeholder="DELETE FROM " />
+                <marker date="1451393983219" expanded="true" signature="3112:3167" placeholder="SELECT ${$_s... $" />
+                <marker date="1451393983219" expanded="true" signature="3661:3709" placeholder="SELECT id FR... $" />
+                <marker date="1451393983219" expanded="true" signature="3841:3871" placeholder="SELECT COUNT... " />
+                <marker date="1451393983219" expanded="true" signature="3841:3879" placeholder="SELECT COUNT... " />
               </folding>
             </state>
           </provider>
@@ -143,6 +127,7 @@
         <option value="a1" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -212,10 +197,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="673" />
+    <option name="width" value="706" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -388,24 +372,30 @@
       <option name="project" value="LOCAL" />
       <updated>1451366575889</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add an administrator level module, and integrated it into ManageAction">
+      <created>1451393949712</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1451393949712</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="673" y="0" width="706" height="780" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13469985" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -456,7 +446,8 @@
     <MESSAGE value="Add a feature of updating administrators" />
     <MESSAGE value="Add a feature of updating administrators&#10;&#10;12/29/2015" />
     <MESSAGE value="Test git commit on PHPSTORM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test git commit on PHPSTORM" />
+    <MESSAGE value="Add an administrator level module, and integrated it into ManageAction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add an administrator level module, and integrated it into ManageAction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -777,16 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/ManageModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.178572">
-          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-          <folding>
-            <element signature="e#6#98#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/check/ManageCheck.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.035714">
@@ -824,24 +805,16 @@
     <entry file="file://$PROJECT_DIR$/public/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.892857">
-          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding>
-            <marker date="1451393369859" expanded="true" signature="1264:1324" placeholder="INSERT INTO $... " />
-            <marker date="1451393369859" expanded="true" signature="1836:1890" placeholder="UPDATE ${{$t... " />
-            <marker date="1451393369859" expanded="true" signature="2215:2260" placeholder="DELETE FROM " />
-            <marker date="1451393369859" expanded="true" signature="3113:3168" placeholder="SELECT ${$_s... $" />
-            <marker date="1451393369859" expanded="true" signature="3662:3710" placeholder="SELECT id FR... $" />
-            <marker date="1451393369859" expanded="true" signature="3842:3872" placeholder="SELECT COUNT... " />
-            <marker date="1451393369859" expanded="true" signature="3842:3880" placeholder="SELECT COUNT... " />
+            <marker date="1451393983219" expanded="true" signature="1264:1324" placeholder="INSERT INTO $... " />
+            <marker date="1451393983219" expanded="true" signature="1835:1889" placeholder="UPDATE ${{$t... " />
+            <marker date="1451393983219" expanded="true" signature="2214:2259" placeholder="DELETE FROM " />
+            <marker date="1451393983219" expanded="true" signature="3112:3167" placeholder="SELECT ${$_s... $" />
+            <marker date="1451393983219" expanded="true" signature="3661:3709" placeholder="SELECT id FR... $" />
+            <marker date="1451393983219" expanded="true" signature="3841:3871" placeholder="SELECT COUNT... " />
+            <marker date="1451393983219" expanded="true" signature="3841:3879" placeholder="SELECT COUNT... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/LevelModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7142856">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,10 +828,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/ManageAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.554295">
+        <state vertical-scroll-proportion="-12.214286">
           <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding>
             <element signature="e#6#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LevelModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/ManageModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43393147">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding>
+            <element signature="e#6#98#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
