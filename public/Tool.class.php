@@ -43,7 +43,7 @@ class Tool{
     static public function setHtmlString($_data)
     {
         $_string = null;
-        if(is_array($_data))
+        if(Validate::isArray($_data))
         {
             foreach($_data as $_key=>$_value)
             {
@@ -62,6 +62,20 @@ class Tool{
             $_string = htmlspecialchars($_data);
         }
         return $_string;
+    }
+
+    //表单选项转换
+    static public function setFormItem($_data,$_key,$_value)
+    {
+        $_items = array();
+        if(Validate::isArray($_data))
+        {
+            foreach($_data as $_v)
+            {
+                $_items[$_v->$_key] = $_v->$_value;
+            }
+        }
+        return $_items;
     }
 
     //得到上一页

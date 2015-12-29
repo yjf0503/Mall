@@ -1,5 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-29 12:07:25
+<?php /* Smarty version 2.6.26, created on 2015-12-29 20:42:05
          compiled from admin/manage/update.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'admin/manage/update.tpl', 21, false),)), $this); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,29 +24,8 @@
         <dd>确认密码：<input type="password" name="notpass" class="text" /> ( * 同密码一致 )</dd>
         <dd>等　　级：<select name="level">
                 <option value="0">--请选择一个等级权限--</option>
-                    <?php if ($this->_tpl_vars['OneManage'][0]->level == 1): ?>
-                    <option value="1" selected="selected">超级管理员</option>
-                    <?php else: ?>
-                    <option value="1">超级管理员</option>
-                    <?php endif; ?>
+                    <?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['AllLevel'],'selected' => $this->_tpl_vars['OneManage'][0]->level), $this);?>
 
-                <?php if ($this->_tpl_vars['OneManage'][0]->level == 2): ?>
-                    <option value="2" selected="selected">普通管理员</option>
-                <?php else: ?>
-                <option value="2">普通管理员</option>
-                <?php endif; ?>
-
-                <?php if ($this->_tpl_vars['OneManage'][0]->level == 3): ?>
-                    <option value="3" selected="selected">商品发布专员</option>
-                <?php else: ?>
-                    <option value="3">商品发布专员</option>
-                <?php endif; ?>
-
-                <?php if ($this->_tpl_vars['OneManage'][0]->level == 4): ?>
-                    <option value="4" selected="selected">订单处理专员</option>
-                <?php else: ?>
-                    <option value="4">订单处理专员</option>
-                <?php endif; ?>
 
             </select> ( * 必须选定一个权限 )</dd>
         <dd><input type="submit" name="send" onclick="return updateManage();" value="修改管理员" class="submit" /></dd>

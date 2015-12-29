@@ -8,9 +8,11 @@
 //管理员控制器
 class ManageAction extends Action
 {
+    private $_level = null;
     public function __construct()
     {
         parent::__construct();
+        $this->_level = new LevelModel();
     }
 
     //管理员列表
@@ -35,6 +37,7 @@ class ManageAction extends Action
                 $this->_redirect->error('管理员新增失败');
             }
         }
+        $this->_tpl->assign('AllLevel',Tool::setFormItem($this->_level->findAll(),'id','level_name'));
         $this->_tpl->display(SMARTY_ADMIN.'manage/add.tpl');
     }
 
@@ -70,6 +73,7 @@ class ManageAction extends Action
         }
         if(isset($_GET['id']))
         {
+            $this->_tpl->assign('AllLevel',Tool::setFormItem($this->_level->findAll(),'id','level_name'));
             $this->_tpl->assign('OneManage', $this->_model->findOne());
             $this->_tpl->display(SMARTY_ADMIN.'manage/update.tpl');
         }

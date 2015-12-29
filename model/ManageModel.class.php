@@ -9,9 +9,10 @@
 class ManageModel extends Model{
     public function __construct()
     {
+        parent::__construct();
         $this->_fields = array('id','user','pass','level','login_count','last_ip','last_time','reg_time');
         $this->_tables = array(DB_PREFIX.'manage');
-        parent::__construct();
+        $this->_request = Request::getInstance($this,$this->_check);
     }
 
     public function findAll()
