@@ -60,7 +60,6 @@ class DB
     //修改
     protected function update($_tables,$_oneData,$_updateData)
     {
-
         $_isAnd = '';
         foreach($_oneData as $_key=>$_value)
         {
