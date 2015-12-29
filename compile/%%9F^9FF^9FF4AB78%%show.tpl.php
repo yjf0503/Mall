@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-29 12:22:53
+<?php /* Smarty version 2.6.26, created on 2015-12-29 21:41:34
          compiled from admin/manage/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,7 +19,7 @@
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
 		<tr><td><?php echo $this->_tpl_vars['value']->user; ?>
-</td><td><?php echo $this->_tpl_vars['value']->level; ?>
+</td><td><?php echo $this->_tpl_vars['value']->level_name; ?>
 </td><td><?php echo $this->_tpl_vars['value']->login_count; ?>
 </td><td><?php echo $this->_tpl_vars['value']->last_ip; ?>
 </td><td><?php echo $this->_tpl_vars['value']->last_time; ?>

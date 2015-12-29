@@ -11,7 +11,6 @@ class Model extends DB
     protected $_fields = array();
     protected $_tables = array();
     protected $_check = null;
-    protected $_request = null;
     protected $_limit = '';
 
     protected function __construct()
@@ -48,6 +47,11 @@ class Model extends DB
     protected function total()
     {
         return $this->_db->total($this->_tables);
+    }
+
+    protected function getRequest()
+    {
+        return Request::getInstance($this,$this->_check);
     }
 
     public function setLimit($_limit)

@@ -12,18 +12,18 @@ class ManageModel extends Model{
         parent::__construct();
         $this->_fields = array('id','user','pass','level','login_count','last_ip','last_time','reg_time');
         $this->_tables = array(DB_PREFIX.'manage');
-        $this->_request = Request::getInstance($this,$this->_check);
     }
 
     public function findAll()
     {
-        return parent::select(array('id','user','level','login_count','last_ip','last_time'),
-                              array('limit'=>$this->_limit,'order'=>'id ASC'));
+        $this->_tables = array(DB_PREFIX.'manage a',DB_PREFIX.'level b');
+        return parent::select(array('a.id','a.user','a.level','a.login_count','a.last_ip','a.last_time','b.level_name'),
+                              array('limit'=>$this->_limit,'order'=>'id ASC','where'=>'a.level=b.id'));
     }
 
     public function findOne()
     {
-        $_oneData = $this->_request->one($this->_fields);
+        $_oneData = $this->getRequest()->one($this->_fields);
         return parent::select(array('id','user','level'),
                               array('where'=>$_oneData,'limit'=>'1'));
     }
@@ -35,7 +35,7 @@ class ManageModel extends Model{
 
     public function add()
     {
-        $_addData = $this->_request->add($this->_fields);
+        $_addData = $this->getRequest()->add($this->_fields);
         $_addData['pass'] = sha1($_addData['pass']);
         $_addData['last_ip'] = Tool::getIP();
         $_addData['reg_time'] = Tool::getDate();
@@ -45,8 +45,8 @@ class ManageModel extends Model{
 
     public function update()
     {
-        $_oneData = $this->_request->one($this->_fields);
-        $_updateData = $this->_request->update($this->_fields);
+        $_oneData = $this->getRequest()->one($this->_fields);
+        $_updateData = $this->getRequest()->update($this->_fields);
         $_updateData['pass'] = sha1($_updateData['pass']);
 
         return parent::update($_oneData,$_updateData);
@@ -54,7 +54,7 @@ class ManageModel extends Model{
 
     public function delete()
     {
-        $_deleteData = $this->_request->delete($this->_fields);
+        $_deleteData = $this->getRequest()->delete($this->_fields);
         return parent::delete($_deleteData);
     }
 

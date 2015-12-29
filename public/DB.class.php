@@ -101,7 +101,7 @@ class DB
             $_limit = isset($_param['limit'])?'LIMIT '.$_param['limit']:'';
             $_order = isset($_param['order'])?'ORDER BY '.$_param['order']:'';
             $_where = '';
-            if(isset($_param['where']))
+            if(isset($_param['where']) && Validate::isArray($_param['where']))
             {
                 $_isAnd = '';
                 foreach ($_param['where'] as $_key=>$_value)
@@ -110,9 +110,14 @@ class DB
                 }
                 $_where = 'WHERE '.substr($_isAnd, 0, -4);
             }
+            elseif(isset($_param['where']))
+            {
+                $_where = 'WHERE '.$_param['where'];
+            }
         }
         $_selectFields = implode(',',$_field);
-        $_sql = "SELECT $_selectFields FROM $_tables[0] $_where $_order $_limit";
+        $_table = isset($_tables[1])?$_tables[0].','.$_tables[1]:$_tables[0];
+        $_sql = "SELECT $_selectFields FROM $_table $_where $_order $_limit";
         $_stmt = $this->execute($_sql);
         $_result = array();
         while(!!$_objs = $_stmt->fetchObject())
