@@ -24,7 +24,7 @@
 <div id="sidebar">
 	<dl style="display:block">
 		<dt>商品</dt>
-		<dd><a href="###">商品1</a></dd>
+		<dd><a href="?a=nav" target="in">导航条列表</a></dd>
 		<dd><a href="###">商品2</a></dd>
 		<dd><a href="###">商品3</a></dd>
 	</dl>

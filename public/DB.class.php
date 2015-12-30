@@ -148,6 +148,15 @@ class DB
         return $_stmt->fetchObject()->count;
     }
 
+    //得到下一个id
+    protected function nextId($_tables)
+    {
+        $_sql = "SHOW TABLE STATUS LIKE '$_tables[0]'";
+        $_stmt = $this->execute($_sql);
+        return $_stmt->fetchObject()->Auto_increment;
+
+    }
+
     //执行sql并返回句柄
     private function execute($_sql)
     {

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-22 11:24:06
+<?php /* Smarty version 2.6.26, created on 2015-12-30 12:36:16
          compiled from admin/public/admin.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,7 +26,7 @@
 <div id="sidebar">
 	<dl style="display:block">
 		<dt>商品</dt>
-		<dd><a href="###">商品1</a></dd>
+		<dd><a href="?a=nav" target="in">导航条列表</a></dd>
 		<dd><a href="###">商品2</a></dd>
 		<dd><a href="###">商品3</a></dd>
 	</dl>
@@ -45,8 +45,8 @@
 	<dl style="display:none">
 		<dt>系统</dt>
 		<dd><a href="?a=manage" target="in">管理员列表</a></dd>
-		<dd><a href="###">系统2</a></dd>
-		<dd><a href="###">系统3</a></dd>
+		<dd><a href="###">等级列表（自行完成）</a></dd>
+		<dd><a href="###">权限管理（自行完成）</a></dd>
 	</dl>
 </div>
 
