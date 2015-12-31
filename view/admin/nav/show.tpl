@@ -13,6 +13,11 @@
 <div id="list">
 	<table>
 		<tr><th>名称</th><th>简介</th><th>子类</th><th>排序</th><th>操作</th></tr>
+		{foreach from=$AllNav key=key item=value}
+			<tr><td>{$value->name}</td><td>{$value->info}</td><td>{$value->sid}</td><td>{$value->sort}</td><td><a href="?a=nav&m=update&id={$value->id}"><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a><a href="?a=nav&m=delete&id={$value->id}" onclick="return confirm('你真的要删除这个导航吗?')?true:false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
+			{foreachelse}
+			<tr><td colspan="5">没有任何导航</td></tr>
+		{/foreach}
 	</table>
 </div>
 

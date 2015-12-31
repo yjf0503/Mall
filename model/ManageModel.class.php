@@ -52,18 +52,6 @@ class ManageModel extends Model{
         return parent::update($_oneData,$_updateData);
     }
 
-    public function delete()
-    {
-        $_deleteData = $this->getRequest()->delete($this->_fields);
-        return parent::delete($_deleteData);
-    }
-
-    //判断输入是否为一
-    public function isOne($_OneData)
-    {
-        return parent::isOne($_OneData);
-    }
-
     public function isUser()
     {
         $this->_check->ajax($this);

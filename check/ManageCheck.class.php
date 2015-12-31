@@ -71,27 +71,6 @@ class ManageCheck extends Check
         return$this->_flag;
     }
 
-    public function deleteCheck(&$_model,$_requestData)
-    {
-        if(!$_model->isOne($_requestData))
-        {
-            $this->_message[] = '找不到这名管理员';
-            $this->_flag = false;
-        }
-        return $this->_flag;
-    }
-
-    //验证一条数据
-    public function oneCheck(&$_model,$_requestData)
-    {
-        if(!$_model->isOne($_requestData))
-        {
-            $this->_message[] = '找不到将要修改的管理员';
-            $this->_flag = false;
-        }
-        return $this->_flag;
-    }
-
     public function ajax(&$_model)
     {
         echo $_model->isOne(array('user'=>$_POST['user'])) ? 1 : 2;

@@ -76,7 +76,7 @@ class Request{
             //筛选准备入库的字段和数据
             $_deleteData = $this->selectData($_GET,$_fields);
             //验证数据的合法性
-            if(!$this->_check->deleteCheck($this->_model,$_deleteData))
+            if(!$this->_check->oneCheck($this->_model,$_deleteData))
             {
                 $this->check();
             }

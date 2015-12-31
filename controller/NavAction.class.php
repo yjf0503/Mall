@@ -15,6 +15,8 @@ class NavAction extends Action
 
     public function index()
     {
+        parent::page();
+        $this->_tpl->assign('AllNav',$this->_model->findAll());
         $this->_tpl->display(SMARTY_ADMIN.'nav/show.tpl');
     }
 
@@ -36,11 +38,43 @@ class NavAction extends Action
 
     public function update()
     {
-        $this->_tpl->display(SMARTY_ADMIN.'nav/update.tpl');
+        if(isset($_POST['send']))
+        {
+            if($this->_model->update())
+            {
+                $this->_redirect->succ(Tool::getPrevPage(),'导航修改成功');
+            }
+            else
+            {
+                $this->_redirect->error('导航修改失败');
+            }
+        }
+        if(isset($_GET['id']))
+        {
+            $this->_tpl->assign('OneNav',$this->_model->findOne());
+            $this->_tpl->display(SMARTY_ADMIN.'nav/update.tpl');
+        }
     }
+
 
     public function delete()
     {
+        if(isset($_GET['id']))
+        {
+            if($this->_model->delete())
+            {
+                $this->_redirect->succ(Tool::getPrevPage(),'导航删除成功');
+            }
+            else
+            {
+                $this->_redirect->error('导航删除失败');
+            }
+        }
+    }
 
+    //ajax
+    public function isName()
+    {
+        $this->_model->isName();
     }
 }

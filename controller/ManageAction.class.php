@@ -77,7 +77,6 @@ class ManageAction extends Action
             $this->_tpl->assign('OneManage', $this->_model->findOne());
             $this->_tpl->display(SMARTY_ADMIN.'manage/update.tpl');
         }
-
     }
 
     //ajax

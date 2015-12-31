@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="view/admin/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/admin/style/nav.css" />
 <script type="text/javascript" src="view/admin/js/nav.js"></script>
+	<script type="text/javascript" src="view/admin/js/ajax.js"></script>
 </head>
 <body>
 
@@ -15,8 +16,8 @@
 <form method="post" name="add" action="?a=nav&m=add">
 	<input type="hidden" name="flag" id="flag" />
 	<dl class="form">
-		<dd>名    称：<input type="text" name="name" class="text" /> ( * 2-4位之间 )</dd>
-		<dd><span class="middle">简    介：<textarea name="info"></textarea>(* 200位以内)</span></dd>
+		<dd>名    称：<input type="text" name="name" id="name" class="text" onblur="checkName();"/> ( * 2-4位之间 )</dd>
+		<dd><span class="middle">简    介：</span><textarea name="info"></textarea><span class="middle">(* 200位以内)</span></dd>
 		<dd><input type="submit" name="send" onclick="return addNav();" value="新增导航" class="submit" /></dd>
 	</dl>
 </form>

@@ -5,16 +5,17 @@
 <title>在线商城后台管理</title>
 <link rel="stylesheet" type="text/css" href="view/admin/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/admin/style/nav.css" />
+    <script type="text/javascript" src="view/admin/js/nav.js"></script>
 </head>
 <body>
 
 <h2><a href="?a=nav">返回导航条列表</a>系统 -- 修改导航条</h2>
 
-<form method="post" name="update" action="?a=nav&m=update">
+<form method="post" name="update" action="?a=nav&m=update&id={$OneNav[0]->id}">
     <input type="hidden" name="flag" id="flag" />
     <dl class="form">
-        <dd>名    称：<input type="text" name="name" class="text" /> ( * 2-4位之间 )</dd>
-        <dd>简    介：<textarea name="info"></textarea></dd>
+        <dd>名    称：{$OneNav[0]->name} </dd>
+        <dd><span class="middle">简    介：</span><textarea name="info">{$OneNav[0]->info}</textarea><span class="middle">(* 200位以内)</span></dd>
         <dd><input type="submit" name="send" onclick="return updateNav();" value="修改导航" class="submit" /></dd>
     </dl>
 </form>

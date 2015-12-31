@@ -30,6 +30,26 @@ class NavCheck extends Check
             $this->_message[] = '导航简介不得大于200位！';
             $this->_flag = false;
         }
+        if($_model->isOne(array('name'=>$_requestData['name'])))
+        {
+            $this->_message[] = '导航名称被占用';
+            $this->_flag = false;
+        }
         return $this->_flag;
+    }
+
+    public function updateCheck(&$_model,$_requestData)
+    {
+        if(self::checkStrLength($_requestData['info'],200,max))
+        {
+            $this->_message[] = '导航简介不得大于200位';
+            $this->_flag = false;
+        }
+        return $this->_flag;
+    }
+
+    public function ajax(&$_model)
+    {
+        echo $_model->isOne(array('name'=>$_POST['name']))?1:2;
     }
 }
