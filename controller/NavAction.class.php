@@ -16,6 +16,10 @@ class NavAction extends Action
     public function index()
     {
         parent::page();
+        if(isset($_GET['sid']))
+        {
+            $this->_tpl->assign('OneNav',$this->_model->findOne());
+        }
         $this->_tpl->assign('AllNav',$this->_model->findAll());
         $this->_tpl->display(SMARTY_ADMIN.'nav/show.tpl');
     }
@@ -32,6 +36,10 @@ class NavAction extends Action
             {
                 $this->_redirect->error('导航新增失败');
             }
+        }
+        if(isset($_GET['id']))
+        {
+            $this->_tpl->assign('OneNav',$this->_model->findOne());
         }
         $this->_tpl->display(SMARTY_ADMIN.'nav/add.tpl');
     }

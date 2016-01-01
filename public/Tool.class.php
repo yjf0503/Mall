@@ -45,6 +45,10 @@ class Tool{
         $_string = null;
         if(Validate::isArray($_data))
         {
+            if(Validate::isNullArray($_data))
+            {
+                return $_data;
+            }
             foreach($_data as $_key=>$_value)
             {
                 $_string[$_key] = self::setHtmlString($_value);

@@ -33,6 +33,15 @@ h2 a:hover {
 	color:#f60;
 	text-decoration:underline;
 }
+a {
+	text-decoration:none;
+	color:#335B64;
+	font-size:12px;
+}
+a:hover {
+	color:#f60;
+	text-decoration:underline;
+}
 dl.form {
 	font-size:12px;
 }
@@ -52,7 +61,7 @@ dl.form select {
 dl.form textarea {
 	border:1px solid #666;
 	background:#fff;
-	font-size: 13px;
+	font-size:13px;
 }
 dl.form input.submit {
 	cursor:pointer;
