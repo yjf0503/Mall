@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-31 23:09:14
+<?php /* Smarty version 2.6.26, created on 2016-01-01 11:37:38
          compiled from admin/nav/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,6 +13,7 @@
 <h2><a href="?a=nav&m=add">添加导航</a>系统 -- 导航条列表</h2>
 
 <div id="list">
+	<form method="post" action="?a=nav&m=sort">
 	<table>
 		<tr><th>名称</th><th>简介</th><th>子类</th><th>排序</th><th>操作</th></tr>
 		<?php $_from = $this->_tpl_vars['AllNav']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
@@ -21,14 +22,17 @@
 			<tr><td><?php echo $this->_tpl_vars['value']->name; ?>
 </td><td><?php echo $this->_tpl_vars['value']->info; ?>
 </td><td><?php echo $this->_tpl_vars['value']->sid; ?>
-</td><td><?php echo $this->_tpl_vars['value']->sort; ?>
-</td><td><a href="?a=nav&m=update&id=<?php echo $this->_tpl_vars['value']->id; ?>
+</td><td><input type="text" name="sort[<?php echo $this->_tpl_vars['value']->id; ?>
+]" class="sort" value="<?php echo $this->_tpl_vars['value']->sort; ?>
+"/></td><td><a href="?a=nav&m=update&id=<?php echo $this->_tpl_vars['value']->id; ?>
 "><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a><a href="?a=nav&m=delete&id=<?php echo $this->_tpl_vars['value']->id; ?>
 " onclick="return confirm('你真的要删除这个导航吗?')?true:false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
 			<?php endforeach; else: ?>
 			<tr><td colspan="5">没有任何导航</td></tr>
 		<?php endif; unset($_from); ?>
+		<tr><td></td><td></td><td></td><td><input type="submit" name="send" value="排序"/></td><td></td></tr>
 	</table>
+	</form>
 </div>
 
 <div id="page"><?php echo $this->_tpl_vars['page']; ?>

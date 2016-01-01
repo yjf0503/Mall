@@ -16,3 +16,9 @@ dl.form input.submit {
 	margin:0 0 0 90px;
 	padding:2px 0;
 }
+.sort {
+	border:1px solid #666;
+	width:30px;
+	background:#fff;
+	text-align:center;
+}

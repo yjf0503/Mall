@@ -72,6 +72,21 @@ class NavAction extends Action
         }
     }
 
+    public function sort()
+    {
+        if(isset($_POST['send']))
+        {
+            if($this->_model->sort())
+            {
+                $this->_redirect->succ(Tool::getPrevPage());
+            }
+            else
+            {
+                $this->_redirect->error('导航排序失败');
+            }
+        }
+    }
+
     //ajax
     public function isName()
     {

@@ -29,12 +29,20 @@ class Redirect
     private function __construct() {}
 
     //成功跳转
-    public function succ($_url,$_info)
+    public function succ($_url,$_info = '')
     {
-        //如果新增成功，跳转到成功提示页，并且再跳转到指定的页面
-        $this->_tpl->assign('message',$_info);
-        $this->_tpl->assign('url',$_url);
-        $this->_tpl->display(SMARTY_ADMIN.'public/succ.tpl');
+        if(!empty($_info))
+        {
+            //如果新增成功，跳转到成功提示页，并且再跳转到指定的页面
+            $this->_tpl->assign('message',$_info);
+            $this->_tpl->assign('url',$_url);
+            $this->_tpl->display(SMARTY_ADMIN.'public/succ.tpl');
+        }
+        else
+        {
+            header('Location:'.$_url);
+        }
+
         exit();
     }
 
