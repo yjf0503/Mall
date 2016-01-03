@@ -12,6 +12,7 @@ class ManageModel extends Model{
         parent::__construct();
         $this->_fields = array('id','user','pass','level','login_count','last_ip','last_time','reg_time');
         $this->_tables = array(DB_PREFIX.'manage');
+        $this->_check = new ManageCheck();
     }
 
     public function findAll()
@@ -50,6 +51,11 @@ class ManageModel extends Model{
         $_updateData['pass'] = sha1($_updateData['pass']);
 
         return parent::update($_oneData,$_updateData);
+    }
+
+    public function login()
+    {
+        return $this->getRequest()->login();
     }
 
     public function isUser()

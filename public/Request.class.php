@@ -100,6 +100,22 @@ class Request{
         }
         return $_oneData;
     }
+
+    //处理登陆数据请求
+    public function login()
+    {
+        if(Validate::isArray($_POST) && !Validate::isNullArray($_POST))
+        {
+            //验证数据合法性
+            if(!$this->_check->loginCheck($this->_model,$_POST))
+            {
+                $this->check();
+            }
+        }
+        return true;
+    }
+
+
     //筛选数据
     private function selectData($_requestData,$_fields)
     {

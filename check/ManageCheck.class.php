@@ -76,4 +76,35 @@ class ManageCheck extends Check
         echo $_model->isOne(array('user'=>$_POST['user'])) ? 1 : 2;
     }
 
+    public function loginCheck(&$_model,$_requestData)
+    {
+        if (self::isNullString($_requestData['user']))
+        {
+            $this->_message[] = '管理员姓名不得为空！';
+            $this->_flag = false;
+        }
+        if (self::isNullString($_requestData['pass']))
+        {
+            $this->_message[] = '管理员密码不得为空！';
+            $this->_flag = false;
+        }
+        if (self::isNullString($_requestData['code']))
+        {
+            $this->_message[] = '验证码不得为空！';
+            $this->_flag = false;
+        }
+        if(!self::checkStrEquals(strtoupper($_SESSION['code']),strtoupper($_requestData['code'])))
+        {
+            $this->_message[] = '验证码不正确！';
+            $this->_flag = false;
+        }
+        if(!$_model->isOne(array('user'=>$_requestData['user'],'pass'=>sha1($_requestData['pass']))))
+        {
+            $this->_message[] = '用户名或密码不正确！';
+            $this->_flag = false;
+        }
+
+        return $this->_flag;
+    }
+
 }

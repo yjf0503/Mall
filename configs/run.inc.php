@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(E_ERROR);
 //创建一个实际路径
 define('ROOT_PATH',substr(dirname(__FILE__),0,-8));

@@ -13,6 +13,7 @@ class NavModel extends Model{
         parent::__construct();
         $this->_fields = array('id','name','info','sort','sid');
         $this->_tables = array(DB_PREFIX.'nav');
+        $this->_check = new NavCheck();
         $this->_sid = isset($_GET['sid'])?Tool::setFormString($_GET['sid']):0;
     }
 

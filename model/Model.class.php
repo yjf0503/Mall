@@ -16,7 +16,6 @@ class Model extends DB
     protected function __construct()
     {
         $this->_db = parent::getInstance();
-        $this->_check = Factory::setCheck();
     }
 
     protected function add($_addData)
