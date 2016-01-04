@@ -11,7 +11,7 @@
 <body>
 
 <div id="header">
-	<p>您好，{$admin.user} [{$admin.level}] [去首页] [退出]</p>
+	<p>您好，{$admin.user} [{$admin.level}] [<a href="?a=index">去首页</a>] [<a href="?a=admin&m=logout">退出</a>]</p>
 	<ul>
 		<li class="first"><a href="?a=admin&m=main" target="in">起始页</a></li>
 		<li><a href="javascript:channel(0)">商品</a></li>

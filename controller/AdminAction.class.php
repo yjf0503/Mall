@@ -42,13 +42,23 @@ class AdminAction extends Action
         {
             if($this->_manage->login())
             {
-                $_SESSION['admin']['user'] = 'root';
-                $_SESSION['admin']['pass'] = '111111';
-                $_SESSION['admin']['level'] = '超级管理员';
+                $_login = $this->_manage->findLogin();
+                $_SESSION['admin']['user'] = $_login[0]->user;
+                $_SESSION['admin']['level'] = $_login[0]->level_name;
+                $this->_manage->countLogin();
                 $this->_redirect->succ('?a=admin','后台登录成功');
             }
         }
         $this->_tpl->display(SMARTY_ADMIN.'public/login.tpl');
+    }
+
+    public function logout()
+    {
+        if(isset($_SESSION['admin']))
+        {
+            session_destroy();
+        }
+        $this->_redirect->succ('?a=admin&m=login');
     }
 
     public function ajaxLogin()

@@ -70,7 +70,14 @@ class DB
         $_setData = '';
         foreach($_updateData as $_key=>$_value)
         {
-            $_setData .= "$_key='$_value',";
+            if(Validate::isArray($_value))
+            {
+                $_setData .= "$_key=$_value[0],";
+            }
+            else
+            {
+                $_setData .= "$_key='$_value',";
+            }
         }
         $_setData = substr($_setData,0,-1);
         $_sql = "UPDATE $_tables[0] SET $_setData WHERE $_isAnd LIMIT 1";
