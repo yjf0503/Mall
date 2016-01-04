@@ -76,6 +76,16 @@ class ManageCheck extends Check
         echo $_model->isOne(array('user'=>$_POST['user'])) ? 1 : 2;
     }
 
+    public function ajaxLogin(&$_model)
+    {
+        echo !$_model->isOne(array('user'=>$_POST['user'],'pass'=>$_POST['pass']))? 1 : 2;
+    }
+
+    public function ajaxCode(&$_model)
+    {
+        echo !self::checkStrEquals(strtoupper($_SESSION['code']),strtoupper($_POST['code']))? 1 : 2;
+    }
+
     public function loginCheck(&$_model,$_requestData)
     {
         if (self::isNullString($_requestData['user']))

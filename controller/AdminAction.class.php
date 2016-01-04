@@ -37,16 +37,27 @@ class AdminAction extends Action
     //后台登录
     public function login()
     {
-        $_SESSION['admin']['user'] = 'root';
-        $_SESSION['admin']['pass'] = '111111';
-        $_SESSION['admin']['level'] = '超级管理员';
+
         if(isset($_POST['send']))
         {
             if($this->_manage->login())
             {
+                $_SESSION['admin']['user'] = 'root';
+                $_SESSION['admin']['pass'] = '111111';
+                $_SESSION['admin']['level'] = '超级管理员';
                 $this->_redirect->succ('?a=admin','后台登录成功');
             }
         }
         $this->_tpl->display(SMARTY_ADMIN.'public/login.tpl');
+    }
+
+    public function ajaxLogin()
+    {
+        $this->_manage->ajaxLogin();
+    }
+
+    public function ajaxCode()
+    {
+        $this->_manage->ajaxCode();
     }
 }

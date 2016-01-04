@@ -62,4 +62,14 @@ class ManageModel extends Model{
     {
         $this->_check->ajax($this);
     }
+
+    public function ajaxLogin()
+    {
+        $this->_check->ajaxLogin($this);
+    }
+
+    public function ajaxCode()
+    {
+        $this->_check->ajaxCode($this);
+    }
 }
