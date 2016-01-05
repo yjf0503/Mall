@@ -8,7 +8,7 @@
 //导航验证类
 class NavCheck extends Check
 {
-    public function addCheck(&$_model,$_requestData)
+    public function addCheck(&$_model,Array $_requestData,Array $_param)
     {
         if (self::isNullString($_requestData['name']))
         {
@@ -30,7 +30,7 @@ class NavCheck extends Check
             $this->_message[] = '导航简介不得大于200位！';
             $this->_flag = false;
         }
-        if($_model->isOne(array('name'=>$_requestData['name'])))
+        if($_model->isOne($_param))
         {
             $this->_message[] = '导航名称被占用';
             $this->_flag = false;
@@ -48,8 +48,8 @@ class NavCheck extends Check
         return $this->_flag;
     }
 
-    public function ajax(&$_model)
+    public function ajax(&$_model,Array $_param)
     {
-        echo $_model->isOne(array('name'=>$_POST['name']))?1:2;
+        echo $_model->isOne($_param)?1:2;
     }
 }

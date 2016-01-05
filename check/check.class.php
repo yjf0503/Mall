@@ -17,9 +17,9 @@ class Check extends Validate{
         return $this->_message;
     }
 
-    public function oneCheck(&$_model,$_requestData)
+    public function oneCheck(&$_model,Array $_param)
     {
-        if(!$_model->isOne($_requestData))
+        if(!$_model->isOne($_param))
         {
             $this->_message[] = '找不到指定的数据';
             $this->_flag = false;

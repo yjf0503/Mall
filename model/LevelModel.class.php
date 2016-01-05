@@ -19,13 +19,4 @@ class LevelModel extends Model
     {
         return parent::select(array('id','level_name'));
     }
-
-    public function update()
-    {
-        $_oneData = $this->getRequest()->one($this->_fields);
-        $_updateData = $this->getRequest()->update($this->_fields);
-        $_updateData['pass'] = sha1($_updateData['pass']);
-
-        return parent::update($_oneData,$_updateData);
-    }
 }

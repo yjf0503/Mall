@@ -10,7 +10,7 @@ class ManageCheck extends Check
 {
     //用户名不得包含指定的非法词组，敏感词
     //密码不能纯数字，纯字母，或者必须包含特殊字符，或者必须大小写混拼
-    public function addCheck(&$_model,$_requestData)
+    public function addCheck(&$_model,Array $_requestData, Array $_param)
     {
         if (self::isNullString($_requestData['user']))
         {
@@ -42,7 +42,7 @@ class ManageCheck extends Check
             $this->_message[] = '管理员等级权限必须选择！';
             $this->_flag = false;
         }
-        if ($_model->isOne(array('user'=>$_requestData['user'])))
+        if ($_model->isOne($_param))
         {
             $this->_message[] = '管理员用户名被占用！';
             $this->_flag = false;
@@ -50,7 +50,7 @@ class ManageCheck extends Check
         return $this->_flag;
     }
 
-    public function updateCheck(&$_model,$_requestData)
+    public function updateCheck(Model &$_model, Array $_requestData)
     {
         if (self::checkStrLength($_requestData['pass'], 6, 'min'))
         {
@@ -71,22 +71,22 @@ class ManageCheck extends Check
         return$this->_flag;
     }
 
-    public function ajax(&$_model)
+    public function ajax(&$_model,Array $_param)
     {
-        echo $_model->isOne(array('user'=>$_POST['user'])) ? 1 : 2;
+        echo $_model->isOne($_param) ? 1 : 2;
     }
 
-    public function ajaxLogin(&$_model)
+    public function ajaxLogin(&$_model,Array $_param)
     {
-        echo !$_model->isOne(array('user'=>$_POST['user'],'pass'=>$_POST['pass']))? 1 : 2;
+        echo !$_model->isOne($_param)? 1 : 2;
     }
 
-    public function ajaxCode(&$_model)
+    public function ajaxCode(&$_model,$_code)
     {
-        echo !self::checkStrEquals(strtoupper($_SESSION['code']),strtoupper($_POST['code']))? 1 : 2;
+        echo !self::checkStrEquals(strtoupper($_SESSION['code']),strtoupper($_code))? 1 : 2;
     }
 
-    public function loginCheck(&$_model,$_requestData)
+    public function loginCheck(&$_model,Array $_requestData,Array $_param)
     {
         if (self::isNullString($_requestData['user']))
         {
@@ -108,7 +108,7 @@ class ManageCheck extends Check
             $this->_message[] = '验证码不正确！';
             $this->_flag = false;
         }
-        if(!$_model->isOne(array('user'=>$_requestData['user'],'pass'=>sha1($_requestData['pass']))))
+        if(!$_model->isOne($_param))
         {
             $this->_message[] = '用户名或密码不正确！';
             $this->_flag = false;

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-01 12:00:41
+<?php /* Smarty version 2.6.26, created on 2016-01-05 17:02:30
          compiled from admin/nav/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -21,9 +21,9 @@
 ?>
 				<tr><td><?php echo $this->_tpl_vars['value']->name; ?>
 </td><td><?php echo $this->_tpl_vars['value']->info; ?>
-</td><td><a href="?a=nav&sid=<?php echo $this->_tpl_vars['value']->id; ?>
+</td><td><?php if ($this->_tpl_vars['OneNav']): ?>无<?php else: ?><a href="?a=nav&sid=<?php echo $this->_tpl_vars['value']->id; ?>
 ">查看</a> | <a href="?a=nav&m=add&id=<?php echo $this->_tpl_vars['value']->id; ?>
-">添加</a></td><td><input type="text" name="sort[<?php echo $this->_tpl_vars['value']->id; ?>
+">添加</a><?php endif; ?> </td><td><input type="text" name="sort[<?php echo $this->_tpl_vars['value']->id; ?>
 ]" class="sort" value="<?php echo $this->_tpl_vars['value']->sort; ?>
 " /></td><td><a href="?a=nav&m=update&id=<?php echo $this->_tpl_vars['value']->id; ?>
 "><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a> <a href="?a=nav&m=delete&id=<?php echo $this->_tpl_vars['value']->id; ?>

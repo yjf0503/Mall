@@ -33,7 +33,7 @@ function adminLogin()
     }
     if(fm.ajaxcode.value !='')
     {
-        alert('验证码不正确!');
+        alert('验证码不正确');
         fm.code.focus();
         return false;
     }

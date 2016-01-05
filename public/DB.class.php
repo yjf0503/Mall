@@ -41,9 +41,8 @@ class DB
     }
 
     //新增
-    protected function add($_tables,$_addData)
+    protected function add($_tables,Array $_addData)
     {
-        $_addData = Tool::setFormString($_addData);
         $_addFields = array();
         $_addValues = array();
         foreach ($_addData as $_key=>$_value)
@@ -58,14 +57,14 @@ class DB
     }
 
     //修改
-    protected function update($_tables,$_oneData,$_updateData)
+    protected function update($_tables,Array $_param,Array $_updateData)
     {
-        $_isAnd = '';
-        foreach($_oneData as $_key=>$_value)
+        $_where = '';
+        foreach($_param as $_key=>$_value)
         {
-            $_isAnd .= "$_key='$_value' AND ";
+            $_where .= $_value.' AND ';
         }
-        $_isAnd = substr($_isAnd,0,-4);
+        $_where = 'WHERE '.substr($_where,0,-4);
 
         $_setData = '';
         foreach($_updateData as $_key=>$_value)
@@ -80,25 +79,25 @@ class DB
             }
         }
         $_setData = substr($_setData,0,-1);
-        $_sql = "UPDATE $_tables[0] SET $_setData WHERE $_isAnd LIMIT 1";
+        $_sql = "UPDATE $_tables[0] SET $_setData $_where LIMIT 1";
         return $this->execute($_sql)->rowCount();
     }
 
     //删除
-    protected function delete($_tables,$_deleteData)
+    protected function delete($_tables,Array $_param)
     {
-        $_isAnd = '';
-        foreach ($_deleteData as $_key=>$_value)
+        $_where = '';
+        foreach($_param as $_key=>$_value)
         {
-            $_isAnd .= "$_key='$_value' AND ";
+            $_where .= $_value.'AND ';
         }
-        $_isAnd = substr($_isAnd, 0, -4);
-        $_sql = "DELETE FROM $_tables[0] WHERE $_isAnd LIMIT 1";
+        $_where ='WHERE '.substr($_where,0,-4);
+        $_sql = "DELETE FROM $_tables[0] $_where LIMIT 1";
         return $this->execute($_sql)->rowCount();
     }
 
     //查询
-    protected function select($_tables,$_field,$_param=array())
+    protected function select($_tables,Array $_field,Array $_param=array())
     {
         $_limit = '';
         $_order = '';
@@ -108,18 +107,13 @@ class DB
             $_limit = isset($_param['limit'])?'LIMIT '.$_param['limit']:'';
             $_order = isset($_param['order'])?'ORDER BY '.$_param['order']:'';
             $_where = '';
-            if(isset($_param['where']) && Validate::isArray($_param['where']))
+            if(isset($_param['where']))
             {
-                $_isAnd = '';
                 foreach ($_param['where'] as $_key=>$_value)
                 {
-                    $_isAnd .= "$_key='$_value' AND ";
+                    $_where .= $_value.' AND ';
                 }
-                $_where = 'WHERE '.substr($_isAnd, 0, -4);
-            }
-            elseif(isset($_param['where']))
-            {
-                $_where = 'WHERE '.$_param['where'];
+                $_where = 'WHERE '.substr($_where, 0, -4);
             }
         }
         $_selectFields = implode(',',$_field);
@@ -135,27 +129,27 @@ class DB
     }
 
     //验证一条数据
-    protected function isOne($_tables,$_oneData)
+    protected function isOne($_tables,Array $_param)
     {
-        $_isAnd = '';
-        foreach ($_oneData as $_key=>$_value)
+        $_where = '';
+        foreach ($_param as $_key=>$_value)
         {
-            $_isAnd .= "$_key='$_value' AND ";
+            $_where .= $_value.' AND ';
         }
-        $_isAnd = substr($_isAnd, 0, -4);
-        $_sql = "SELECT id FROM $_tables[0] WHERE $_isAnd LIMIT 1";
+        $_where = 'WHERE '.substr($_where, 0, -4);
+        $_sql = "SELECT id FROM $_tables[0] $_where LIMIT 1";
         return $this->execute($_sql)->rowCount();
     }
 
     //总记录
-    protected function total($_tables,$_param = array())
+    protected function total($_tables,Array $_param = array())
     {
         $_where = '';
         if(isset($_param['where']))
         {
             foreach ($_param['where'] as $_key=>$_value)
             {
-                $_where .= "$_key='$_value' AND ";
+                $_where .= $_value.' AND ';
             }
             $_where = 'WHERE '.substr($_where, 0, -4);
         }
