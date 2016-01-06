@@ -11,6 +11,13 @@ class Factory{
     static public function setAction()
     {
         $_a = self::getA();
+        if(Validate::inArray($_a,array('manage','nav','level')))
+        {
+            if(!isset($_SESSION['admin']))
+            {
+               Redirect::getInstance()->succ('?a=admin&m=login');
+            }
+        }
         if(!file_exists(ROOT_PATH.'/controller/'.$_a.'Action.class.php'))
         {
             $_a = 'index';
@@ -25,16 +32,6 @@ class Factory{
         if(file_exists(ROOT_PATH.'/model/'.$_a.'Model.class.php'))
         {
             eval('self::$_obj = new '.ucfirst($_a).'Model();');
-        }
-        return self::$_obj;
-    }
-
-    static public function setCheck()
-    {
-        $_a = self::getA();
-        if(file_exists(ROOT_PATH.'/check/'.$_a.'Check.class.php'))
-        {
-            eval('self::$_obj = new '.ucfirst($_a).'Check();');
         }
         return self::$_obj;
     }

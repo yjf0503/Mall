@@ -10,6 +10,13 @@ class Check extends Validate{
     protected $_flag = true;
     //错误消息集
     protected $_message = array();
+    //模板对象
+    protected $_tpl = null;
+
+    public function __construct()
+    {
+        $this->_tpl = TPL::getInstance();
+    }
 
     //获取消息集
     public function getMessage()
@@ -25,5 +32,13 @@ class Check extends Validate{
             $this->_flag = false;
         }
         return $this->_flag;
+    }
+
+    public function error()
+    {
+        $this->_tpl->assign('message', $this->_message);
+        $this->_tpl->assign('prev', Tool::getPrevPage());
+        $this->_tpl->display(SMARTY_ADMIN.'public/error.tpl');
+        exit();
     }
 }

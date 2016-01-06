@@ -94,4 +94,17 @@ class Tool{
             return $_SERVER["HTTP_REFERER"];
         }
     }
+
+    //过滤
+    public static function setRequest()
+    {
+        if(isset($_GET))
+        {
+            $_GET = Tool::setFormString($_GET);
+        }
+        if(isset($_POST))
+        {
+            $_POST = Tool::setFormString($_POST);
+        }
+    }
 }

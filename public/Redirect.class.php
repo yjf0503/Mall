@@ -11,7 +11,7 @@ class Redirect
 
     private $_tpl = null;
 
-    public static function getInstance(&$_tpl)
+    public static function getInstance(TPL &$_tpl=null)
     {
         if(!self::$_instance instanceof Redirect)
         {
