@@ -24,6 +24,12 @@ class NavModel extends Model{
         ));
     }
 
+    public function findFrontTenNav()
+    {
+        return parent::select(array('id','name'),
+                               array('where'=>array('sid=0'),'limit'=>'10','order'=>'sort ASC'));
+    }
+
     public function findAll()
     {
         $this->_tables = array(DB_PREFIX.'nav');
@@ -54,7 +60,7 @@ class NavModel extends Model{
         {
             $this->_check->error();
         }
-        $_addData = $this->getRequest()->add($this->_fields);
+        $_addData = $this->getRequest()->filter($this->_fields);
         $_addData['sort'] = $this->nextId();
         return parent::add($_addData);
     }
@@ -70,7 +76,7 @@ class NavModel extends Model{
         {
             $this->_check->error();
         }
-        $_updateData = $this->getRequest()->update($this->_fields);
+        $_updateData = $this->getRequest()->filter($this->_fields);
         return parent::update($_where,$_updateData);
     }
 

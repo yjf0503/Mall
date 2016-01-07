@@ -22,7 +22,7 @@
 		//生成背景
 		private function createBg()
 		{
-			$this->img = imagecreatefrompng(ROOT_PATH.'/view/default/public/images/bg_code'.mt_rand(1,3).'.png');
+			$this->img = imagecreatefrompng(ROOT_PATH.'/view/default/images/bg_code'.mt_rand(1,3).'.png');
 		}
 		
 		//生成文字

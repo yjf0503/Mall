@@ -70,7 +70,7 @@ class ManageModel extends Model{
         {
             $this->_check->error();
         }
-        $_addData = $this->getRequest()->add($this->_fields);
+        $_addData = $this->getRequest()->filter($this->_fields);
         $_addData['pass'] = sha1($_addData['pass']);
         $_addData['last_ip'] = Tool::getIP();
         $_addData['reg_time'] = Tool::getDate();
@@ -89,7 +89,7 @@ class ManageModel extends Model{
         {
             $this->_check->error();
         }
-        $_updateData = $this->getRequest()->update($this->_fields);
+        $_updateData = $this->getRequest()->filter($this->_fields);
         $_updateData['pass'] = sha1($_updateData['pass']);
 
         return parent::update($_where,$_updateData);
@@ -108,10 +108,7 @@ class ManageModel extends Model{
        {
            $this->_check->error();
        }
-        else
-        {
-            return true;
-        }
+        return true;
     }
 
     public function isUser()
