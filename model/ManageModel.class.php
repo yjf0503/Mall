@@ -6,6 +6,8 @@
  * Time: 1:02 PM
  */
 
+//test Git on macbook
+
 class ManageModel extends Model{
     public function __construct()
     {
