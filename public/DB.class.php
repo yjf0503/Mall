@@ -171,8 +171,13 @@ class DB
     //执行sql并返回句柄
     private function execute($_sql)
     {
-        $_stmt = $this->_pdo->prepare($_sql);
-        $_stmt->execute();
+        try{
+            $_stmt = $this->_pdo->prepare($_sql);
+            $_stmt->execute();
+        } catch(PDOException $e) {
+            exit('SQL语句：'.$_sql.'<br/>错误信息：'.$e->getMessage());
+        }
+
         return $_stmt;
     }
 }

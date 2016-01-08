@@ -34,11 +34,19 @@ class Check extends Validate{
         return $this->_flag;
     }
 
-    public function error()
+    public function error($_url='')
     {
-        $this->_tpl->assign('message', $this->_message);
-        $this->_tpl->assign('prev', Tool::getPrevPage());
-        $this->_tpl->display(SMARTY_ADMIN.'public/error.tpl');
-        exit();
+        if(empty($_url))
+        {
+            $this->_tpl->assign('message', $this->_message);
+            $this->_tpl->assign('prev', Tool::getPrevPage());
+            $this->_tpl->display(SMARTY_ADMIN.'public/error.tpl');
+            exit();
+        }
+        else
+        {
+            Redirect::getInstance()->succ($_url);
+        }
+
     }
 }

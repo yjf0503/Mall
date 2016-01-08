@@ -7,20 +7,7 @@
 </head>
 <body>
 
-<div id="header">
-   header
-</div>
-
-<div id="nav">
-    <ul>
-        <li><a href="./">首页</a></li>
-        {foreach from=$FrontTenNav key=key item=value}
-            <li><a href="?a=list&id={$value->id}">{$value->name}</a></li>
-        {/foreach}
-    </ul>
-</div>
-
-<div id="search">
+{include file="default/public/header.tpl"}
 
 </div>
 

@@ -24,6 +24,19 @@ class NavModel extends Model{
         ));
     }
 
+    public function findFrontNav()
+    {
+        $_where = array("id='{$this->_R['id']}'");
+       if(!$this->_check->oneCheck($this,$_where))
+       {
+           $this->_check->error('./');
+       }
+        $_allNav = parent::select(array('id','name','sid'));
+
+        return Tree::getInstance()->getTree($_allNav,$this->_R['id']);
+
+    }
+
     public function findFrontTenNav()
     {
         return parent::select(array('id','name'),
