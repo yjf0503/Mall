@@ -13,12 +13,12 @@ html {
 	text-align:right;
 	padding:0 20px 0 0;
 }
-#header p a{
-	color: #ffffff;
-	text-decoration: none;
+#header p a {
+	color:#fff;
+	text-decoration:none;
 }
-#header p a:hover{
-	text-decoration: underline;
+#header p a:hover {
+	text-decoration:underline;
 }
 #header ul {
 	border-top:1px solid #fff;

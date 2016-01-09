@@ -51,7 +51,7 @@
 #sidebar div dl {
 	color:#666;
 	padding:10px;
-	border-top: 1px dashed #cccccc;
+	border-top:1px dashed #ccc;
 }
 #sidebar div dl dt img {
 	display:block;
@@ -83,77 +83,61 @@
 	margin:10px 0 0 0;
 }
 #main h2 {
-	height:34px;
-	line-height:34px;
-	padding:0 0 0 25px;
-	background:url(../images/list_h2_bg.png) no-repeat left center;
-	font-size:12px;
-	color:#56A5EE;
-}
-#main div {
-	margin:0 0 10px 0;
-	border:1px solid #C5E4FF;
-	border-top:none;
-}
-#main div.filter p {
+	font-size:14px;
 	color:#333;
-	padding:10px;
+	border-bottom:1px dashed #ccc;
+	height:25px;
+	margin:0 0 10px 0;
 }
-#main div.filter p span {
-	background:#C5E4FF;
-	padding:5px 5px;
-}
-#main div.filter p a {
-	text-decoration:underline;
-	padding:5px 5px;
-}
-#main div.filter p a:hover {
-	color:#f60;
-}
-#main div.pro {
-	height:2200px;
-}
-#main div.pro img {
-	border:none;
-	display:block;
-}
-#main div.pro dl {
-	width:224px;
+#main dl.pic {
+	width:304px;
 	float:left;
-	padding:15px 0 0 28px;
 }
-#main div.pro dl dt {
-	width:224px;
-	height:224px;
-	border:1px solid #C5E4FF;
+#main dl.pic dt {
+	width:304px;
+	height:304px;
+	border:1px solid #ccc;
 }
-#main div.pro dl dt img {
+#main dl.pic dt img {
+	display:block;
+	border:none;
 	margin:2px 0 0 2px;
 }
-#main div.pro dl dd {
-	padding:8px 0 0 0;
-}
-#main div.pro dl dd.price strong {
-	font-size:16px;
-	color:red;
-	font-family:Tahoma;
-}
-#main div.pro dl dd.price del {
-	color:#999;
-}
-#main div.pro dl dd.title {
-	font-size:14px;
-}
-#main div.pro dl dd.comment {
+#main dl.pic dd {
+	height:30px;
+	line-height:30px;
 	text-align:center;
+	color:#666;
 }
-#main div.pro dl dd.comment a {
-	color:maroon;
+#main dl.text {
+	color:#333;
+	width:450px;
+	float:right;
 }
-#main div.pro dl dd.buy {
+#main dl.text dd {
+	padding:5px 0;
+}
+#main div.content {
+	padding:10px 0 0 0;
+	clear:both;
+	height:30px;
+	color:#333;
+}
+#main div.content ul {
+	height:30px;
+	background:url(../images/content_bg_point.png) repeat-x bottom;
+}
+#main div.content ul li {
+	height:30px;
+	line-height:30px;
+	width:86px;
+	background:url(../images/content_bg.png) no-repeat right center;
+	float:left;
+	margin:0 4px 0 0;
 	text-align:center;
-	color:#369;
+	cursor:pointer;
 }
-#main div.pro dl dd.buy a {
-	color:#369;
+#main div.content ul li.first {
+	background-position:left;
+	color:#fff;
 }

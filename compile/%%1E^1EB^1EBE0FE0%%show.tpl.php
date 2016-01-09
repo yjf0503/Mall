@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-05 17:02:30
+<?php /* Smarty version 2.6.26, created on 2016-01-09 13:53:32
          compiled from admin/nav/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h2><a href="?a=nav&m=add">添加导航</a>系统 -- 导航条列表</h2>
+<h2><a href="?a=nav&m=add">添加导航</a>商品 -- 导航条列表</h2>
 
 <div id="list">
 	<form method="post" action="?a=nav&m=sort">

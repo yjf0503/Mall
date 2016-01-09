@@ -66,6 +66,9 @@ dl.form textarea {
 dl.form input.submit {
 	cursor:pointer;
 }
+dl.form span.red {
+	color:red;
+}
 #list {
 	margin:0 10px;
 }

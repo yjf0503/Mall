@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h2><a href="?a=nav&m=add">添加导航</a>系统 -- 导航条列表</h2>
+<h2><a href="?a=nav&m=add">添加导航</a>商品 -- 导航条列表</h2>
 
 <div id="list">
 	<form method="post" action="?a=nav&m=sort">
