@@ -1,5 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-12-31 23:59:46
+<?php /* Smarty version 2.6.26, created on 2016-01-10 20:10:49
          compiled from admin/nav/update.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_checkboxes', 'admin/nav/update.tpl', 20, false),)), $this); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,6 +23,10 @@
  </dd>
         <dd><span class="middle">简    介：</span><textarea name="info"><?php echo $this->_tpl_vars['OneNav'][0]->info; ?>
 </textarea><span class="middle">(* 200位以内)</span></dd>
+        <?php if ($this->_tpl_vars['OneNav'][0]->sid != 0): ?>
+            <dd>关联品牌：<?php echo smarty_function_html_checkboxes(array('options' => $this->_tpl_vars['AllBrand'],'selected' => $this->_tpl_vars['selectedBrand'],'name' => 'brand'), $this);?>
+</dd>
+        <?php endif; ?>
         <dd><input type="submit" name="send" onclick="return updateNav();" value="修改导航" class="submit" /></dd>
     </dl>
 </form>

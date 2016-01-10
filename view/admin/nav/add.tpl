@@ -20,6 +20,7 @@
 		{if $OneNav}<dd>主类名称: {$OneNav[0]->name}</dd>{/if}
 		<dd>名    称：<input type="text" name="name" id="name" class="text" onblur="checkName();"/> ( * 2-4位之间 )</dd>
 		<dd><span class="middle">简    介：</span><textarea name="info"></textarea><span class="middle">(* 200位以内)</span></dd>
+		{if $OneNav}<dd>关联品牌：{html_checkboxes options=$AllBrand name=brand}</dd>{/if}
 		<dd><input type="submit" name="send" onclick="return addNav();" value="新增导航" class="submit" /></dd>
 	</dl>
 </form>

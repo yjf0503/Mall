@@ -8,9 +8,11 @@
 //导航条控制器
 class NavAction extends Action
 {
+    private $_brand = null;
     public function __construct()
     {
         parent::__construct();
+        $this->_brand = new BrandModel();
     }
 
     public function index()
@@ -39,6 +41,7 @@ class NavAction extends Action
         }
         if(isset($_GET['id']))
         {
+            $this->_tpl->assign('AllBrand',Tool::setFormItem($this->_brand->findNavBrand(),'id','name'));
             $this->_tpl->assign('OneNav',$this->_model->findOne());
         }
         $this->_tpl->display(SMARTY_ADMIN.'nav/add.tpl');
@@ -59,6 +62,8 @@ class NavAction extends Action
         }
         if(isset($_GET['id']))
         {
+            $this->_tpl->assign('selectedBrand',$this->_model->findUpdateBrand());
+            $this->_tpl->assign('AllBrand',Tool::setFormItem($this->_brand->findNavBrand(),'id','name'));
             $this->_tpl->assign('OneNav',$this->_model->findOne());
             $this->_tpl->display(SMARTY_ADMIN.'nav/update.tpl');
         }

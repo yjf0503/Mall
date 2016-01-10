@@ -10,7 +10,7 @@ class NavModel extends Model{
     public function __construct()
     {
         parent::__construct();
-        $this->_fields = array('id','name','info','sort','sid');
+        $this->_fields = array('id','name','info','sort','sid','brand');
         $this->_tables = array(DB_PREFIX.'nav');
         $this->_check = new NavCheck();
         list(
@@ -22,6 +22,12 @@ class NavModel extends Model{
             isset($_GET['sid'])?$_GET['sid']:0,
             isset($_POST['name'])?$_POST['name']:null
         ));
+    }
+
+    public function findUpdateBrand()
+    {
+        $_oneBrand = parent::select(array('brand'),array('where'=>array("id='{$this->_R['id']}'")));
+        return unserialize(htmlspecialchars_decode($_oneBrand[0]->brand));
     }
 
     public function findAddGoodsNav()
@@ -76,9 +82,28 @@ class NavModel extends Model{
 
     public function findAll()
     {
-        $this->_tables = array(DB_PREFIX.'nav');
-        return parent::select(array('id','info','name','sort'),
+        $_allNav = parent::select(array('id','info','name','sort','brand'),
             array('where'=>array("sid='{$this->_R['sid']}'"),'limit'=>$this->_limit,'order'=>'sort ASC'));
+        $this->_tables = array(DB_PREFIX.'brand');
+        $_allBrand = Tool::setFormItem(parent::select(array('id','name')),'id','name');
+        foreach($_allNav as $_key=>$_value)
+        {
+            if(Validate::isNullString($_value->brand))
+            {
+                $_value->brand = '其他品牌';
+            }
+            else
+            {
+                $_tempArr = unserialize(htmlspecialchars_decode($_value->brand));
+                $_value->brand = '';
+                foreach($_tempArr as $_k=>$_v)
+                {
+                    $_value->brand .= $_allBrand[$_v].',';
+                }
+                $_value->brand = substr($_value->brand,0,-1);
+            }
+        }
+        return $_allNav;
     }
 
     public function findOne()
@@ -93,7 +118,7 @@ class NavModel extends Model{
         {
             $this->_check->error();
         }
-        return parent::select(array('id','name','info'),
+        return parent::select(array('id','name','info','sid'),
                               array('where'=>$_where,'limit'=>'1'));
     }
 
@@ -106,6 +131,10 @@ class NavModel extends Model{
         }
         $_addData = $this->getRequest()->filter($this->_fields);
         $_addData['sort'] = $this->nextId();
+        if(isset($_addData['brand']))
+        {
+            $_addData['brand'] = serialize($_addData['brand']);
+        }
         return parent::add($_addData);
     }
 
@@ -121,6 +150,14 @@ class NavModel extends Model{
             $this->_check->error();
         }
         $_updateData = $this->getRequest()->filter($this->_fields);
+        if(isset($_updateData['brand']))
+        {
+            $_updateData['brand'] = serialize($_updateData['brand']);
+        }
+        else
+        {
+            $_updateData['brand'] = '';
+        }
         return parent::update($_where,$_updateData);
     }
 

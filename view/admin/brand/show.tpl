@@ -15,7 +15,7 @@
 	<table>
 		<tr><th>品牌名称</th><th>官方网站</th><th>品牌简介</th><th>操作</th></tr>
 		{foreach from=$AllBrand key=key item=value}
-		<tr><td>{$value->name}</td><td><a href="{$value->url}">{$value->url}</a></td><td>{$value->info}</td><td><a href="?a=brand&m=update&id={$value->id}"><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a> <a href="?a=brand&m=delete&id={$value->id}" onclick="return confirm('你真的要删除这个品牌吗？') ? true : false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
+		<tr><td>{$value->name}</td><td><a href="http://{$value->url}">{$value->url}</a></td><td>{$value->info}</td><td><a href="?a=brand&m=update&id={$value->id}"><img src="view/admin/images/edit.gif" alt="编辑" title="编辑" /></a> <a href="?a=brand&m=delete&id={$value->id}" onclick="return confirm('你真的要删除这个品牌吗？') ? true : false"><img src="view/admin/images/drop.gif" alt="删除" title="删除" /></a></td></tr>
 		{foreachelse}
 		<tr><td colspan="4">没有任何品牌</td></tr>
 		{/foreach}

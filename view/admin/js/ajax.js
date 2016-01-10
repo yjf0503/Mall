@@ -38,14 +38,14 @@ function AjaxObj() {
         this.Request(cfg.method||"POST",cfg.url||"",cfg.data,function(req){
             if(req.readyState==4){
                 if(req.status==200||req.status==0){
-                     var obj = null;
-                     var text = req.responseText;
-                     eval("obj = "+ text);
-                     cfg.success.call(cfg.soap||this,obj);
+                    var obj = null;
+                    var text = req.responseText;
+                    obj = '' + text;
+                    cfg.success.call(cfg.soap||this,obj);
                     return;
                 }else{
-                     cfg.failure.call(cfg.soap||this,"错误!");
-                     return;
+                    cfg.failure.call(cfg.soap||this,"错误!");
+                    return;
                 }
             }
         });

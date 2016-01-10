@@ -9,10 +9,12 @@
 class GoodsAction extends Action
 {
     private $_nav = null;
+    private $_brand = null;
     public function __construct()
     {
         parent::__construct();
         $this->_nav = new NavModel();
+        $this->_brand = new BrandModel();
     }
 
     public function index()
@@ -45,5 +47,10 @@ class GoodsAction extends Action
                 $this->_redirect->error('导航删除失败');
             }
         }
+    }
+
+    public function getBrand()
+    {
+        echo $this->_brand->findGoodsBrand();
     }
 }

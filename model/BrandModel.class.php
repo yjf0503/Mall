@@ -12,12 +12,37 @@ class BrandModel extends Model {
 		$this->_fields = array( 'id','name','info','url','reg_time');
 		$this->_tables = array( DB_PREFIX . 'brand' );
 		$this->_check  = new BrandCheck();
-		list( $this->_R['id'],$this->_R['name']) = $this->getRequest()->getParam( array( isset( $_POST['id'] ) ? $_GET['id'] : null,isset( $_POST['name'] ) ? $_POST['name'] : null ) );
+		list( $this->_R['id'],$this->_R['name']) = $this->getRequest()->getParam( array( isset( $_GET['id'] ) ? $_GET['id'] : null,isset( $_POST['name'] ) ? $_POST['name'] : null ) );
+	}
+
+	public function findGoodsBrand()
+	{
+		$this->_tables = array(DB_PREFIX.'nav' );
+		$_oneBrand = parent::select(array('brand'),array('where'=>array("id='{$this->_R['id']}'")));
+		if(Validate::isNullString($_oneBrand[0]->brand))
+		{
+			return '-1:其他品牌';
+		}
+		$_brandId = implode(',',unserialize(htmlspecialchars_decode($_oneBrand[0]->brand)));
+		$this->_tables = array( DB_PREFIX . 'brand' );
+		$_brand = parent::select(array('id','name'),array('where'=>array("id in ($_brandId)")));
+		$_brandStr = '';
+		foreach($_brand as $_key=>$_value)
+		{
+			$_brandStr .= $_value->id.':'.$_value->name.';';
+		}
+		$_brandStr = substr($_brandStr,0,-1);
+		return $_brandStr;
 	}
 
 	public function findAll()
 	{
-		return parent::select(array('id','name','url','info'),array('order'=>'reg_time DESC'));
+		return parent::select(array('id','name','url','info'),array('limit'=>$this->_limit,'order'=>'reg_time DESC'));
+	}
+
+	public function findNavBrand()
+	{
+		return parent::select(array('id','name'));
 	}
 
 	public function total()

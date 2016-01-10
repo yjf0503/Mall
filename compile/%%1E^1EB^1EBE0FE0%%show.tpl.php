@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-09 13:53:32
+<?php /* Smarty version 2.6.26, created on 2016-01-10 19:17:59
          compiled from admin/nav/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,18 +10,20 @@
 </head>
 <body>
 
-<h2><a href="?a=nav&m=add">添加导航</a>商品 -- 导航条列表</h2>
+<h2><a href="?a=nav&m=add<?php if ($this->_tpl_vars['OneNav']): ?>&id=<?php echo $this->_tpl_vars['OneNav'][0]->id; ?>
+<?php endif; ?>">添加导航</a>商品 -- 导航条列表</h2>
 
 <div id="list">
 	<form method="post" action="?a=nav&m=sort">
 		<table>
-			<tr><th>名称</th><th>简介</th><th>子类</th><th>排序</th><th>操作</th></tr>
+			<tr><th>名称</th><th>简介</th><th><?php if ($this->_tpl_vars['OneNav']): ?>关联品牌<?php else: ?>子类<?php endif; ?></th><th>排序</th><th>操作</th></tr>
 			<?php $_from = $this->_tpl_vars['AllNav']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
 				<tr><td><?php echo $this->_tpl_vars['value']->name; ?>
 </td><td><?php echo $this->_tpl_vars['value']->info; ?>
-</td><td><?php if ($this->_tpl_vars['OneNav']): ?>无<?php else: ?><a href="?a=nav&sid=<?php echo $this->_tpl_vars['value']->id; ?>
+</td><td><?php if ($this->_tpl_vars['OneNav']): ?><?php echo $this->_tpl_vars['value']->brand; ?>
+<?php else: ?><a href="?a=nav&sid=<?php echo $this->_tpl_vars['value']->id; ?>
 ">查看</a> | <a href="?a=nav&m=add&id=<?php echo $this->_tpl_vars['value']->id; ?>
 ">添加</a><?php endif; ?> </td><td><input type="text" name="sort[<?php echo $this->_tpl_vars['value']->id; ?>
 ]" class="sort" value="<?php echo $this->_tpl_vars['value']->sort; ?>

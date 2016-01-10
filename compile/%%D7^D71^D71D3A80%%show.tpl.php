@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-10 14:55:21
+<?php /* Smarty version 2.6.26, created on 2016-01-10 18:34:44
          compiled from admin/brand/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,7 +20,7 @@
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
 		<tr><td><?php echo $this->_tpl_vars['value']->name; ?>
-</td><td><a href="<?php echo $this->_tpl_vars['value']->url; ?>
+</td><td><a href="http://<?php echo $this->_tpl_vars['value']->url; ?>
 "><?php echo $this->_tpl_vars['value']->url; ?>
 </a></td><td><?php echo $this->_tpl_vars['value']->info; ?>
 </td><td><a href="?a=brand&m=update&id=<?php echo $this->_tpl_vars['value']->id; ?>
