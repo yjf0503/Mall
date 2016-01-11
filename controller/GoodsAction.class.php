@@ -19,20 +19,49 @@ class GoodsAction extends Action
 
     public function index()
     {
+        parent::page();
+        $this->_tpl->assign('AllGoods',$this->_model->findAll());
         $this->_tpl->display(SMARTY_ADMIN.'goods/show.tpl');
     }
 
     public function add()
     {
+        if (isset($_POST['send']))
+        {
+            if($this->_model->add())
+            {
+                $this->_redirect->succ('?a=goods','商品新增成功');
+            }
+            else
+            {
+                $this->_redirect->error('商品新增失败');
+            }
+        }
         $this->_tpl->assign('addNav',$this->_nav->findAddGoodsNav());
         $this->_tpl->display(SMARTY_ADMIN.'goods/add.tpl');
     }
 
     public function update()
     {
-        $this->_tpl->display(SMARTY_ADMIN.'goods/update.tpl');
+        if(isset($_POST['send']))
+        {
+            if($this->_model->update())
+            {
+                $this->_redirect->succ(Tool::getPrevPage(),'商品修改成功');
+            }
+            else
+            {
+                $this->_redirect->error('商品修改失败');
+            }
+        }
+        if(isset($_GET['id']))
+        {
+            $this->_tpl->assign('addNav',$this->_nav->findAddGoodsNav());
+            $this->_tpl->assign('bool',array(1=>'是',2=>'否'));
+            $this->_tpl->assign('OneGoods', $this->_model->findOne());
+            $this->_tpl->display(SMARTY_ADMIN.'goods/update.tpl');
+        }
     }
-
 
     public function delete()
     {
@@ -40,11 +69,11 @@ class GoodsAction extends Action
         {
             if($this->_model->delete())
             {
-                $this->_redirect->succ(Tool::getPrevPage(),'导航删除成功');
+                $this->_redirect->succ(Tool::getPrevPage(),'商品删除成功');
             }
             else
             {
-                $this->_redirect->error('导航删除失败');
+                $this->_redirect->error('商品删除失败');
             }
         }
     }
@@ -52,5 +81,24 @@ class GoodsAction extends Action
     public function getBrand()
     {
         echo $this->_brand->findGoodsBrand();
+    }
+
+    //ajax
+    public function isSn()
+    {
+        $this->_model->isSn();
+    }
+
+    public function isUp()
+    {
+       if( $this->_model->isUp())
+       {
+           $this->_redirect->succ(Tool::getPrevPage());
+       }
+    }
+
+    public function isUpdateSn()
+    {
+        $this->_model->isUpdateSn();
     }
 }

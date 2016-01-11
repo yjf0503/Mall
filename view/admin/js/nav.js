@@ -2,7 +2,8 @@ function updateNav()
 {
 	var fm = document.update;
 
-	if (fm.info.value.length > 200) {
+	if (fm.info.value.length > 200)
+	{
 		alert('导航简介不得大于200位！');
 		fm.info.focus();
 		return false;

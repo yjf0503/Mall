@@ -21,7 +21,7 @@ class BrandModel extends Model {
 		$_oneBrand = parent::select(array('brand'),array('where'=>array("id='{$this->_R['id']}'")));
 		if(Validate::isNullString($_oneBrand[0]->brand))
 		{
-			return '-1:其他品牌';
+			return '0:其他品牌';
 		}
 		$_brandId = implode(',',unserialize(htmlspecialchars_decode($_oneBrand[0]->brand)));
 		$this->_tables = array( DB_PREFIX . 'brand' );
@@ -29,7 +29,7 @@ class BrandModel extends Model {
 		$_brandStr = '';
 		foreach($_brand as $_key=>$_value)
 		{
-			$_brandStr .= $_value->id.':'.$_value->name.';';
+			$_brandStr .= $_value->id.':'.$_value->name.':';
 		}
 		$_brandStr = substr($_brandStr,0,-1);
 		return $_brandStr;
