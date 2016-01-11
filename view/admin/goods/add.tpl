@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="view/admin/style/goods.css" />
 	<script type="text/javascript" src="view/admin/js/ajax.js"></script>
 	<script type="text/javascript" src="view/admin/js/goods.js"></script>
-</head>
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+ </head>
 <body>
 
 <h2><a href="?a=goods">返回商品列表</a>商品 -- 添加商品</h2>
@@ -27,6 +28,12 @@
 				<option value="0" selected="selected">--请选择一个商品的品牌--</option>
 			</select> <span class="red">[必填]</span>
 		</dd>
+		<dd>
+			上传图片：<input type="text" name="thumbnail" class="text" readonly="readonly" />
+			<input type="button" value="上传产品图" onclick="centerWindow('?a=call&m=upfile&type=content','upfile','400','150')" />
+			<img name="pic" style="display:none;" /> ( * 保存图片完整性，最佳尺寸为：300 * 300  必须是jpg,gif,png，并且200k内)
+		</dd>
+		<dd><textarea id="TextArea1" name="content" class="ckeditor"></textarea></dd>
 	</dl>
 </form>
 

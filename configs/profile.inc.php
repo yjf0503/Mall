@@ -20,4 +20,6 @@ define('DB_PREFIX','mall_');
 
 //系统参数设置
 define('PAGE_SIZE',10);
+define('UPDIR','uploads/');
+define('MARK',ROOT_PATH.'/view/admin/images/yc.png');
 ?>
