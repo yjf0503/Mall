@@ -53,14 +53,16 @@
 	</div>
 	<h2>商品列表</h2>
 	<div class="pro">
-		<dl>
-			<dt><a href="?a=details"><img src="view/default/images/pro_list_demo.jpg" alt="连衣裙"></a></dt>
-			<dd class="price"><strong>$158.00</strong><del>$258.00</del></dd>
-			<dd class="title"><a href="">连衣裙</a></dd>
-			<dd class="comment"><a href="">已有34人评价</a></dd>
-			<dd class="buy">购买 | 收藏 | 比较</dd>
-		</dl>
-
+		{foreach from=$ListGoods key=key item=value}
+			<dl>
+				<dt><a href="?a=details"><img src="{$value->thumbnail2}" alt="连衣裙"></a></dt>
+				<dd class="price"><strong>￥{$value->price_sale}</strong><del>$258.00</del></dd>
+				<dd class="title"><a href="">{$value->name}</a></dd>
+				<dd class="comment"><a href="">已有34人评价</a></dd>
+				<dd class="buy">购买 | 收藏 | 比较</dd>
+			</dl>
+		{/foreach}
+		<div id="page">{$page}</div>
 	</div>
 </div>
 </body>

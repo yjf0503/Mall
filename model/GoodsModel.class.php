@@ -56,9 +56,61 @@ class GoodsModel extends Model {
 			array('where'=>$_where, 'limit'=>'1'));
 	}
 
-	public function total( Array $_param = array() )
+	public function findListGoods()
 	{
-		return parent::total();
+		$_allGoods = parent::select(array('id','name','thumbnail','price_sale','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
+
+		foreach($_allGoods as $_value)
+		{
+			if(Validate::isNullString($_value->thumbnail2))
+			{
+				$_img = new Image($_value->thumbnail);
+				$_img->thumb(220,220);
+				$_img->out('220x220');
+				$_value->thumbnail2 = $_img->getPath();
+				parent::update(array("id='$_value->id'"), array('thumbnail2'=>$_img->getPath()));
+			}
+		}
+		return $_allGoods;
+	}
+
+	public function total()
+	{
+		if(Validate::isNullString($this->_R['id']))
+		{
+			return parent::total();
+		}
+		else
+		{
+			return parent::total(array('where'=>array('nav in('.$this->getNavId().')')));
+		}
+
+	}
+
+	private function getNavId()
+	{
+		$this->_tables = array(DB_PREFIX.'nav');
+		//商品副类id数组
+		$_idArr = parent::select(array('id'),array('where'=>array("sid='{$this->_R['id']}'")));
+		$_id = '';
+
+		//副类处理
+		if(Validate::isNullArray($_idArr))
+		{
+			$_id = $this->_R['id'];
+		}
+		//主类处理
+		else
+		{
+			foreach($_idArr as $_key=>$_value)
+			{
+				$_id .= $_value->id.',';
+			}
+			$_id = substr($_id,0,-1);
+		}
+		$this->_tables = array(DB_PREFIX.'goods');
+
+		return $_id;
 	}
 
 	public function add()

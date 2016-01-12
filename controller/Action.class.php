@@ -19,8 +19,12 @@ class Action
         $this->_redirect = Redirect::getInstance($this->_tpl);
     }
 
-    protected function page($_pagesize = PAGE_SIZE)
+    protected function page($_pagesize = PAGE_SIZE,$_model = null)
     {
+        if(!Validate::isNullString($_model))
+        {
+            $this->_model = $_model;
+        }
         $_page = new Page($this->_model->total(),$_pagesize);
         $this->_model->setLimit($_page->getLimit());
         $this->_tpl->assign('page',$_page->showpage());
