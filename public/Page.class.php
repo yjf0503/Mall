@@ -110,6 +110,15 @@ class Page
 			return ' <a href="'.$this->_url.'">1</a> ...';
 		}
 	}
+
+	//尾页
+	private function last()
+	{
+		if ($this->_pagenum - $this->_page > $this->_bothnum)
+		{
+			return ' ...<a href="'.$this->_url.'&page='.$this->_pagenum.'">'.$this->_pagenum.'</a> ';
+		}
+	}
 	
 	//上一页
 	private function prev()
@@ -131,14 +140,7 @@ class Page
 		return ' <a href="'.$this->_url.'&page='.($this->_page+1).'">下一页</a> ';
 	}
 	
-	//尾页
-	private function last()
-	{
-		if ($this->_pagenum - $this->_page > $this->_bothnum)
-		{
-			return ' ...<a href="'.$this->_url.'&page='.$this->_pagenum.'">'.$this->_pagenum.'</a> ';
-		}
-	}
+
 	
 	//分页信息
 	public function showpage()

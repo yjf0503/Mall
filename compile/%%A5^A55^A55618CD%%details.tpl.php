@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-09 11:54:13
+<?php /* Smarty version 2.6.26, created on 2016-01-12 21:30:22
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,13 +17,15 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="sait">
 	当前位置：<a href="./">首页</a>
-	<?php $_from = $this->_tpl_vars['FrontNav'][0]->sait; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+	<?php $_from = $this->_tpl_vars['FrontNav'][0]->site; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-	 &gt; <a href="?a=list&id=<?php echo $this->_tpl_vars['key']; ?>
+	 &gt; <a href="?a=list&navid=<?php echo $this->_tpl_vars['key']; ?>
 "><?php echo $this->_tpl_vars['value']; ?>
 </a>
 	<?php endforeach; endif; unset($_from); ?>
+	&gt; <?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+
 </div>
 
 <div id="sidebar">
@@ -33,7 +35,7 @@ unset($_smarty_tpl_vars);
 		<?php $_from = $this->_tpl_vars['FrontNav'][0]->child; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-		<li><a href="?a=list&id=<?php echo $this->_tpl_vars['value']->id; ?>
+		<li><a href="?a=list&navid=<?php echo $this->_tpl_vars['value']->id; ?>
 "><?php echo $this->_tpl_vars['value']->name; ?>
 <span class="gray">(1000)</span></a></li>
 		<?php endforeach; endif; unset($_from); ?>
@@ -79,23 +81,32 @@ unset($_smarty_tpl_vars);
 </div>
 
 <div id="main">
-	<h2>春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</h2>
+	<h2><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+</h2>
 	<dl class="pic">
-		<dt><a href="###"><img src="view/default/images/pro_details.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
+		<dt><a href="###"><img src="<?php echo $this->_tpl_vars['FrontGoods'][0]->thumbnail; ?>
+" alt="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+" title="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+" /></a></dt>
 		<dd>分享至：新浪微博 | 腾讯微博 | 人人网 | 开心网</dd>
 	</dl>
 	<dl class="text">
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd>售　　价：￥158.00</dd>
-		<dd><img src="view/default/images/buy.gif" alt="购买" title="购买" /> <img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+		<dd>售　　价：<span class="sale">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
+</span><span class="market">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_market; ?>
+</span></dd>
+		<dd>商品编号：<?php echo $this->_tpl_vars['FrontGoods'][0]->sn; ?>
+</dd>
+		<dd>所属品牌：<?php echo $this->_tpl_vars['FrontGoods'][0]->brandname; ?>
+</dd>
+		<dd>销 售 量：<span class="sale_num">136</span> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
+</dd>
+		<dd>重　　量：<?php echo $this->_tpl_vars['FrontGoods'][0]->weight; ?>
+ kg <?php if ($this->_tpl_vars['FrontGoods'][0]->is_freight == 1): ?><span class="gray">(免运费)</span><?php endif; ?></dd>
+		<dd>数　　量：<input type="text" value="1" class="num" name="num" /> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
+ <span class="gray">(目前库存：<?php echo $this->_tpl_vars['FrontGoods'][0]->inventory; ?>
+<?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
+)</span></dd>
+		<dd class="buy_button"><img src="view/default/images/buy.gif" alt="购买" title="购买" /> <img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
 	</dl>
 	<div class="content">
 		<ul>
@@ -105,7 +116,8 @@ unset($_smarty_tpl_vars);
 			<li id="button4" onclick="channel(4)">售后服务</li>
 		</ul>
 		<div class="c1" id="c1" style="display:block;">
-			商品详情
+			<?php echo $this->_tpl_vars['FrontGoods'][0]->content; ?>
+
 		</div>
 		<div class="c2" id="c2" style="display:none;">
 			评价列表

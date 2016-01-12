@@ -15,10 +15,12 @@ class NavModel extends Model{
         $this->_check = new NavCheck();
         list(
             $this->_R['id'],
+            $this->_R['navid'],
             $this->_R['sid'],
             $this->_R['name'])
             =$this->getRequest()->getParam(array(
             isset($_GET['id'])?$_GET['id']:null,
+            isset($_GET['navid'])?$_GET['navid']:null,
             isset($_GET['sid'])?$_GET['sid']:0,
             isset($_POST['name'])?$_POST['name']:null
         ));
@@ -63,14 +65,13 @@ class NavModel extends Model{
 
     public function findFrontNav()
     {
-        $_where = array("id='{$this->_R['id']}'");
+        $_where = array("id='{$this->_R['navid']}'");
        if(!$this->_check->oneCheck($this,$_where))
        {
            $this->_check->error('./');
        }
         $_allNav = parent::select(array('id','name','sid'));
-
-        return Tree::getInstance()->getTree($_allNav,$this->_R['id']);
+        return Tree::getInstance()->getTree($_allNav,$this->_R['navid']);
 
     }
 

@@ -15,10 +15,14 @@ class GoodsModel extends Model {
 		$this->_check  = new GoodsCheck();
 		list(
 			$this->_R['id'],
+			$this->_R['navid'],
+			$this->_R['goodsid'],
 			$this->_R['sn'],
 			$this->_R['act'])
 				= $this->getRequest()->getParam( array(
 				isset($_GET['id']) ? $_GET['id'] : null,
+				isset($_GET['navid']) ? $_GET['navid'] : null,
+				isset($_GET['goodsid']) ? $_GET['goodsid'] : null,
 				isset($_POST['sn']) ? $_POST['sn'] : null,
 				isset($_GET['act']) ? $_GET['act'] : null
 		) );
@@ -56,9 +60,27 @@ class GoodsModel extends Model {
 			array('where'=>$_where, 'limit'=>'1'));
 	}
 
+	public function findDetailsGoods()
+	{
+		$_oneGoods = parent::select(array('id','brand','name','thumbnail','sn','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
+
+		$this->_tables = array(DB_PREFIX.'brand');
+		$_allBrand = Tool::setFormItem(parent::select(array('id','name')),'id','name');
+		if($_oneGoods[0]->brand == 0)
+		{
+			$_oneGoods[0]->brandname = '其他品牌';
+		}
+		else
+		{
+			$_oneGoods[0]->brandname = $_allBrand[$_oneGoods[0]->brand];
+		}
+		return $_oneGoods;
+	}
+
 	public function findListGoods()
 	{
-		$_allGoods = parent::select(array('id','name','thumbnail','price_sale','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
+		$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
 
 		foreach($_allGoods as $_value)
 		{
@@ -76,7 +98,7 @@ class GoodsModel extends Model {
 
 	public function total()
 	{
-		if(Validate::isNullString($this->_R['id']))
+		if(Validate::isNullString($this->_R['navid']))
 		{
 			return parent::total();
 		}
@@ -91,13 +113,13 @@ class GoodsModel extends Model {
 	{
 		$this->_tables = array(DB_PREFIX.'nav');
 		//商品副类id数组
-		$_idArr = parent::select(array('id'),array('where'=>array("sid='{$this->_R['id']}'")));
+		$_idArr = parent::select(array('id'),array('where'=>array("sid='{$this->_R['navid']}'")));
 		$_id = '';
 
 		//副类处理
 		if(Validate::isNullArray($_idArr))
 		{
-			$_id = $this->_R['id'];
+			$_id = $this->_R['navid'];
 		}
 		//主类处理
 		else
