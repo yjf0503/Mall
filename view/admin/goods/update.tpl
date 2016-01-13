@@ -16,6 +16,8 @@
 <form method="post" name="update" action="?a=goods&m=update&id={$OneGoods[0]->id}">
     <input type="hidden" name="flag" id="flag" />
     <input type="hidden" name="brandid" id="brandid" value="{$OneGoods[0]->brand}" />
+    <input type="hidden" name="attrid" id="attrid" value="{$OneGoods[0]->attr}" />
+
     <dl class="form">
         <dd>商品类型：<select name="nav" id="nav">
                 <option value="-1" selected="selected">--请选择一个商品的类型--</option>

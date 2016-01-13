@@ -10,11 +10,14 @@ class GoodsAction extends Action
 {
     private $_nav = null;
     private $_brand = null;
+    private $_attr = null;
+
     public function __construct()
     {
         parent::__construct();
         $this->_nav = new NavModel();
         $this->_brand = new BrandModel();
+        $this->_attr = new AttrModel();
     }
 
     public function index()
@@ -81,6 +84,11 @@ class GoodsAction extends Action
     public function getBrand()
     {
         echo $this->_brand->findGoodsBrand();
+    }
+
+    public function getAttr()
+    {
+        echo $this->_attr->findGoodsAttr();
     }
 
     //ajax

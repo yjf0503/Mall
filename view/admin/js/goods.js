@@ -1,23 +1,15 @@
-/**
- * Created by 杰夫 on 2016/1/10.
- */
-window.onload = function ()
-{
+window.onload = function () {
     var nav = $('nav');
     var brand = $('brand');
-    nav.onchange = function ()
-    {
-        if(this.value == -1)
-        {
+    nav.onchange = function () {
+        if (this.value == -1) {
             brand.options.length = 1;
-        }
-        else
-        {
+        } else {
             changeNav(this.value);
+            getAttr(this.value);
         }
     };
 };
-
 
 function changeNav(id){
     var brand = $('brand');
@@ -40,73 +32,114 @@ function changeNav(id){
     });
 }
 
-function centerWindow(url, name, width, height)
-{
+function getAttr(id) {
+    var ajax = new AjaxObj();
+    ajax.swRequest({
+        method:"GET",
+        sync:false,
+        url:'?a=goods&m=getAttr&id='+id,
+        success: function(msg) {
+
+            var ddRe = document.getElementsByTagName('dd');
+            for (var i = ddRe.length - 1; i >= 0; i --) {
+                if (ddRe[i].className == 'tmp') {
+                    ddRe[i].parentNode.removeChild(ddRe[i]);
+                }
+            }
+
+            var attrArr = msg.split(';');
+            var ddLoction = document.getElementsByTagName('dd')[4];
+
+            for (var i = 0; i < attrArr.length; i ++) {
+                var attrName = attrArr[i].substr(0, attrArr[i].indexOf(':'));
+                var attrNamePrototype = attrName;
+                if (attrName.length == 2) {
+                    attrName = attrName.charAt(0) + '　　' + attrName.charAt(1);
+                } else if (attrName.length == 3) {
+                    attrName = attrName.charAt(0) + ' ' + attrName.charAt(1) + ' ' + attrName.charAt(2);
+                }
+
+                var attrValueArr = attrArr[i].substr(attrArr[i].indexOf(':') + 1).split('|');
+
+                var dd = document.createElement('dd');
+                var addAttrName = document.createTextNode(attrName + '：');
+                dd.className = 'tmp';
+                dd.appendChild(addAttrName);
+                for (var j = 0; j < attrValueArr.length; j ++) {
+                    var input = document.createElement('input');
+                    var inputText = document.createTextNode(attrValueArr[j] + ' ');
+                    input.type = 'checkbox';
+                    dd.appendChild(input);
+                    dd.appendChild(inputText);
+                    input.name = 'attr['+attrNamePrototype+'][]';
+                    input.value = attrValueArr[j];
+                    input.checked = true;
+                }
+                ddLoction.parentNode.insertBefore(dd, ddLoction);
+            }
+        },
+        failure: function(a) {
+            alert(a);
+        },
+        soap:this
+    });
+}
+
+function centerWindow(url, name, width, height) {
     var left = (screen.width - width) / 2;
     var top = (screen.height - height) / 2 - 50;
     window.open(url, name, 'width='+width+',height='+height+',top='+top+',left='+left);
 }
 
-function $(id)
-{
+function $(id) {
     return document.getElementById(id);
 }
 
-function addGoods()
-{
-    var fm = document.add;
 
-    if(fm.nav.value == -1)
-    {
+function addGoods() {
+    var fm = document.add;
+    if (fm.nav.value == -1) {
         alert('商品类型必须选择！');
-        fm.name.focus();
+        fm.nav.focus();
         return false;
     }
-    if(fm.brand.value == -1)
-    {
+    if (fm.brand.value == -1) {
         alert('商品品牌必须选择！');
-        fm.name.focus();
+        fm.brand.focus();
         return false;
     }
-    if (fm.name.value == '')
-    {
+    if (fm.name.value == '') {
         alert('商品名称不得为空！');
         fm.name.focus();
         return false;
     }
-    if (fm.name.value.length < 2)
-    {
+    if (fm.name.value.length < 2) {
         alert('商品名称不得小于2位！');
         fm.name.focus();
         return false;
     }
-    if (fm.name.value.length > 100)
-    {
+    if (fm.name.value.length > 100) {
         alert('商品名称不得大于100位！');
         fm.name.focus();
         return false;
     }
-    if (fm.sn.value == '')
-    {
+    if (fm.sn.value == '') {
         alert('商品编号不得为空！');
-        fm.name.focus();
+        fm.sn.focus();
         return false;
     }
-    if (fm.sn.value.length < 2)
-    {
+    if (fm.sn.value.length < 2) {
         alert('商品编号不得小于2位！');
-        fm.name.focus();
+        fm.sn.focus();
         return false;
     }
-    if (fm.sn.value.length > 50)
-    {
+    if (fm.sn.value.length > 50) {
         alert('商品编号不得大于50位！');
-        fm.name.focus();
+        fm.sn.focus();
         return false;
     }
-    if(fm.flag.value != '')
-    {
-        alert('商品编号已存在');
+    if (fm.flag.value != '') {
+        alert('商品编号已存在，请换个！');
         fm.name.focus();
         return false;
     }

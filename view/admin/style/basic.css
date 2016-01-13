@@ -42,6 +42,12 @@ a:hover {
 	color:#f60;
 	text-decoration:underline;
 }
+span.red {
+	color:red;
+}
+span.green {
+	color:green;
+}
 dl.form {
 	font-size:12px;
 }
@@ -65,12 +71,6 @@ dl.form textarea {
 }
 dl.form input.submit {
 	cursor:pointer;
-}
-span.red {
-	color:red;
-}
-span.green{
-	color:green;
 }
 #list {
 	margin:0 10px;

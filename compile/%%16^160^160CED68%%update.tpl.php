@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-11 20:56:22
+<?php /* Smarty version 2.6.26, created on 2016-01-13 21:03:39
          compiled from admin/goods/update.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'admin/goods/update.tpl', 24, false),array('function', 'html_radios', 'admin/goods/update.tpl', 43, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'admin/goods/update.tpl', 26, false),array('function', 'html_radios', 'admin/goods/update.tpl', 45, false),)), $this); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,6 +22,9 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_option
     <input type="hidden" name="flag" id="flag" />
     <input type="hidden" name="brandid" id="brandid" value="<?php echo $this->_tpl_vars['OneGoods'][0]->brand; ?>
 " />
+    <input type="hidden" name="attrid" id="attrid" value="<?php echo $this->_tpl_vars['OneGoods'][0]->attr; ?>
+" />
+
     <dl class="form">
         <dd>商品类型：<select name="nav" id="nav">
                 <option value="-1" selected="selected">--请选择一个商品的类型--</option>

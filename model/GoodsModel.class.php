@@ -10,7 +10,7 @@ class GoodsModel extends Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->_fields = array('id','nav','brand','name','keyword','sn','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
+		$this->_fields = array('id','nav','brand','name','keyword','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
 		$this->_tables = array( DB_PREFIX . 'goods' );
 		$this->_check  = new GoodsCheck();
 		list(
@@ -56,13 +56,13 @@ class GoodsModel extends Model {
 		{
 			$this->_check->error();
 		}
-		return parent::select(array('id','name','sn','price_sale','price_market','price_cost','keyword','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','nav','brand'),
+		return parent::select(array('id','name','sn','attr','price_sale','price_market','price_cost','keyword','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','nav','brand'),
 			array('where'=>$_where, 'limit'=>'1'));
 	}
 
 	public function findDetailsGoods()
 	{
-		$_oneGoods = parent::select(array('id','brand','name','thumbnail','sn','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+		$_oneGoods = parent::select(array('id','brand','name','thumbnail','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
 		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
 
 		$this->_tables = array(DB_PREFIX.'brand');
@@ -145,6 +145,18 @@ class GoodsModel extends Model {
 		$_addData = $this->getRequest()->filter($this->_fields);
 		$_addData['date'] = Tool::getDate();
 
+		$_attr = '';
+		foreach($_addData['attr'] as $_key=>$_value)
+		{
+			$_attr .= $_key.':';
+			foreach($_value as $_v)
+			{
+				$_attr .= $_v.'|';
+			}
+			$_attr = substr($_attr,0,-1).';';
+		}
+		$_attr = substr($_attr,0,-1);
+		$_addData['attr'] = $_attr;
 		return parent::add($_addData);
 	}
 
@@ -160,6 +172,18 @@ class GoodsModel extends Model {
 			$this->_check->error();
 		}
 		$_updateData = $this->getRequest()->filter($this->_fields);
+		$_attr = '';
+		foreach($_updateData['attr'] as $_key=>$_value)
+		{
+			$_attr .= $_key.':';
+			foreach($_value as $_v)
+			{
+				$_attr .= $_v.'|';
+			}
+			$_attr = substr($_attr,0,-1).';';
+		}
+		$_attr = substr($_attr,0,-1);
+		$_updateData['attr'] = $_attr;
 		return parent::update($_where,$_updateData);
 	}
 

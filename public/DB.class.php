@@ -102,6 +102,7 @@ class DB
         $_limit = '';
         $_order = '';
         $_where = '';
+        $_like = '';
         if(Validate::isArray($_param) && !Validate::isNullArray($_param))
         {
             $_limit = isset($_param['limit'])?'LIMIT '.$_param['limit']:'';
@@ -115,10 +116,17 @@ class DB
                 }
                 $_where = 'WHERE '.substr($_where, 0, -4);
             }
+            if(isset($_param['like']))
+            {
+                foreach ($_param['like'] as $_key=>$_value)
+                {
+                    $_like = "WHERE $_key LIKE '%$_value%'";
+                }
+            }
         }
         $_selectFields = implode(',',$_field);
         $_table = isset($_tables[1])?$_tables[0].','.$_tables[1]:$_tables[0];
-        $_sql = "SELECT $_selectFields FROM $_table $_where $_order $_limit";
+        $_sql = "SELECT $_selectFields FROM $_table $_where $_like $_order $_limit";
         $_stmt = $this->execute($_sql);
         $_result = array();
         while(!!$_objs = $_stmt->fetchObject())

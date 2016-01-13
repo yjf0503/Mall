@@ -2,14 +2,73 @@ window.onload = function () {
     var nav = $('nav');
     var brand = $('brand');
     changeNav(nav.value);
+    getAttr(nav.value);
     nav.onchange = function () {
         if (this.value == -1) {
             brand.options.length = 1;
         } else {
             changeNav(this.value);
+            getAttr2(nav.value);
         }
     };
 };
+
+function getAttr(id) {
+    var attrid = $('attrid');
+    var ajax = new AjaxObj();
+    ajax.swRequest({
+        method:"GET",
+        sync:false,
+        url:'?a=goods&m=getAttr&id='+id,
+        success: function(msg) {
+
+            var ddRe = document.getElementsByTagName('dd');
+            for (var i = ddRe.length - 1; i >= 0; i --) {
+                if (ddRe[i].className == 'tmp') {
+                    ddRe[i].parentNode.removeChild(ddRe[i]);
+                }
+            }
+
+            var attrArr = msg.split(';');
+            var ddLoction = document.getElementsByTagName('dd')[4];
+
+            for (var i = 0; i < attrArr.length; i ++) {
+                var attrName = attrArr[i].substr(0, attrArr[i].indexOf(':'));
+                var attrNamePrototype = attrName;
+                if (attrName.length == 2) {
+                    attrName = attrName.charAt(0) + '　　' + attrName.charAt(1);
+                } else if (attrName.length == 3) {
+                    attrName = attrName.charAt(0) + ' ' + attrName.charAt(1) + ' ' + attrName.charAt(2);
+                }
+
+                var attrValueArr = attrArr[i].substr(attrArr[i].indexOf(':') + 1).split('|');
+
+                var dd = document.createElement('dd');
+                var addAttrName = document.createTextNode(attrName + '：');
+                dd.className = 'tmp';
+                dd.appendChild(addAttrName);
+                for (var j = 0; j < attrValueArr.length; j ++) {
+                    var input = document.createElement('input');
+                    var inputText = document.createTextNode(attrValueArr[j] + ' ');
+                    input.type = 'checkbox';
+                    dd.appendChild(input);
+                    dd.appendChild(inputText);
+                    input.name = 'attr['+attrNamePrototype+'][]';
+                    input.value = attrValueArr[j];
+                    if(attrid.value.indexOf(attrValueArr[j]) != -1)
+                    {
+                        input.checked = true;
+                    }
+                }
+                ddLoction.parentNode.insertBefore(dd, ddLoction);
+            }
+        },
+        failure: function(a) {
+            alert(a);
+        },
+        soap:this
+    });
+}
 
 function changeNav(id){
     var brand = $('brand');
@@ -28,6 +87,60 @@ function changeNav(id){
                 } else {
                     brand.options.add(new Option(a[i+1], a[i]));
                 }
+            }
+        },
+        failure: function(a) {
+            alert(a);
+        },
+        soap:this
+    });
+}
+
+function getAttr2(id) {
+    var ajax = new AjaxObj();
+    ajax.swRequest({
+        method:"GET",
+        sync:false,
+        url:'?a=goods&m=getAttr&id='+id,
+        success: function(msg) {
+
+            var ddRe = document.getElementsByTagName('dd');
+            for (var i = ddRe.length - 1; i >= 0; i --) {
+                if (ddRe[i].className == 'tmp') {
+                    ddRe[i].parentNode.removeChild(ddRe[i]);
+                }
+            }
+
+            var attrArr = msg.split(';');
+            var ddLoction = document.getElementsByTagName('dd')[4];
+
+            for (var i = 0; i < attrArr.length; i ++) {
+                var attrName = attrArr[i].substr(0, attrArr[i].indexOf(':'));
+                var attrNamePrototype = attrName;
+                if (attrName.length == 2) {
+                    attrName = attrName.charAt(0) + '　　' + attrName.charAt(1);
+                } else if (attrName.length == 3) {
+                    attrName = attrName.charAt(0) + ' ' + attrName.charAt(1) + ' ' + attrName.charAt(2);
+                }
+
+                var attrValueArr = attrArr[i].substr(attrArr[i].indexOf(':') + 1).split('|');
+
+                var dd = document.createElement('dd');
+                var addAttrName = document.createTextNode(attrName + '：');
+                dd.className = 'tmp';
+                dd.appendChild(addAttrName);
+                for (var j = 0; j < attrValueArr.length; j ++) {
+                    var input = document.createElement('input');
+                    var inputText = document.createTextNode(attrValueArr[j] + ' ');
+                    input.type = 'checkbox';
+                    dd.appendChild(input);
+                    dd.appendChild(inputText);
+                    input.name = 'attr['+attrNamePrototype+'][]';
+                    input.value = attrValueArr[j];
+                    input.checked = true;
+
+                }
+                ddLoction.parentNode.insertBefore(dd, ddLoction);
             }
         },
         failure: function(a) {

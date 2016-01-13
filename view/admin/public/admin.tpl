@@ -26,6 +26,7 @@
 		<dt>商品</dt>
 		<dd><a href="?a=nav" target="in">导航条列表</a></dd>
 		<dd><a href="?a=goods" target="in">商品列表</a></dd>
+		<dd><a href="?a=attr" target="in">自定义属性</a></dd>
 		<dd><a href="?a=brand" target="in">品牌列表</a></dd>
 	</dl>
 	<dl style="display:none">
