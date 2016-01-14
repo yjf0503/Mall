@@ -6,6 +6,8 @@
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
 <script type="text/javascript" src="view/default/js/channel.js"></script>
+	<script type="text/javascript" src="view/default/js/attr.js"></script>
+
 </head>
 <body>
 {include file='default/public/header.tpl'}
@@ -65,12 +67,14 @@
 </div>
 
 <div id="main">
+	<input type="hidden" id="attrid" name="attrid" value="{$FrontGoods[0]->attr}"/>
+	<input type="hidden" id="attrtype" name="attrtype" value="{$attrType}"/>
 	<h2>{$FrontGoods[0]->name}</h2>
 	<dl class="pic">
 		<dt><a href="###"><img src="{$FrontGoods[0]->thumbnail}" alt="{$FrontGoods[0]->name}" title="{$FrontGoods[0]->name}" /></a></dt>
 		<dd>分享至：新浪微博 | 腾讯微博 | 人人网 | 开心网</dd>
 	</dl>
-	<dl class="text">
+	<dl id="text" class="text">
 		<dd>售　　价：<span class="sale">￥{$FrontGoods[0]->price_sale}</span><span class="market">￥{$FrontGoods[0]->price_market}</span></dd>
 		<dd>商品编号：{$FrontGoods[0]->sn}</dd>
 		<dd>所属品牌：{$FrontGoods[0]->brandname}</dd>

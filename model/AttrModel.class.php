@@ -15,9 +15,11 @@ class AttrModel extends Model{
         $this->_check = new AttrCheck();
         list(
             $this->_R['id'],
+            $this->_R['goodsid'],
             $this->_R['name'])
             =$this->getRequest()->getParam(array(
             isset($_GET['id'])?$_GET['id']:null,
+            isset($_GET['goodsid'])?$_GET['goodsid']:null,
             isset($_POST['name'])?$_POST['name']:null
         ));
     }
@@ -184,6 +186,30 @@ class AttrModel extends Model{
     public function total()
     {
         return parent::total();
+    }
+
+    public function getAttrType()
+    {
+        $this->_tables = array(DB_PREFIX.'goods');
+        $_oneGoods = parent::select(array('attr'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+        $_attrTypeArr = explode(';',$_oneGoods[0]->attr);
+        $_attrname = '';
+        foreach($_attrTypeArr as $_value)
+        {
+            $_attrname .= mb_substr($_value,0,mb_strpos($_value,':',0,'utf-8'),'utf-8').',';
+        }
+        $_attrname = substr($_attrname,0,-1);
+        $_attrname = str_replace(',',"','",$_attrname);
+        $this->_tables = array(DB_PREFIX.'attr');
+        $_attr = parent::select(array('way'),array('where'=>array("name in ('$_attrname')")));
+
+        $_attrValue = '';
+        foreach($_attr as $_value)
+        {
+            $_attrValue .= $_value->way.'|';
+        }
+        $_attrValue = substr($_attrValue,0,-1);
+        return $_attrValue;
     }
 
     public function isName()

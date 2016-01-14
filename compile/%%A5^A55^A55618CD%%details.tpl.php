@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-12 21:30:22
+<?php /* Smarty version 2.6.26, created on 2016-01-14 19:18:46
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,6 +8,8 @@
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
 <script type="text/javascript" src="view/default/js/channel.js"></script>
+	<script type="text/javascript" src="view/default/js/attr.js"></script>
+
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -81,6 +83,10 @@ unset($_smarty_tpl_vars);
 </div>
 
 <div id="main">
+	<input type="hidden" id="attrid" name="attrid" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->attr; ?>
+"/>
+	<input type="hidden" id="attrtype" name="attrtype" value="<?php echo $this->_tpl_vars['attrType']; ?>
+"/>
 	<h2><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 </h2>
 	<dl class="pic">
@@ -90,7 +96,7 @@ unset($_smarty_tpl_vars);
 " /></a></dt>
 		<dd>分享至：新浪微博 | 腾讯微博 | 人人网 | 开心网</dd>
 	</dl>
-	<dl class="text">
+	<dl id="text" class="text">
 		<dd>售　　价：<span class="sale">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
 </span><span class="market">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_market; ?>
 </span></dd>
