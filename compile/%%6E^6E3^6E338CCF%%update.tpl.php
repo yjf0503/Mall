@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-10 20:10:49
+<?php /* Smarty version 2.6.26, created on 2016-01-15 11:40:51
          compiled from admin/nav/update.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'html_checkboxes', 'admin/nav/update.tpl', 20, false),)), $this); ?>
@@ -27,6 +27,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_checkb
             <dd>关联品牌：<?php echo smarty_function_html_checkboxes(array('options' => $this->_tpl_vars['AllBrand'],'selected' => $this->_tpl_vars['selectedBrand'],'name' => 'brand'), $this);?>
 </dd>
         <?php endif; ?>
+        <dd>价格区间 <?php echo smarty_function_html_checkboxes(array('options' => $this->_tpl_vars['AllPrice'],'selected' => $this->_tpl_vars['selectedPrice'],'name' => 'price'), $this);?>
+</dd>
         <dd><input type="submit" name="send" onclick="return updateNav();" value="修改导航" class="submit" /></dd>
     </dl>
 </form>

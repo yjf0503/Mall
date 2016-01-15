@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff74b8f1-beb9-4b44-8f33-e146cb5e2be7" name="Default" comment="Add the relationship between product categories and brands on back stage">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%A5^A55^A55618CD%%details.tpl.php" afterPath="$PROJECT_DIR$/compile/%%A5^A55^A55618CD%%details.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/DetailsAction.class.php" afterPath="$PROJECT_DIR$/controller/DetailsAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/AttrModel.class.php" afterPath="$PROJECT_DIR$/model/AttrModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/details.tpl" afterPath="$PROJECT_DIR$/view/default/public/details.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%6E^6E3^6E338CCF%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%6E^6E3^6E338CCF%%update.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%97^972^9725C220%%list.tpl.php" afterPath="$PROJECT_DIR$/compile/%%97^972^9725C220%%list.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%E3^E38^E38EEECA%%admin.tpl.php" afterPath="$PROJECT_DIR$/compile/%%E3^E38^E38EEECA%%admin.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%E7^E78^E787F650%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%E7^E78^E787F650%%add.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ListAction.class.php" afterPath="$PROJECT_DIR$/controller/ListAction.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/NavAction.class.php" afterPath="$PROJECT_DIR$/controller/NavAction.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/GoodsModel.class.php" afterPath="$PROJECT_DIR$/model/GoodsModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/NavModel.class.php" afterPath="$PROJECT_DIR$/model/NavModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Tool.class.php" afterPath="$PROJECT_DIR$/public/Tool.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Validate.class.php" afterPath="$PROJECT_DIR$/public/Validate.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/nav/add.tpl" afterPath="$PROJECT_DIR$/view/admin/nav/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/nav/update.tpl" afterPath="$PROJECT_DIR$/view/admin/nav/update.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/admin.tpl" afterPath="$PROJECT_DIR$/view/admin/public/admin.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/list.tpl" afterPath="$PROJECT_DIR$/view/default/public/list.tpl" />
     </list>
     <ignored path="Mall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,32 +38,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AttrModel.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/AttrModel.class.php">
+      <file leaf-file-name="NavModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/NavModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42807627">
-              <caret line="195" column="24" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+            <state vertical-scroll-proportion="-6.857143">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="details.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/default/public/details.tpl">
+      <file leaf-file-name="ListAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/ListAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.25">
-              <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
+            <state vertical-scroll-proportion="-12.464286">
+              <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailsAction.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/DetailsAction.class.php">
+      <file leaf-file-name="Page.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Page.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.25">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state vertical-scroll-proportion="-16.535715">
+              <caret line="82" column="5" selection-start-line="70" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tool.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/Tool.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.464286">
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoodsModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/GoodsModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.071429">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/default/public/list.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.035714">
+              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/admin/price/update.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.857142">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/admin/price/show.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.821428">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/admin/price/add.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32928944">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PriceModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/PriceModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.714286">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,22 +168,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/admin/brand/add.tpl" />
-        <option value="$PROJECT_DIR$/model/Model.class.php" />
-        <option value="$PROJECT_DIR$/view/admin/js/brand.js" />
-        <option value="$PROJECT_DIR$/controller/BrandAction.class.php" />
-        <option value="$PROJECT_DIR$/view/admin/brand/show.tpl" />
-        <option value="$PROJECT_DIR$/view/admin/nav/add.tpl" />
-        <option value="$PROJECT_DIR$/view/admin/nav/show.tpl" />
-        <option value="$PROJECT_DIR$/view/admin/nav/update.tpl" />
-        <option value="$PROJECT_DIR$/view/admin/js/ajax.js" />
-        <option value="$PROJECT_DIR$/controller/IndexAction.class.php" />
-        <option value="$PROJECT_DIR$/view/admin/public/login.tpl" />
         <option value="$PROJECT_DIR$/view/admin/public/upfile.tpl" />
         <option value="$PROJECT_DIR$/controller/CallAction.class.php" />
         <option value="$PROJECT_DIR$/configs/profile.inc.php" />
         <option value="$PROJECT_DIR$/view/admin/style/goods.css" />
-        <option value="$PROJECT_DIR$/controller/NavAction.class.php" />
         <option value="$PROJECT_DIR$/view/admin/js/nav.js" />
         <option value="$PROJECT_DIR$/view/admin/goods/add.tpl" />
         <option value="$PROJECT_DIR$/smarty/plugins/modifier.truncate.php" />
@@ -112,11 +185,7 @@
         <option value="$PROJECT_DIR$/public/Image.class.php" />
         <option value="$PROJECT_DIR$/public/Page.class.php" />
         <option value="$PROJECT_DIR$/view/default/public/header.tpl" />
-        <option value="$PROJECT_DIR$/model/NavModel.class.php" />
-        <option value="$PROJECT_DIR$/view/default/public/list.tpl" />
-        <option value="$PROJECT_DIR$/controller/ListAction.class.php" />
         <option value="$PROJECT_DIR$/view/default/style/details.css" />
-        <option value="$PROJECT_DIR$/view/admin/public/admin.tpl" />
         <option value="$PROJECT_DIR$/view/admin/style/attr.css" />
         <option value="$PROJECT_DIR$/view/admin/js/attr.js" />
         <option value="$PROJECT_DIR$/view/admin/attr/add.tpl" />
@@ -129,11 +198,27 @@
         <option value="$PROJECT_DIR$/view/admin/js/goods.js" />
         <option value="$PROJECT_DIR$/view/admin/goods/update.tpl" />
         <option value="$PROJECT_DIR$/view/admin/js/goods_update.js" />
-        <option value="$PROJECT_DIR$/model/GoodsModel.class.php" />
         <option value="$PROJECT_DIR$/view/default/js/attr.js" />
         <option value="$PROJECT_DIR$/view/default/public/details.tpl" />
         <option value="$PROJECT_DIR$/controller/DetailsAction.class.php" />
         <option value="$PROJECT_DIR$/model/AttrModel.class.php" />
+        <option value="$PROJECT_DIR$/view/admin/public/admin.tpl" />
+        <option value="$PROJECT_DIR$/view/admin/style/price.css" />
+        <option value="$PROJECT_DIR$/public/Validate.class.php" />
+        <option value="$PROJECT_DIR$/check/PriceCheck.class.php" />
+        <option value="$PROJECT_DIR$/controller/PriceAction.class.php" />
+        <option value="$PROJECT_DIR$/view/admin/nav/add.tpl" />
+        <option value="$PROJECT_DIR$/model/PriceModel.class.php" />
+        <option value="$PROJECT_DIR$/view/admin/nav/update.tpl" />
+        <option value="$PROJECT_DIR$/controller/NavAction.class.php" />
+        <option value="$PROJECT_DIR$/public/Tool.class.php" />
+        <option value="$PROJECT_DIR$/model/NavModel.class.php" />
+        <option value="$PROJECT_DIR$/controller/ListAction.class.php" />
+        <option value="$PROJECT_DIR$/model/GoodsModel.class.php" />
+        <option value="$PROJECT_DIR$/view/default/public/list.tpl" />
+        <option value="$PROJECT_DIR$/view/admin/price/update.tpl" />
+        <option value="$PROJECT_DIR$/view/admin/price/show.tpl" />
+        <option value="$PROJECT_DIR$/view/admin/price/add.tpl" />
       </list>
     </option>
   </component>
@@ -147,8 +232,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="670" />
-    <option name="width" value="705" />
+    <option name="x" value="677" />
+    <option name="y" value="1" />
+    <option name="width" value="697" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -213,6 +299,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -356,6 +444,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="price" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -603,8 +713,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -631,19 +739,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\js" />
-      <recent name="D:\Program Files (x86)\wamp\www\Mall\check" />
-      <recent name="D:\Program Files (x86)\wamp\www\Mall\model" />
-      <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\style" />
-      <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\attr" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Program Files (x86)\wamp\www\Mall\view\default" />
       <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\manage" />
       <recent name="D:\Program Files (x86)\wamp\www\Mall\view\default\public" />
       <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\public" />
       <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Files (x86)\wamp\www\Mall\check" />
+      <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\style" />
+      <recent name="D:\Program Files (x86)\wamp\www\Mall\controller" />
+      <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\price" />
+      <recent name="D:\Program Files (x86)\wamp\www\Mall\view\admin\js" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.LevelModel.class.php">
@@ -792,11 +900,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="670" y="0" width="705" height="744" extended-state="0" />
+    <frame x="677" y="1" width="697" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38606676" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3594203" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3154574" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -831,7 +939,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38606676" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3594203" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -872,90 +980,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/configs/profile.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7693662">
-          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/js/nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/nav/add.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="94" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smarty/plugins/modifier.truncate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.214286">
-          <caret line="40" column="106" selection-start-line="40" selection-start-column="106" selection-end-line="40" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/manage/show.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.535714">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/goods/add.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/ManageAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.892858">
-          <caret line="78" column="9" selection-start-line="62" selection-start-column="8" selection-end-line="78" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/goods/show.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33450705">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="9" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322314">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/check/GoodsCheck.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.60714287">
-          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/FileUpload.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4627383">
@@ -967,7 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,13 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/Page.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.237676">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Tree.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="18.392857">
@@ -1013,30 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7359155">
           <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/NavModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.071429">
-          <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/ListAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.142858">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/default/public/list.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="33.92857">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1059,29 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7036395">
           <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/public/admin.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33450705">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/style/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/style/attr.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,13 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/NavAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.044014">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/GoodsAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1149,7 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="86" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1210,7 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="71" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1218,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,46 +1193,197 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/GoodsModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="88.21429">
-          <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/default/js/attr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43471074">
           <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/default/public/details.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.25">
-          <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/DetailsAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.25">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/default/public/details.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6785714">
+          <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/public/admin.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.285714">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/style/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/style/price.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Validate.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.857143">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/check/PriceCheck.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7142856">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/AttrModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42807627">
-          <caret line="195" column="24" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+        <state vertical-scroll-proportion="-3.642857">
+          <caret line="185" column="3" selection-start-line="185" selection-start-column="3" selection-end-line="188" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/nav/show.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/PriceAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.178572">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/nav/add.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.607142">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/nav/update.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.25">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/NavAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7142856">
+          <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/PriceModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.714286">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Page.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.535715">
+          <caret line="82" column="5" selection-start-line="70" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/Tool.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.464286">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/NavModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.857143">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ListAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.464286">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/GoodsModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.071429">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/default/public/list.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.035714">
+          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/price/update.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.857142">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/price/show.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.821428">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin/price/add.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32928944">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
       </provider>

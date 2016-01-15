@@ -19,6 +19,20 @@ class Tool{
         return date('Y-m-d H:i:s');
     }
 
+    //获取地址
+    static public function getUrl()
+    {
+        $_url = $_SERVER["REQUEST_URI"];
+        $_par = parse_url($_url);
+        if (isset($_par['query']))
+        {
+            parse_str($_par['query'],$_query);
+            unset($_query['price']);
+            $_url = $_par['path'].'?'.http_build_query($_query);
+        }
+        return $_url;
+    }
+
     //表单提交字符转义
     static public function setFormString($_string)
     {

@@ -26,6 +26,10 @@ class Validate{
         return empty($_string)?true:false;
     }
 
+    public static function isNumeric($_string)
+    {
+        return is_numeric($_string);
+    }
     //判断字符串长度是否合法
     static public function checkStrLength($_string, $_length, $_flag, $_charset = 'utf-8')
     {

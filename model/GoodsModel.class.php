@@ -18,13 +18,15 @@ class GoodsModel extends Model {
 			$this->_R['navid'],
 			$this->_R['goodsid'],
 			$this->_R['sn'],
-			$this->_R['act'])
+			$this->_R['act'],
+			$this->_R['price'])
 				= $this->getRequest()->getParam( array(
 				isset($_GET['id']) ? $_GET['id'] : null,
 				isset($_GET['navid']) ? $_GET['navid'] : null,
 				isset($_GET['goodsid']) ? $_GET['goodsid'] : null,
 				isset($_POST['sn']) ? $_POST['sn'] : null,
-				isset($_GET['act']) ? $_GET['act'] : null
+				isset($_GET['act']) ? $_GET['act'] : null,
+				isset($_GET['price']) ? $_GET['price'] : null
 		) );
 	}
 
@@ -80,19 +82,38 @@ class GoodsModel extends Model {
 
 	public function findListGoods()
 	{
-		$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
-
-		foreach($_allGoods as $_value)
+		if($this->_R['price'])
 		{
-			if(Validate::isNullString($_value->thumbnail2))
+			$_left = substr($this->_R['price'],0,strpos($this->_R['price'],','));
+			$_right = substr($this->_R['price'],strpos($this->_R['price'],',')+1);
+			if(!Validate::isNumeric($_left) || !Validate::isNumeric($_right))
 			{
-				$_img = new Image($_value->thumbnail);
-				$_img->thumb(220,220);
-				$_img->out('220x220');
-				$_value->thumbnail2 = $_img->getPath();
-				parent::update(array("id='$_value->id'"), array('thumbnail2'=>$_img->getPath()));
+				$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','price_market','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
+
+			}
+			else
+			{
+				$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','price_market','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().') AND price_sale BETWEEN '.$_left.' AND '.$_right.'' ),'order'=>'date DESC'));
+
 			}
 		}
+		else
+		{
+			$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','price_market','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
+
+			foreach($_allGoods as $_value)
+			{
+				if(Validate::isNullString($_value->thumbnail2))
+				{
+					$_img = new Image($_value->thumbnail);
+					$_img->thumb(220,220);
+					$_img->out('220x220');
+					$_value->thumbnail2 = $_img->getPath();
+					parent::update(array("id='$_value->id'"), array('thumbnail2'=>$_img->getPath()));
+				}
+			}
+		}
+
 		return $_allGoods;
 	}
 

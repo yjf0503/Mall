@@ -67,14 +67,30 @@
 	<div class="filter">
 		<p>品牌：<span>全部</span> <a href="###">苹果</a> <a href="###">三星</a> <a href="###">索尼</a> <a href="###">小米</a> <a href="###">华为</a></p>
 		<p>属性：<span>全部</span> <a href="###">属性1</a> <a href="###">属性2</a> <a href="###">属性3</a></p>
-		<p>价格：<span>全部</span> <a href="###">100 - 500</a> <a href="###">501 - 1000</a> <a href="###">1001 - 3000</a></p>
+		{if $FrontPrice[0]->price}
+		<p>价格：
+			{if $smarty.get.price}
+				<a href="{$url}">全部</a>
+				{else}
+				<span>全部</span>
+			{/if}
+
+			{foreach from=$FrontPrice[0]->price  key=key item=value}
+				{if $smarty.get.price == $key}
+					<span>{$value}</span>
+					{else}
+					<a href="{$url}&price={$key}">{$value}</a>
+				{/if}
+			{/foreach}
+		</p>
+		{/if}
 	</div>
 	<h2>商品列表</h2>
 	<div class="pro">
 		{foreach from=$ListGoods key=key item=value}
 			<dl>
 				<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank"><img src="{$value->thumbnail2}" alt="连衣裙" title="连衣裙" /></a></dt>
-				<dd class="price"><strong>￥158.00</strong> <del>￥258.00</del></dd>
+				<dd class="price"><strong>￥{$value->price_sale}</strong> <del>￥{$value->price_market}</del></dd>
 				<dd class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">{$value->name}</a></dd>
 				<dd class="commend"><a href="###">已有34人评价</a></dd>
 				<dd class="buy"><a href="###">购买</a> | <a href="###">收藏</a> | <a href="###">比较</a></dd>

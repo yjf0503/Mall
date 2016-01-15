@@ -10,7 +10,7 @@ class NavModel extends Model{
     public function __construct()
     {
         parent::__construct();
-        $this->_fields = array('id','name','info','sort','sid','brand');
+        $this->_fields = array('id','name','info','sort','sid','brand','price');
         $this->_tables = array(DB_PREFIX.'nav');
         $this->_check = new NavCheck();
         list(
@@ -30,6 +30,12 @@ class NavModel extends Model{
     {
         $_oneBrand = parent::select(array('brand'),array('where'=>array("id='{$this->_R['id']}'")));
         return unserialize(htmlspecialchars_decode($_oneBrand[0]->brand));
+    }
+
+    public function findUpdatePrice()
+    {
+        $_onePrice = parent::select(array('price'),array('where'=>array("id='{$this->_R['id']}'")));
+        return unserialize(htmlspecialchars_decode($_onePrice[0]->price));
     }
 
     public function findAddGoodsNav()
@@ -61,6 +67,20 @@ class NavModel extends Model{
         }
 
         return $_mainNav;
+    }
+
+    public function findFrontPrice()
+    {
+        $_onePrice = parent::select(array('price'),array('where'=>array("id='{$this->_R['navid']}'")));
+
+        $_onePrice[0]->price = unserialize(htmlspecialchars_decode($_onePrice[0]->price));
+        foreach($_onePrice[0]->price as $_key=>$_value)
+        {
+            unset($_onePrice[0]->price[$_key]);
+            $_key = str_replace(' - ',',',$_value);
+            $_onePrice[0]->price[$_key] = $_value;
+        }
+        return $_onePrice;
     }
 
     public function findFrontNav()
@@ -135,6 +155,12 @@ class NavModel extends Model{
         if(isset($_addData['brand']))
         {
             $_addData['brand'] = serialize($_addData['brand']);
+
+        }
+        if(isset($_addData['price']))
+        {
+            $_addData['price'] = serialize($_addData['price']);
+
         }
         return parent::add($_addData);
     }
@@ -158,6 +184,14 @@ class NavModel extends Model{
         else
         {
             $_updateData['brand'] = '';
+        }
+        if(isset($_updateData['price']))
+        {
+            $_updateData['price'] = serialize($_updateData['price']);
+        }
+        else
+        {
+            $_updateData['price'] = '';
         }
         return parent::update($_where,$_updateData);
     }

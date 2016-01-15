@@ -19,6 +19,7 @@
         {if $OneNav[0]->sid != 0}
             <dd>关联品牌：{html_checkboxes options=$AllBrand selected=$selectedBrand name=brand}</dd>
         {/if}
+        <dd>价格区间 {html_checkboxes options=$AllPrice selected=$selectedPrice name=price}</dd>
         <dd><input type="submit" name="send" onclick="return updateNav();" value="修改导航" class="submit" /></dd>
     </dl>
 </form>

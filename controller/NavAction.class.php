@@ -9,10 +9,12 @@
 class NavAction extends Action
 {
     private $_brand = null;
+    private $_price = null;
     public function __construct()
     {
         parent::__construct();
         $this->_brand = new BrandModel();
+        $this->_price = new PriceModel();
     }
 
     public function index()
@@ -44,6 +46,7 @@ class NavAction extends Action
             $this->_tpl->assign('AllBrand',Tool::setFormItem($this->_brand->findNavBrand(),'id','name'));
             $this->_tpl->assign('OneNav',$this->_model->findOne());
         }
+        $this->_tpl->assign('AllPrice',Tool::setFormItem($this->_price->findAllNav(),'value','value'));
         $this->_tpl->display(SMARTY_ADMIN.'nav/add.tpl');
     }
 
@@ -62,6 +65,8 @@ class NavAction extends Action
         }
         if(isset($_GET['id']))
         {
+            $this->_tpl->assign('AllPrice',Tool::setFormItem($this->_price->findAllNav(),'value','value'));
+            $this->_tpl->assign('selectedPrice',$this->_model->findUpdatePrice());
             $this->_tpl->assign('selectedBrand',$this->_model->findUpdateBrand());
             $this->_tpl->assign('AllBrand',Tool::setFormItem($this->_brand->findNavBrand(),'id','name'));
             $this->_tpl->assign('OneNav',$this->_model->findOne());
