@@ -10,7 +10,7 @@
 {include file='default/public/header.tpl'}
 <div id="sait">
 	当前位置：<a href="./">首页</a>
-	{foreach from=$FrontNav[0]->site key=key item=value}
+	{foreach from=$FrontNav[0]->sait key=key item=value}
 		&gt; <a href="?a=list&navid={$key}">{$value}</a>
 	{/foreach}
 </div>
@@ -65,25 +65,45 @@
 <div id="main">
 	<h2>商品筛选</h2>
 	<div class="filter">
-		<p>品牌：<span>全部</span> <a href="###">苹果</a> <a href="###">三星</a> <a href="###">索尼</a> <a href="###">小米</a> <a href="###">华为</a></p>
-		<p>属性：<span>全部</span> <a href="###">属性1</a> <a href="###">属性2</a> <a href="###">属性3</a></p>
-		{if $FrontPrice[0]->price}
-		<p>价格：
-			{if $smarty.get.price}
-				<a href="{$url}">全部</a>
-				{else}
-				<span>全部</span>
-			{/if}
-
-			{foreach from=$FrontPrice[0]->price  key=key item=value}
-				{if $smarty.get.price == $key}
+		<!--品牌筛选-->
+		<p>品牌：{if $smarty.get.brand}<a href="{$url}&brand=">全部</a>{else}<span>全部</span>{/if}
+			{foreach from=$FrontBrand key=key item=value}
+				{if $smarty.get.brand == $key}
 					<span>{$value}</span>
-					{else}
-					<a href="{$url}&price={$key}">{$value}</a>
+				{else}
+					<a href="{$url}&brand={$key}">{$value}</a>
 				{/if}
 			{/foreach}
 		</p>
-		{/if}
+		<!--属性筛选-->
+		{foreach from=$FrontAttr key=key item=value}
+			<p>
+				{$key}：{if $smarty.get.attr}<a href="{$url}&attr=">全部</a>{else}<span>全部</span>{/if}
+				{foreach from=$value key=k item=v}
+					{assign var=attr value=$key:$v}
+					{if $smarty.get.attr == $attr}
+						<span>{$v}</span>
+					{else}
+						<a href="{$url}&attr={$key}:{$v}">{$v}</a>
+					{/if}
+				{/foreach}
+			</p>
+		{/foreach}
+		<!--价格区间-->
+		{if $FrontPrice[0]->price}
+		<p>价格：{if $smarty.get.price}<a href="{$url}&price=">全部</a>{else}<span>全部</span>{/if}
+			{/if}
+			{foreach from=$FrontPrice[0]->price key=key item=value}
+				{if $smarty.get.price == $key}
+					<span>{$value}</span>
+				{else}
+					<a href="{$url}&price={$key}">{$value}</a>
+				{/if}
+			{/foreach}
+
+
+
+		</p>
 	</div>
 	<h2>商品列表</h2>
 	<div class="pro">

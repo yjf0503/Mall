@@ -19,14 +19,18 @@ class GoodsModel extends Model {
 			$this->_R['goodsid'],
 			$this->_R['sn'],
 			$this->_R['act'],
-			$this->_R['price'])
+			$this->_R['price'],
+			$this->_R['brand'],
+			$this->_R['attr'])
 				= $this->getRequest()->getParam( array(
 				isset($_GET['id']) ? $_GET['id'] : null,
 				isset($_GET['navid']) ? $_GET['navid'] : null,
 				isset($_GET['goodsid']) ? $_GET['goodsid'] : null,
 				isset($_POST['sn']) ? $_POST['sn'] : null,
 				isset($_GET['act']) ? $_GET['act'] : null,
-				isset($_GET['price']) ? $_GET['price'] : null
+				isset($_GET['price']) ? $_GET['price'] : null,
+				isset($_GET['brand']) ? $_GET['brand'] : null,
+				isset($_GET['attr']) ? $_GET['attr'] : null
 		) );
 	}
 
@@ -82,25 +86,35 @@ class GoodsModel extends Model {
 
 	public function findListGoods()
 	{
-		if($this->_R['price'])
+		$_priceSQL = '';
+		$_brandSQL = '';
+		$_attrSQL = '';
+		if ($this->_R['price'])
 		{
-			$_left = substr($this->_R['price'],0,strpos($this->_R['price'],','));
-			$_right = substr($this->_R['price'],strpos($this->_R['price'],',')+1);
-			if(!Validate::isNumeric($_left) || !Validate::isNumeric($_right))
+			$_left = substr($this->_R['price'], 0, strpos($this->_R['price'], ','));
+			$_right = substr($this->_R['price'], strpos($this->_R['price'], ',') + 1);
+			$_priceSQL = "AND price_sale BETWEEN $_left AND $_right";
+		}
+		if ($this->_R['brand'])
+		{
+			if($this->_R['brand'] == 'other')
 			{
-				$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','price_market','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
-
+				$_brand = 0;
 			}
 			else
 			{
-				$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','price_market','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().') AND price_sale BETWEEN '.$_left.' AND '.$_right.'' ),'order'=>'date DESC'));
-
+				$_brand = $this->_R['brand'];
 			}
+			$_brandSQL = "AND brand='$_brand'";
 		}
-		else
+		if($this->_R['attr'])
 		{
-			$_allGoods = parent::select(array('id','name','nav','thumbnail','price_sale','price_market','thumbnail2'),array('limit'=>$this->_limit,'where'=>array('nav in('.$this->getNavId().')'),'order'=>'date DESC'));
+			$_attr = explode(':',$this->_R['attr']);
+			$_attrSQL = "AND attr LIKE '%$_attr[0]%$_attr[1]%'";
+		}
 
+		$_allGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2'),
+			array('limit'=>$this->_limit,'where'=>array("nav in ({$this->getNavId()}) $_priceSQL $_brandSQL $_attrSQL"),'order'=>'date DESC'));
 			foreach($_allGoods as $_value)
 			{
 				if(Validate::isNullString($_value->thumbnail2))
@@ -112,7 +126,6 @@ class GoodsModel extends Model {
 					parent::update(array("id='$_value->id'"), array('thumbnail2'=>$_img->getPath()));
 				}
 			}
-		}
 
 		return $_allGoods;
 	}

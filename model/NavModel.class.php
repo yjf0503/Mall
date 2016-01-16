@@ -82,6 +82,69 @@ class NavModel extends Model{
         }
         return $_onePrice;
     }
+    public function findFrontBrand()
+    {
+        $_brandid = '';
+        $_oneBrand = array();
+        foreach($this->getNavId() as $_value)
+        {
+            $_oneBrand = parent::select(array('brand'),array('where'=>array("id ='$_value'")));
+            if(!Validate::isNullString($_oneBrand[0]->brand))
+            {
+                $_brandid .= implode(',',unserialize(htmlspecialchars_decode($_oneBrand[0]->brand))).',';
+            }
+        }
+        $_brandid = substr($_brandid,0,-1);
+        if(Validate::isNullString($_oneBrand[0]->brand))
+        {
+            return array('other'=>'其他品牌');
+        }
+        $this->_tables = array(DB_PREFIX.'brand');
+        $_brand = parent::select(array('id','name'),array('where'=>array("id in ($_brandid)")));
+        $_brand = Tool::setFormItem($_brand,'id','name');
+        $this->_tables = array(DB_PREFIX.'nav');
+        return $_brand;
+    }
+
+    public function findFrontAttr()
+    {
+        $_navid = $this->getNavId();
+        $this->_tables = array(DB_PREFIX.'attr');
+        $_attr = array();
+        foreach($_navid as $_value)
+        {
+            $_oneAttr = parent::select(array('name','item'),array('like'=>array('nav'=>$_value)));
+            foreach(Tool::setFormItem($_oneAttr,'name','item') as $_key=>$_value)
+            {
+                $_attr[$_key] = explode('|',$_value);
+            }
+        }
+        $this->_tables = array(DB_PREFIX.'nav');
+        return  $_attr;
+
+    }
+
+    private function getNavId()
+    {
+        //商品副类id数组
+        $_idArr = parent::select(array('id'),array('where'=>array("sid='{$this->_R['navid']}'")));
+        $_id = array();
+
+        //副类处理
+        if(Validate::isNullArray($_idArr))
+        {
+            $_id[] = $this->_R['navid'];
+        }
+        //主类处理
+        else
+        {
+            foreach($_idArr as $_key=>$_value)
+            {
+                $_id[] .= $_value->id;
+            }
+        }
+        return $_id;
+    }
 
     public function findFrontNav()
     {

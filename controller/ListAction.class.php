@@ -24,6 +24,8 @@ class ListAction extends Action{
 		$this->_tpl->assign('FrontNav',$this->_nav->findFrontNav());
 		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
 		$this->_tpl->assign('FrontPrice',$this->_nav->findFrontPrice());
+		$this->_tpl->assign('FrontBrand',$this->_nav->findFrontBrand());
+		$this->_tpl->assign('FrontAttr',$this->_nav->findFrontAttr());
 		$this->_tpl->assign('url',Tool::getUrl());
 		$this->_tpl->display(SMARTY_FRONT.'public/list.tpl');
 	}

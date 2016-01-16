@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-15 12:36:09
+<?php /* Smarty version 2.6.26, created on 2016-01-16 22:47:27
          compiled from default/public/list.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,7 +16,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="sait">
 	当前位置：<a href="./">首页</a>
-	<?php $_from = $this->_tpl_vars['FrontNav'][0]->site; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+	<?php $_from = $this->_tpl_vars['FrontNav'][0]->sait; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
 		&gt; <a href="?a=list&navid=<?php echo $this->_tpl_vars['key']; ?>
@@ -80,32 +80,70 @@ unset($_smarty_tpl_vars);
 <div id="main">
 	<h2>商品筛选</h2>
 	<div class="filter">
-		<p>品牌：<span>全部</span> <a href="###">苹果</a> <a href="###">三星</a> <a href="###">索尼</a> <a href="###">小米</a> <a href="###">华为</a></p>
-		<p>属性：<span>全部</span> <a href="###">属性1</a> <a href="###">属性2</a> <a href="###">属性3</a></p>
-		<?php if ($this->_tpl_vars['FrontPrice'][0]->price): ?>
-		<p>价格：
-			<?php if ($_GET['price']): ?>
-				<a href="<?php echo $this->_tpl_vars['url']; ?>
-">全部</a>
+		<!--品牌筛选-->
+		<p>品牌：<?php if ($_GET['brand']): ?><a href="<?php echo $this->_tpl_vars['url']; ?>
+&brand=">全部</a><?php else: ?><span>全部</span><?php endif; ?>
+			<?php $_from = $this->_tpl_vars['FrontBrand']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+				<?php if ($_GET['brand'] == $this->_tpl_vars['key']): ?>
+					<span><?php echo $this->_tpl_vars['value']; ?>
+</span>
 				<?php else: ?>
-				<span>全部</span>
+					<a href="<?php echo $this->_tpl_vars['url']; ?>
+&brand=<?php echo $this->_tpl_vars['key']; ?>
+"><?php echo $this->_tpl_vars['value']; ?>
+</a>
+				<?php endif; ?>
+			<?php endforeach; endif; unset($_from); ?>
+		</p>
+		<!--属性筛选-->
+		<?php $_from = $this->_tpl_vars['FrontAttr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+			<p>
+				<?php echo $this->_tpl_vars['key']; ?>
+：<?php if ($_GET['attr']): ?><a href="<?php echo $this->_tpl_vars['url']; ?>
+&attr=">全部</a><?php else: ?><span>全部</span><?php endif; ?>
+				<?php $_from = $this->_tpl_vars['value']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['v']):
+?>
+					<?php $this->assign('attr', ($this->_tpl_vars['key']).":".($this->_tpl_vars['v'])); ?>
+					<?php if ($_GET['attr'] == $this->_tpl_vars['attr']): ?>
+						<span><?php echo $this->_tpl_vars['v']; ?>
+</span>
+					<?php else: ?>
+						<a href="<?php echo $this->_tpl_vars['url']; ?>
+&attr=<?php echo $this->_tpl_vars['key']; ?>
+:<?php echo $this->_tpl_vars['v']; ?>
+"><?php echo $this->_tpl_vars['v']; ?>
+</a>
+					<?php endif; ?>
+				<?php endforeach; endif; unset($_from); ?>
+			</p>
+		<?php endforeach; endif; unset($_from); ?>
+		<!--价格区间-->
+		<?php if ($this->_tpl_vars['FrontPrice'][0]->price): ?>
+		<p>价格：<?php if ($_GET['price']): ?><a href="<?php echo $this->_tpl_vars['url']; ?>
+&price=">全部</a><?php else: ?><span>全部</span><?php endif; ?>
 			<?php endif; ?>
-
 			<?php $_from = $this->_tpl_vars['FrontPrice'][0]->price; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
 				<?php if ($_GET['price'] == $this->_tpl_vars['key']): ?>
 					<span><?php echo $this->_tpl_vars['value']; ?>
 </span>
-					<?php else: ?>
+				<?php else: ?>
 					<a href="<?php echo $this->_tpl_vars['url']; ?>
 &price=<?php echo $this->_tpl_vars['key']; ?>
 "><?php echo $this->_tpl_vars['value']; ?>
 </a>
 				<?php endif; ?>
 			<?php endforeach; endif; unset($_from); ?>
+
+
+
 		</p>
-		<?php endif; ?>
 	</div>
 	<h2>商品列表</h2>
 	<div class="pro">

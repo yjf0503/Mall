@@ -27,7 +27,8 @@ class Tool{
         if (isset($_par['query']))
         {
             parse_str($_par['query'],$_query);
-            unset($_query['price']);
+//            unset($_query['price']);
+//            unset($_query['brand']);
             $_url = $_par['path'].'?'.http_build_query($_query);
         }
         return $_url;
