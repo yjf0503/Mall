@@ -1,7 +1,16 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-12 20:42:26
+<?php /* Smarty version 2.6.26, created on 2016-01-17 20:24:10
          compiled from default/public/header.tpl */ ?>
 <div id="header">
 	<h1><a href="./">瓢城Web俱乐部</a></h1>
+	<div class="top">
+		<?php if ($_COOKIE['user']): ?>
+			您好，<?php echo $_COOKIE['user']; ?>
+，欢迎再次光临，个人中心 | <a href="?a=member&m=logout">退出</a>
+		<?php else: ?>
+			<a href="?a=member&m=login"><img src="view/default/images/bnt_log.gif" alt="登录" /></a>
+			<a href="?a=member&m=reg"><img src="view/default/images/bnt_reg.gif" alt="注册" /></a>
+		<?php endif; ?>
+	</div>
 </div>
 <div id="nav">
 	<ul>

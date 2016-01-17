@@ -29,11 +29,19 @@ a:hover {
 	background:url(../images/logo.png) no-repeat left center;
 	text-indent:-9999px;
 	font-size:12px;
+	float:left;
 }
 #header h1 a {
 	width:200px;
 	height:60px;
 	display:block;
+}
+#header div.top {
+	padding:10px 10px 0 0;
+	float:right;
+}
+#header div.top img {
+	border:none;
 }
 #nav {
 	height:26px;

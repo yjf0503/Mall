@@ -5,18 +5,17 @@
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
+<script type="text/javascript" src="view/default/js/attr.js"></script>
 <script type="text/javascript" src="view/default/js/channel.js"></script>
-	<script type="text/javascript" src="view/default/js/attr.js"></script>
-
 </head>
 <body>
 {include file='default/public/header.tpl'}
 <div id="sait">
 	当前位置：<a href="./">首页</a>
-	{foreach from=$FrontNav[0]->site key=key item=value}
+	{foreach from=$FrontNav[0]->sait key=key item=value}
 	 &gt; <a href="?a=list&navid={$key}">{$value}</a>
 	{/foreach}
-	&gt; {$FrontGoods[0]->name}
+	 &gt; {$FrontGoods[0]->name}
 </div>
 
 <div id="sidebar">
@@ -67,8 +66,8 @@
 </div>
 
 <div id="main">
-	<input type="hidden" id="attrid" name="attrid" value="{$FrontGoods[0]->attr}"/>
-	<input type="hidden" id="attrtype" name="attrtype" value="{$attrType}"/>
+	<input type="hidden" id="attrid" name="attrid" value="{$FrontGoods[0]->attr}" />
+	<input type="hidden" id="attrtype" name="attrtype" value="{$attrType}" />
 	<h2>{$FrontGoods[0]->name}</h2>
 	<dl class="pic">
 		<dt><a href="###"><img src="{$FrontGoods[0]->thumbnail}" alt="{$FrontGoods[0]->name}" title="{$FrontGoods[0]->name}" /></a></dt>
