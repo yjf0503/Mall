@@ -1,17 +1,22 @@
 /**
  * Created by 杰夫 on 2016/1/14.
  */
-window.onload = function () {
+window.onload = function ()
+{
     var attrArr = $('attrid').value.split(';');
     var attrType = $('attrtype').value.split('|');
     var ddLoction = document.getElementById('text').getElementsByTagName('dd')[5];
 
-    for (var i = 0; i < attrArr.length; i ++) {
+    for (var i = 0; i < attrArr.length; i ++)
+    {
         var attrName = attrArr[i].substr(0, attrArr[i].indexOf(':'));
         var attrNamePrototype = attrName;
-        if (attrName.length == 2) {
+        if (attrName.length == 2)
+        {
             attrName = attrName.charAt(0) + '　　' + attrName.charAt(1);
-        } else if (attrName.length == 3) {
+        }
+        else if (attrName.length == 3)
+        {
             attrName = attrName.charAt(0) + ' ' + attrName.charAt(1) + ' ' + attrName.charAt(2);
         }
         var attrValueArr = attrArr[i].substr(attrArr[i].indexOf(':') + 1).split('|');
@@ -19,18 +24,27 @@ window.onload = function () {
         var dd = document.createElement('dd');
         var addAttrName = document.createTextNode(attrName + '：');
         dd.appendChild(addAttrName);
-        for (var j = 0; j < attrValueArr.length; j ++) {
+
+        for (var j = 0; j < attrValueArr.length; j ++)
+        {
             var input = document.createElement('input');
             var inputText = document.createTextNode(attrValueArr[j] + ' ');
-            if (attrType[i] == 1) {
+            if (attrType[i] == 1)
+            {
                 input.type = 'checkbox';
-            } else {
+            }
+            else
+            {
                 input.type = 'radio';
             }
             dd.appendChild(input);
             dd.appendChild(inputText);
             input.name = 'attr[' + attrNamePrototype + '][]';
             input.value = attrValueArr[j];
+            if(j == 0 && input.type!='checkbox')
+            {
+                input.checked = true;
+            }
         }
         ddLoction.parentNode.insertBefore(dd, ddLoction);
     }

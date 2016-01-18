@@ -113,7 +113,7 @@
 			<dd class="price"><strong>￥{$value->price_sale}</strong> <del>￥{$value->price_market}</del></dd>
 			<dd class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">{$value->name}</a></dd>
 			<dd class="commend"><a href="###">已有34人评价</a></dd>
-			<dd class="buy"><a href="###">购买</a> | <a href="###">收藏</a> | <a href="###">比较</a></dd>
+			<dd class="buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">购买</a> | <a href="###">收藏</a> | <a href="###">比较</a></dd>
 		</dl>
 		{/foreach}
 		<div id="page">{$page}</div>

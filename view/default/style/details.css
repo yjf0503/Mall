@@ -1,13 +1,4 @@
 @CHARSET "UTF-8";
-#sait {
-	height:36px;
-	line-height:36px;
-	background:url(../images/sait_bg.png);
-	border:1px solid #C5E4FF;
-	border-top:none;
-	color:#333;
-	padding:0 0 0 15px;
-}
 #sidebar {
 	width:200px;
 	float:left;
@@ -145,6 +136,15 @@
 	width:30px;
 	color:#666;
 	padding:0 0 0 2px;
+}
+#main dl.text dd input.submit {
+	width:144px;
+	height:35px;
+	background:url(../images/buy.gif) no-repeat;
+	border:none;
+	cursor:pointer;
+	float:left;
+	margin:0 10px 0 0;
 }
 #main dl.text dd.buy_button {
 	padding:10px 0 0 60px;

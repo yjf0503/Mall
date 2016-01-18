@@ -1,15 +1,14 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-14 19:18:46
+<?php /* Smarty version 2.6.26, created on 2016-01-18 11:27:03
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>在线商城系统</title>
-<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
-<link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
-<script type="text/javascript" src="view/default/js/channel.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>在线商城系统</title>
+	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
+	<link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
 	<script type="text/javascript" src="view/default/js/attr.js"></script>
-
+	<script type="text/javascript" src="view/default/js/channel.js"></script>
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -19,10 +18,10 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="sait">
 	当前位置：<a href="./">首页</a>
-	<?php $_from = $this->_tpl_vars['FrontNav'][0]->site; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+	<?php $_from = $this->_tpl_vars['FrontNav'][0]->sait; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-	 &gt; <a href="?a=list&navid=<?php echo $this->_tpl_vars['key']; ?>
+		&gt; <a href="?a=list&navid=<?php echo $this->_tpl_vars['key']; ?>
 "><?php echo $this->_tpl_vars['value']; ?>
 </a>
 	<?php endforeach; endif; unset($_from); ?>
@@ -37,7 +36,7 @@ unset($_smarty_tpl_vars);
 		<?php $_from = $this->_tpl_vars['FrontNav'][0]->child; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-		<li><a href="?a=list&navid=<?php echo $this->_tpl_vars['value']->id; ?>
+			<li><a href="?a=list&navid=<?php echo $this->_tpl_vars['value']->id; ?>
 "><?php echo $this->_tpl_vars['value']->name; ?>
 <span class="gray">(1000)</span></a></li>
 		<?php endforeach; endif; unset($_from); ?>
@@ -83,37 +82,47 @@ unset($_smarty_tpl_vars);
 </div>
 
 <div id="main">
-	<input type="hidden" id="attrid" name="attrid" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->attr; ?>
-"/>
-	<input type="hidden" id="attrtype" name="attrtype" value="<?php echo $this->_tpl_vars['attrType']; ?>
-"/>
-	<h2><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+	<form method="post" action="?a=cart&m=addProduct">
+		<input type="hidden" id="attrid" name="attrid" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->attr; ?>
+" />
+		<input type="hidden" id="attrtype" name="attrtype" value="<?php echo $this->_tpl_vars['attrType']; ?>
+" />
+		<input type="hidden" name="id" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->id; ?>
+" />
+		<input type="hidden" name="name" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+" />
+		<input type="hidden" name="price_sale" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
+" />
+		<input type="hidden" name="sn" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->sn; ?>
+" />
+		<h2><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 </h2>
-	<dl class="pic">
-		<dt><a href="###"><img src="<?php echo $this->_tpl_vars['FrontGoods'][0]->thumbnail; ?>
+		<dl class="pic">
+			<dt><a href="###"><img src="<?php echo $this->_tpl_vars['FrontGoods'][0]->thumbnail; ?>
 " alt="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 " title="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 " /></a></dt>
-		<dd>分享至：新浪微博 | 腾讯微博 | 人人网 | 开心网</dd>
-	</dl>
-	<dl id="text" class="text">
-		<dd>售　　价：<span class="sale">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
+			<dd>分享至：新浪微博 | 腾讯微博 | 人人网 | 开心网</dd>
+		</dl>
+		<dl id="text" class="text">
+			<dd>售　　价：<span class="sale">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
 </span><span class="market">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_market; ?>
 </span></dd>
-		<dd>商品编号：<?php echo $this->_tpl_vars['FrontGoods'][0]->sn; ?>
+			<dd>商品编号：<?php echo $this->_tpl_vars['FrontGoods'][0]->sn; ?>
 </dd>
-		<dd>所属品牌：<?php echo $this->_tpl_vars['FrontGoods'][0]->brandname; ?>
+			<dd>所属品牌：<?php echo $this->_tpl_vars['FrontGoods'][0]->brandname; ?>
 </dd>
-		<dd>销 售 量：<span class="sale_num">136</span> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
+			<dd>销 售 量：<span class="sale_num">136</span> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
 </dd>
-		<dd>重　　量：<?php echo $this->_tpl_vars['FrontGoods'][0]->weight; ?>
+			<dd>重　　量：<?php echo $this->_tpl_vars['FrontGoods'][0]->weight; ?>
  kg <?php if ($this->_tpl_vars['FrontGoods'][0]->is_freight == 1): ?><span class="gray">(免运费)</span><?php endif; ?></dd>
-		<dd>数　　量：<input type="text" value="1" class="num" name="num" /> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
+			<dd>数　　量：<input type="text" value="1" class="num" name="num" /> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
  <span class="gray">(目前库存：<?php echo $this->_tpl_vars['FrontGoods'][0]->inventory; ?>
 <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
 )</span></dd>
-		<dd class="buy_button"><img src="view/default/images/buy.gif" alt="购买" title="购买" /> <img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
-	</dl>
+			<dd class="buy_button"><input type="submit" name="send" class="submit" value="" /> <img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+		</dl>
+	</form>
 	<div class="content">
 		<ul>
 			<li id="button1" onclick="channel(1)" class="first">商品详情</li>

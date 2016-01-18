@@ -5,8 +5,6 @@
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/reg.css" />
-	<script type="text/javascript" src="view/default/js/ajax.js"></script>
-	<script type="text/javascript" src="view/default/js/reg.js"></script>
 </head>
 <body>
 {include file='default/public/header.tpl'}
@@ -14,14 +12,14 @@
 	当前位置：<a href="./">首页</a> &gt; 注册会员
 </div>
 
+
 <div id="reg">
-	<form action="" name="reg" method="post">
-		<input type="hidden" name="flag" id="flag"/>
+	<form action="" method="post">
 		<dl>
-			<dd>用 户 名：<input type="text" name="user" id="user" onblur="checkUser();" class="text" /></dd>
+			<dd>用 户 名：<input type="text" name="user" class="text" /></dd>
 			<dd>密　　码：<input type="password" name="pass" class="text" /></dd>
 			<dd>确认密码：<input type="password" name="notpass" class="text" /></dd>
-			<dd><input type="submit" name="send" value="注册" onclick="return regUser();" class="submit" /></dd>
+			<dd><input type="submit" name="send" value="注册" class="submit" /></dd>
 		</dl>
 	</form>
 </div>
