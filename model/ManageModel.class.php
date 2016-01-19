@@ -5,9 +5,7 @@
  * Date: 19/12/2015/019
  * Time: 1:02 PM
  */
-
-//test Git on macbook
-
+//管理员实体类
 class ManageModel extends Model{
     public function __construct()
     {

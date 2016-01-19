@@ -34,6 +34,6 @@
 
 <p><a href="./">继续购物</a> | <a href="?a=cart&m=clearProduct">清空购物车</a> | 共计：<strong class="price">{$total}</strong>/元 </p>
 
-
+<p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" alt="结算"/></a></p>
 </body>
 </html>

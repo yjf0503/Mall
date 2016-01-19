@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-18 13:07:13
+<?php /* Smarty version 2.6.26, created on 2016-01-19 18:13:12
          compiled from default/public/cart.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,6 +56,6 @@ unset($_smarty_tpl_vars);
 <p><a href="./">继续购物</a> | <a href="?a=cart&m=clearProduct">清空购物车</a> | 共计：<strong class="price"><?php echo $this->_tpl_vars['total']; ?>
 </strong>/元 </p>
 
-
+<p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" alt="结算"/></a></p>
 </body>
 </html>

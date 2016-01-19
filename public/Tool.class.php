@@ -19,6 +19,12 @@ class Tool{
         return date('Y-m-d H:i:s');
     }
 
+    //以时间生成订单号
+    static public function getOrderNum()
+    {
+        return date('YmdHis'.mt_rand(1,99999));
+    }
+
     //获取地址
     static public function getUrl()
     {
@@ -27,8 +33,6 @@ class Tool{
         if (isset($_par['query']))
         {
             parse_str($_par['query'],$_query);
-//            unset($_query['price']);
-//            unset($_query['brand']);
             $_url = $_par['path'].'?'.http_build_query($_query);
         }
         return $_url;

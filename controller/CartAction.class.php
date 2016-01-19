@@ -9,6 +9,7 @@
 class CartAction extends Action{
 	private $_cart = null;
 	private $_nav = null;
+	private $_order = null;
 	public function __construct()
 	{
 		parent::__construct();
@@ -18,6 +19,7 @@ class CartAction extends Action{
 		}
 		$this->_cart = new Cart();
 		$this->_nav = new NavModel();
+		$this->_order = new OrderModel();
 	}
 
 	//显示购物车
@@ -66,5 +68,22 @@ class CartAction extends Action{
 		{
 			echo 2;
 		}
+	}
+
+	//提交订单
+	public function order()
+	{
+		if(isset($_POST['send']))
+		{
+			$this->_order->order();
+		}
+	}
+
+	//显示结算
+	public function flow()
+	{
+		$this->_tpl->assign('FrontCart',$this->_cart->getProduct());
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->display(SMARTY_FRONT.'public/flow.tpl');
 	}
 }
