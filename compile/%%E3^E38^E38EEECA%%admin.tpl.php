@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-15 11:09:04
+<?php /* Smarty version 2.6.26, created on 2016-01-20 17:54:10
          compiled from admin/public/admin.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,7 +36,7 @@
 	</dl>
 	<dl style="display:none">
 		<dt>订单</dt>
-		<dd><a href="###">订单1</a></dd>
+		<dd><a href="?a=order" target="in">订单列表</a></dd>
 		<dd><a href="###">订单2</a></dd>
 		<dd><a href="###">订单3</a></dd>
 	</dl>

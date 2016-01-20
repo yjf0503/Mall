@@ -9,11 +9,70 @@
 class MemberAction extends Action{
 	private $_nav = null;
 	private $_user = null;
+	private $_address = null;
+	private $_order = null;
 	public function __construct()
 	{
 		parent::__construct();
 		$this->_nav = new NavModel();
 		$this->_user = new UserModel();
+		$this->_address = new AddressModel();
+		$this->_order = new OrderModel();
+	}
+
+	public function index()
+	{
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->display(SMARTY_FRONT.'public/member.tpl');
+	}
+
+	public function order()
+	{
+		parent::page(10,$this->_order);
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('AllOrder',$this->_order->findUserAll());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_order.tpl');
+	}
+
+	public function order_details()
+	{
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('OneOrder',$this->_order->findUserDetails());
+		$this->_tpl->assign('prev',Tool::getPrevPage());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_order_details.tpl');
+	}
+
+	public function address()
+	{
+		if (isset($_POST['send']))
+		{
+			if($this->_address->add())
+			{
+				$this->_redirect->succ('?a=member&m=address');
+			}
+			else
+			{
+				$this->_redirect->error('新增收货人失败');
+			}
+		}
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('AllAddress',$this->_address->findAll());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_address.tpl');
+	}
+
+	public function selected()
+	{
+		if(isset($_GET['id']))
+		{
+			if($this->_address->selected())
+			{
+				$this->_redirect->succ(Tool::getPrevPage());
+			}
+			else
+			{
+				$this->_redirect->error('首选失败，请重试');
+			}
+		}
 	}
 
 	public function reg()

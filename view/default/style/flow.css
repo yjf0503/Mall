@@ -51,10 +51,10 @@ input.small {
 	text-align:center;
 	font-weight:bold;
 }
-input.submit{
-	width: 145px;
-	height: 40px;
-	background: url("../images/order.gif") no-repeat;
-	border: none;
-	cursor: pointer;
+input.submit {
+	width:145px;
+	height:40px;
+	background:url(../images/order.gif) no-repeat;
+	border:none;
+	cursor:pointer;
 }

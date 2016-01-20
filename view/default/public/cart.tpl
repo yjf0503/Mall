@@ -5,8 +5,8 @@
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/cart.css" />
-	<script type="text/javascript" src="view/default/js/ajax.js"></script>
-	<script type="text/javascript" src="view/default/js/cart.js"></script>
+<script type="text/javascript" src="view/default/js/ajax.js"></script>
+<script type="text/javascript" src="view/default/js/cart.js"></script>
 </head>
 <body>
 {include file='default/public/header.tpl'}
@@ -27,13 +27,13 @@
 	{/foreach}
 	{/foreach}
 	{assign var=total value=$total+$value.price_sale*$value.num}
-	</td><td class="price">{$value.price_sale}/元</td><td><input type="text" name="num" onkeyup="changeNum({$value.id},this.value);" class="small" value="{$value.num}"/></td><td class="price">{$value.price_sale*$value.num}/元</td><td><a href="?a=cart&m=delProduct&id={$value.id}">删除</a></td></tr>
+	</td><td class="price">{$value.price_sale}/元</td><td><input type="text" name="num" onkeyup="changeNum({$value.id},this.value);" class="small" value="{$value.num}" /></td><td class="price">{$value.price_sale*$value.num}/元</td><td><a href="?a=cart&m=delProduct&id={$value.id}">删除</a></td></tr>
 	{/foreach}
 </table>
 
+<p><a href="./">继续购物</a> | <a href="?a=cart&m=clearProduct">清空购物车</a> | 共计：<strong class="price">{$total}</strong>/元</p>
 
-<p><a href="./">继续购物</a> | <a href="?a=cart&m=clearProduct">清空购物车</a> | 共计：<strong class="price">{$total}</strong>/元 </p>
+<p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" /></a></p>
 
-<p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" alt="结算"/></a></p>
 </body>
 </html>

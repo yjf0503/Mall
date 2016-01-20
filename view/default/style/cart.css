@@ -22,18 +22,18 @@ p strong.price {
 	font-size:20px;
 	color:red;
 }
-p{
-	text-align: right;
-	padding: 10px;
+p {
+	text-align:right;
+	padding:10px;
 }
-p img{
-	border: none;
+p img {
+	border:none;
 }
-input.small{
-	width: 30px;
-	border: 1px solid #999;
-	background: #ffffff;
-	color: #666666;
-	text-align: center;
-	font-weight: bold;
+input.small {
+	width:30px;
+	border:1px solid #999;
+	background:#fff;
+	color:#666;
+	text-align:center;
+	font-weight:bold;
 }

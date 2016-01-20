@@ -79,7 +79,7 @@ class DB
             }
         }
         $_setData = substr($_setData,0,-1);
-        $_sql = "UPDATE $_tables[0] SET $_setData $_where LIMIT 1";
+        $_sql = "UPDATE $_tables[0] SET $_setData $_where";
         return $this->execute($_sql)->rowCount();
     }
 

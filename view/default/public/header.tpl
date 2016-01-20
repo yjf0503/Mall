@@ -2,7 +2,7 @@
 	<h1><a href="./">瓢城Web俱乐部</a></h1>
 	<div class="top">
 		{if $smarty.cookies.user}
-		您好，{$smarty.cookies.user}，欢迎再次光临，个人中心 | <a href="?a=cart">购物车</a> | <a href="?a=member&m=logout">退出</a>
+		您好，{$smarty.cookies.user}，欢迎再次光临，<a href="?a=member">个人中心</a> | <a href="?a=cart">购物车</a> | <a href="?a=member&m=logout">退出</a>
 		{else}
 		<a href="?a=member&m=login"><img src="view/default/images/bnt_log.gif" alt="登录" /></a>
 		<a href="?a=member&m=reg"><img src="view/default/images/bnt_reg.gif" alt="注册" /></a>
