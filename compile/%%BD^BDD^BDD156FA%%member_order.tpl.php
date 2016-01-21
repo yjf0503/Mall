@@ -1,12 +1,12 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-20 18:46:01
+<?php /* Smarty version 2.6.26, created on 2016-01-21 11:23:47
          compiled from default/public/member_order.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>在线商城系统</title>
-<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
-<link rel="stylesheet" type="text/css" href="view/default/style/member.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>在线商城系统</title>
+	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
+	<link rel="stylesheet" type="text/css" href="view/default/style/member.css" />
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -31,14 +31,27 @@ unset($_smarty_tpl_vars);
 		<?php $_from = $this->_tpl_vars['AllOrder']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-		<tr><td><a href="?a=member&m=order_details&id=<?php echo $this->_tpl_vars['value']->id; ?>
+			<tr><td><a href="?a=member&m=order_details&id=<?php echo $this->_tpl_vars['value']->id; ?>
 "><?php echo $this->_tpl_vars['value']->ordernum; ?>
 </a></td><td><?php echo $this->_tpl_vars['value']->date; ?>
 </td><td><?php echo $this->_tpl_vars['value']->price; ?>
 /元</td><td><?php echo $this->_tpl_vars['value']->order_state; ?>
-，<?php echo $this->_tpl_vars['value']->order_pay; ?>
-，<?php echo $this->_tpl_vars['value']->order_delivery; ?>
-</td><td>取消</td></tr>
+，
+					<?php if ($this->_tpl_vars['value']->order_pay == '未付款'): ?>
+						<span style="color:red;"><?php echo $this->_tpl_vars['value']->order_pay; ?>
+</span>
+					<?php else: ?>
+						<span style="color:green;"><?php echo $this->_tpl_vars['value']->order_pay; ?>
+</span>
+					<?php endif; ?>
+					，
+					<?php echo $this->_tpl_vars['value']->order_delivery; ?>
+</td><td>
+					<?php if ($this->_tpl_vars['value']->order_pay == '未付款'): ?>
+						<a href="?a=member&m=alipay&id=<?php echo $this->_tpl_vars['value']->id; ?>
+">在线支付</a> |
+					<?php endif; ?>
+					取消</td></tr>
 		<?php endforeach; endif; unset($_from); ?>
 	</table>
 	<div id="page"><?php echo $this->_tpl_vars['page']; ?>

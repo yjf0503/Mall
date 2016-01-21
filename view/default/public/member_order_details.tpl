@@ -56,7 +56,9 @@
 		<tr><th>备注信息</th><th>缺货方式</th></tr>
 		<tr><td>{$OneOrder[0]->text}</td><td>{$OneOrder[0]->ps}</td></tr>
 	</table>
-	
+
+	<p style="text-align:center;padding: 10px;"><a href="?a=member&m=alipay&id={$OneOrder[0]->id}"><img src="view/default/images/fu.gif" style="border: none" alt="付款"></a></p>
+
 	<p style="text-align:center"><a href="{$prev}">[返回]</a></p>
 </div>
 

@@ -13,9 +13,11 @@ class OrderModel extends Model{
         $this->_fields = array('id','user','name','email','tel','address','goods','buildings','code','delivery','pay','price','text','ps','orderNum','order_state','order_pay','order_delivery');
         $this->_tables = array(DB_PREFIX.'order');
         //$this->_check = new ManageCheck();
-        list($this->_R['id']
+        list($this->_R['id'],
+            $this->_R['out_trade_no']
             ) = $this->getRequest()->getParam(array(
-            isset($_GET['id'])?$_GET['id']:null));
+            isset($_GET['id'])?$_GET['id']:null,
+            isset($_GET['out_trade_no'])?$_GET['out_trade_no']:null));
     }
 
     public function findAll()
@@ -60,6 +62,14 @@ class OrderModel extends Model{
             $_orderDetails[0]->goods[$_key] = unserialize($_value);
         }
         return $_orderDetails;
+    }
+
+    public function updateOrderNum()
+    {
+        $_where = array("ordernum='{$this->_R['out_trade_no']}'");
+        $_updateData = $this->getRequest()->filter($this->_fields);
+        $_updateData['order_pay'] = '已付款';
+        return parent::update($_where,$_updateData);
     }
 
     public function total()

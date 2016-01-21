@@ -26,6 +26,13 @@ class MemberAction extends Action{
 		$this->_tpl->display(SMARTY_FRONT.'public/member.tpl');
 	}
 
+	public function alipay()
+	{
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('OneOrder',$this->_order->findUserDetails());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_alipay.tpl');
+	}
+
 	public function order()
 	{
 		parent::page(10,$this->_order);

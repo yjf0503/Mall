@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-20 13:34:43
+<?php /* Smarty version 2.6.26, created on 2016-01-21 11:29:18
          compiled from default/public/member_order_details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -85,7 +85,10 @@ unset($_smarty_tpl_vars);
 </td><td><?php echo $this->_tpl_vars['OneOrder'][0]->ps; ?>
 </td></tr>
 	</table>
-	
+
+	<p style="text-align:center;padding: 10px;"><a href="?a=member&m=alipay&id=<?php echo $this->_tpl_vars['OneOrder'][0]->id; ?>
+"><img src="view/default/images/fu.gif" style="border: none" alt="付款"></a></p>
+
 	<p style="text-align:center"><a href="<?php echo $this->_tpl_vars['prev']; ?>
 ">[返回]</a></p>
 </div>
