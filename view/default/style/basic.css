@@ -124,3 +124,14 @@ a:hover {
 #page select.select optgroup {
 	font-style:normal;
 }
+#footer{
+	width: 986px;
+	margin: 0 auto;
+	float: left;
+	text-align: center;
+	padding: 5px;
+	color:#666;
+}
+#footer p{
+	padding: 2px;
+}

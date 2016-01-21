@@ -21,7 +21,7 @@ class OrderAction extends Action
         $this->_tpl->display(SMARTY_ADMIN.'order/show.tpl');
     }
 
-    //修改管理员
+    //修改订单
     public function update()
     {
         if(isset($_POST['send']))
@@ -41,4 +41,21 @@ class OrderAction extends Action
             $this->_tpl->display(SMARTY_ADMIN.'order/update.tpl');
         }
     }
+
+    //删除订单
+    public function delete()
+    {
+        if(isset($_GET['id']))
+        {
+            if($this->_model->delete())
+            {
+                $this->_redirect->succ(Tool::getPrevPage(),'订单删除成功');
+            }
+            else
+            {
+                $this->_redirect->error('订单删除失败');
+            }
+        }
+    }
+
 }

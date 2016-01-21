@@ -74,11 +74,18 @@ class NavModel extends Model{
         $_onePrice = parent::select(array('price'),array('where'=>array("id='{$this->_R['navid']}'")));
 
         $_onePrice[0]->price = unserialize(htmlspecialchars_decode($_onePrice[0]->price));
-        foreach($_onePrice[0]->price as $_key=>$_value)
+        if($_onePrice[0]->price)
         {
-            unset($_onePrice[0]->price[$_key]);
-            $_key = str_replace(' - ',',',$_value);
-            $_onePrice[0]->price[$_key] = $_value;
+            foreach($_onePrice[0]->price as $_key=>$_value)
+            {
+                unset($_onePrice[0]->price[$_key]);
+                $_key = str_replace(' - ',',',$_value);
+                $_onePrice[0]->price[$_key] = $_value;
+            }
+        }
+        else
+        {
+            return null;
         }
         return $_onePrice;
     }

@@ -25,6 +25,12 @@ class Tool{
         return date('YmdHis'.mt_rand(1,99999));
     }
 
+    //错误弹窗
+    static function alertback($_str)
+    {
+        echo "<script>alert($_str);window.close();</script>";
+    }
+
     //获取地址
     static public function getUrl()
     {
@@ -34,6 +40,21 @@ class Tool{
         {
             parse_str($_par['query'],$_query);
             $_url = $_par['path'].'?'.http_build_query($_query);
+        }
+        return $_url;
+    }
+
+    //获取域名，如果有目录就是域名+目录
+    static function getDomain()
+    {
+        $_url = 'http://'.$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+        if(strpos($_url,'index.php'))
+        {
+            $_url = substr($_url,0,strpos($_url,'index.php'));
+        }
+        else
+        {
+            $_url = substr($_url,0,strpos($_url,'?'));
         }
         return $_url;
     }

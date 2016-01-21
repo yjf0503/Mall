@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-19 18:13:12
+<?php /* Smarty version 2.6.26, created on 2016-01-21 13:43:34
          compiled from default/public/cart.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,8 +7,8 @@
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/cart.css" />
-	<script type="text/javascript" src="view/default/js/ajax.js"></script>
-	<script type="text/javascript" src="view/default/js/cart.js"></script>
+<script type="text/javascript" src="view/default/js/ajax.js"></script>
+<script type="text/javascript" src="view/default/js/cart.js"></script>
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -46,16 +46,21 @@ unset($_smarty_tpl_vars);
 	</td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']; ?>
 /元</td><td><input type="text" name="num" onkeyup="changeNum(<?php echo $this->_tpl_vars['value']['id']; ?>
 ,this.value);" class="small" value="<?php echo $this->_tpl_vars['value']['num']; ?>
-"/></td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']; ?>
+" /></td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']; ?>
 /元</td><td><a href="?a=cart&m=delProduct&id=<?php echo $this->_tpl_vars['value']['id']; ?>
 ">删除</a></td></tr>
 	<?php endforeach; endif; unset($_from); ?>
 </table>
 
-
 <p><a href="./">继续购物</a> | <a href="?a=cart&m=clearProduct">清空购物车</a> | 共计：<strong class="price"><?php echo $this->_tpl_vars['total']; ?>
-</strong>/元 </p>
+</strong>/元</p>
 
-<p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" alt="结算"/></a></p>
+<p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" /></a></p>
+
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => 'default/public/footer.tpl', 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 </body>
 </html>

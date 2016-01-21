@@ -1,12 +1,14 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-18 11:27:03
+<?php /* Smarty version 2.6.26, created on 2016-01-21 15:52:56
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>在线商城系统</title>
+	<title><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
+ -- 在线商城系统</title>
 	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 	<link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
+	<script type="text/javascript" src="view/default/js/browserdetect.js"></script>
 	<script type="text/javascript" src="view/default/js/attr.js"></script>
 	<script type="text/javascript" src="view/default/js/channel.js"></script>
 </head>
@@ -102,7 +104,26 @@ unset($_smarty_tpl_vars);
 " alt="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 " title="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 " /></a></dt>
-			<dd>分享至：新浪微博 | 腾讯微博 | 人人网 | 开心网</dd>
+			<script>var thumbnail = '<?php echo $this->_tpl_vars['domain']; ?>
+<?php echo $this->_tpl_vars['FrontGoods'][0]->thumbnail; ?>
+';</script>
+			<?php echo '
+				<dd>分享至：<a href="javascript:void((function(s,d,e){try{}catch(e){}var f=\'http://service.weibo.com/share/share.php?\',u=d.location.href,p=[\'url=\',e(u),\'&title=\',e(d.title),\'&pic=\',e(thumbnail),\'&appkey=\'].join(\'\');function a(){if(!window.open([f,p].join(\'\'),\'mb\',[\'toolbar=0,status=0,resizable=1,width=620,height=450,left=\',(s.width-620)/2,\',top=\',(s.height-450)/2].join(\'\')))u.href=[f,p].join(\'\');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));">新浪微博</a>
+					| <a href="javascript:void(0)" onclick="postToWb();" class="tmblog">腾讯微博</a>
+					<script type="text/javascript">
+						function postToWb(){
+							var _t = encodeURI(document.title);
+							var _url = encodeURIComponent(\'http://www.yc60.com\');
+							var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
+							var _pic = encodeURI(\'http://www.yc60.com/video/dreamweavermain.png\');//（列如：var _pic=\'图片url1|图片url2’）
+							var _site = \'\';//你的网站地址
+							var _u =\'http://v.t.qq.com/share/share.php?title=\'+_t+\'&url=\'+_url+\'&appkey=\'+_appkey+\'&site=\'+_site+\'&pic=\'+_pic;window.open( _u,\'转播到腾讯微博\', \'width=700, height=680, top=0, left=0,toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no\' );
+						}
+					</script>
+					| <a href="javascript:void((function(s,d,e){if(/renren\\.com/.test(d.location))return;var f=\'http://share.renren.com/share/buttonshare?link=\',u=d.location,l=d.title,p=[e(u),\'&title=\',e(l)].join(\'\');function a(){if(!window.open([f,p].join(\'\'),\'xnshare\',[\'toolbar=0,status=0,resizable=1,width=626,height=436,left=\',(s.width-626)/2,\',top=\',(s.height-436)/2].join(\'\')))u.href=[f,p].join(\'\');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));" title="分享到人人">人人网</a>
+					| <a href="javascript:d=document;t=d.selection?(d.selection.type!=\'None\'?d.selection.createRange().text:\'\'):(d.getSelection?d.getSelection():\'\');void(kaixin=window.open(\'http://www.kaixin001.com/~repaste/repaste.php?&amp;rurl=\'+escape(d.location.href)+\'&amp;rtitle=\'+escape(d.title)+\'&amp;rcontent=\'+escape(d.title),\'kaixin\'));kaixin.focus();">开心网</a></dd>
+			'; ?>
+
 		</dl>
 		<dl id="text" class="text">
 			<dd>售　　价：<span class="sale">￥<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
@@ -145,5 +166,11 @@ unset($_smarty_tpl_vars);
 		</div>
 	</div>
 </div>
+
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => 'default/public/footer.tpl', 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 </body>
 </html>

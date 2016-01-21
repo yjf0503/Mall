@@ -36,5 +36,6 @@
 	<div id="page">{$page}</div>
 </div>
 
+{include file='default/public/footer.tpl'}
 </body>
 </html>

@@ -88,5 +88,6 @@
 <p style="text-align:center;"><input type="submit" class="submit" name="send" value="" /></p>
 </form>
 
+{include file='default/public/footer.tpl'}
 </body>
 </html>

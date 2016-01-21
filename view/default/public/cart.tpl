@@ -35,5 +35,6 @@
 
 <p><a href="?a=cart&m=flow"><img src="view/default/images/checkout.gif" /></a></p>
 
+{include file='default/public/footer.tpl'}
 </body>
 </html>

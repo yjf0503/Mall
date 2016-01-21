@@ -9,5 +9,7 @@
 <body>
 {include file='default/public/header.tpl'}
 
+{include file='default/public/footer.tpl'}
+
 </body>
 </html>

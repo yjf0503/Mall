@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-20 10:52:40
+<?php /* Smarty version 2.6.26, created on 2016-01-21 13:43:33
          compiled from default/public/member.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,5 +28,10 @@ unset($_smarty_tpl_vars);
 	<h2>欢迎来到个人管理中心</h2>
 </div>
 
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => 'default/public/footer.tpl', 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 </body>
 </html>

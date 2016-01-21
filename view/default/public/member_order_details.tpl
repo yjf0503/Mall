@@ -62,5 +62,6 @@
 	<p style="text-align:center"><a href="{$prev}">[返回]</a></p>
 </div>
 
+{include file='default/public/footer.tpl'}
 </body>
 </html>

@@ -1,6 +1,3 @@
-/**
- * Created by 杰夫 on 2016/1/14.
- */
 window.onload = function ()
 {
     var attrArr = $('attrid').value.split(';');
@@ -23,11 +20,19 @@ window.onload = function ()
 
         var dd = document.createElement('dd');
         var addAttrName = document.createTextNode(attrName + '：');
+        var input = null;
         dd.appendChild(addAttrName);
-
         for (var j = 0; j < attrValueArr.length; j ++)
         {
-            var input = document.createElement('input');
+            if (BrowserDetect.browser == 'Internet Explorer' && BrowserDetect.version <= 7)
+            {
+                input = document.createElement('<input name="attr[' + attrNamePrototype + '][]">');
+            }
+            else
+            {
+                input = document.createElement('input');
+                input.name = 'attr[' + attrNamePrototype + '][]';
+            }
             var inputText = document.createTextNode(attrValueArr[j] + ' ');
             if (attrType[i] == 1)
             {
@@ -39,17 +44,17 @@ window.onload = function ()
             }
             dd.appendChild(input);
             dd.appendChild(inputText);
-            input.name = 'attr[' + attrNamePrototype + '][]';
             input.value = attrValueArr[j];
-            if(j == 0 && input.type!='checkbox')
-            {
-                input.checked = true;
-            }
         }
         ddLoction.parentNode.insertBefore(dd, ddLoction);
+        if (dd.children[0].type != 'checkbox')
+        {
+            dd.children[0].checked = true;
+        }
     }
 };
 
-function $(id) {
+function $(id)
+{
     return document.getElementById(id);
 }

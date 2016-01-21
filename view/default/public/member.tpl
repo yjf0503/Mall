@@ -18,5 +18,6 @@
 	<h2>欢迎来到个人管理中心</h2>
 </div>
 
+{include file='default/public/footer.tpl'}
 </body>
 </html>

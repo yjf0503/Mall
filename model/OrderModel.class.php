@@ -52,6 +52,17 @@ class OrderModel extends Model{
         return parent::update($_where,$_updateData);
     }
 
+    public function getNextId()
+    {
+        return parent::nextId();
+    }
+
+    public function delete()
+    {
+        $_where = array("id='{$this->_R['id']}'");
+        return parent::delete($_where);
+    }
+
     public function findUserDetails()
     {
         $_orderDetails = parent::select(array('id','ordernum','goods','delivery','pay','price','text','ps','order_state','order_pay','order_delivery'),array('where'=>array("id='{$this->_R['id']}'")));
