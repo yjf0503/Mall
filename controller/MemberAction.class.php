@@ -55,6 +55,7 @@ class MemberAction extends Action{
 		{
 			if($this->_address->add())
 			{
+				$this->selected();
 				$this->_redirect->succ('?a=member&m=address');
 			}
 			else

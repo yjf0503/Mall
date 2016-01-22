@@ -12,7 +12,7 @@ class AddressModel extends Model{
         parent::__construct();
         $this->_fields = array('id','user','name','email','tel','code','buildings','address','selected');
         $this->_tables = array(DB_PREFIX.'address');
-        //$this->_check = new ManageCheck();
+        $this->_check = new AddressCheck();
         list($this->_R['id']
             ) = $this->getRequest()->getParam(array(
             isset($_GET['id'])?$_GET['id']:null));
@@ -41,11 +41,11 @@ class AddressModel extends Model{
 
     public function add()
     {
-//        $_where = array("user='{$this->_R['user']}'");
-//        if(!$this->_check->addCheck($this,$_where))
-//        {
-//            $this->_check->error();
-//        }
+        $_where = array("user='{$this->_R['user']}'");
+        if(!$this->_check->addCheck($this,$_where))
+        {
+            $this->_check->error();
+        }
         $_addData = $this->getRequest()->filter($this->_fields);
         $_addData['user'] = $_COOKIE['user'];
         return parent::add($_addData);

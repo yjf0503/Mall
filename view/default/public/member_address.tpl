@@ -5,6 +5,7 @@
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/member.css" />
+	<script type="text/javascript" src="view/default/js/address.js"></script>
 </head>
 <body>
 {include file='default/public/header.tpl'}
@@ -29,7 +30,7 @@
 		{/foreach}
 	</table>
 	<p style="text-align:center;margin:5px 0;"><a href="?a=cart&m=flow">[去结算中心]</a></p>
-		<form action="" method="post">
+		<form action="" method="post" name="address">
 		<dl>
 			<dd>收 货 人：<input type="text" name="name" class="text" /></dd>
 			<dd>收货地址：<input type="text" name="address" class="text" /></dd>
@@ -37,7 +38,7 @@
 			<dd>邮政编码：<input type="text" name="code" class="text" /></dd>
 			<dd>手机号码：<input type="text" name="tel" class="text" /></dd>
 			<dd>标志建筑：<input type="text" name="buildings" class="text" /></dd>
-			<dd><input type="submit" name="send" value="" class="submit" /></dd>
+			<dd><input type="submit" name="send" value="" onclick="return addressCheck();" class="submit" /></dd>
 			<dd style="color:red;padding:0 0 0 60px;">PS：表单验证留给大家自行完成，当新增一条地址，默认设置为首选</dd>
 		</dl>
 	</form>
