@@ -70,16 +70,14 @@ class MemberAction extends Action{
 
 	public function selected()
 	{
-		if(isset($_GET['id']))
+
+		if($this->_address->selected())
 		{
-			if($this->_address->selected())
-			{
-				$this->_redirect->succ(Tool::getPrevPage());
-			}
-			else
-			{
-				$this->_redirect->error('首选失败，请重试');
-			}
+			$this->_redirect->succ(Tool::getPrevPage());
+		}
+		else
+		{
+			$this->_redirect->error('首选失败，请重试');
 		}
 	}
 

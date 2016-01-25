@@ -57,7 +57,15 @@ class AddressModel extends Model{
         $_updateData['selected'] = 0;
         parent::update($_where,$_updateData);
 
-        $_where = array("id='{$this->_R['id']}'");
+        if(isset($_GET['id']))
+        {
+            $_where = array("id='{$this->_R['id']}'");
+        }
+        else
+        {
+            $_id = $this->select(array('id'),array('limit'=>'1','order'=>'id DESC','where'=>array("user='{$_COOKIE['user']}'")));
+            $_where = array("user='{$_COOKIE['user']}'","id='{$_id[0]->id}'");
+        }
         $_updateData['selected'] = 1;
         return parent::update($_where,$_updateData);
     }
