@@ -206,6 +206,7 @@ class GoodsModel extends Model {
 			$this->_check->error();
 		}
 		$_updateData = $this->getRequest()->filter($this->_fields);
+		$_updateData['thumbnail2'] = '';
 		$_attr = '';
 		foreach($_updateData['attr'] as $_key=>$_value)
 		{

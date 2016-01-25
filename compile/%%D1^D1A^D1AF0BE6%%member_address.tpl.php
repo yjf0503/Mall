@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-23 01:04:08
+<?php /* Smarty version 2.6.26, created on 2016-01-25 19:07:03
          compiled from default/public/member_address.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -58,7 +58,6 @@ unset($_smarty_tpl_vars);
 			<dd>手机号码：<input type="text" name="tel" class="text" /></dd>
 			<dd>标志建筑：<input type="text" name="buildings" class="text" /></dd>
 			<dd><input type="submit" name="send" value="" onclick="return addressCheck();" class="submit" /></dd>
-			<dd style="color:red;padding:0 0 0 60px;">PS：表单验证留给大家自行完成，当新增一条地址，默认设置为首选</dd>
 		</dl>
 	</form>
 </div>

@@ -39,7 +39,6 @@
 			<dd>手机号码：<input type="text" name="tel" class="text" /></dd>
 			<dd>标志建筑：<input type="text" name="buildings" class="text" /></dd>
 			<dd><input type="submit" name="send" value="" onclick="return addressCheck();" class="submit" /></dd>
-			<dd style="color:red;padding:0 0 0 60px;">PS：表单验证留给大家自行完成，当新增一条地址，默认设置为首选</dd>
 		</dl>
 	</form>
 </div>
