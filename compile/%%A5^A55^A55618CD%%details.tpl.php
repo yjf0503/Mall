@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-26 12:11:00
+<?php /* Smarty version 2.6.26, created on 2016-01-26 18:26:46
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -113,7 +113,7 @@ unset($_smarty_tpl_vars);
 					<script type="text/javascript">
 						function postToWb(){
 							var _t = encodeURI(document.title);
-							var _url = encodeURIComponent(\'http://www.yc60.com\');
+							var _url = encodeURIComponent(document.location);
 							var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
 							var _pic = encodeURI(\'http://www.yc60.com/video/dreamweavermain.png\');//（列如：var _pic=\'图片url1|图片url2’）
 							var _site = \'\';//你的网站地址
@@ -141,7 +141,14 @@ unset($_smarty_tpl_vars);
  <span class="gray">(目前库存：<?php echo $this->_tpl_vars['FrontGoods'][0]->inventory; ?>
 <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
 )</span></dd>
-			<dd class="buy_button"><input type="submit" name="send" class="submit" value="" /> <img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+			<dd class="buy_button">
+			<?php if ($this->_tpl_vars['FrontGoods'][0]->is_up == 1): ?>
+				<input type="submit" name="send" class="submit" value="" />
+				<?php else: ?>
+				<strong class="is_up">此商品已下架</strong>
+			<?php endif; ?>
+				<img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+
 		</dl>
 	</form>
 	<div class="content">

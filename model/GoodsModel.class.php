@@ -68,7 +68,7 @@ class GoodsModel extends Model {
 
 	public function findDetailsGoods()
 	{
-		$_oneGoods = parent::select(array('id','brand','service','name','thumbnail','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+		$_oneGoods = parent::select(array('id','brand','service','is_up','name','thumbnail','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
 		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
 
 		$this->_tables = array(DB_PREFIX.'brand');
@@ -120,7 +120,7 @@ class GoodsModel extends Model {
 		}
 
 		$_allGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2'),
-			array('limit'=>$this->_limit,'where'=>array("nav in ({$this->getNavId()}) $_priceSQL $_brandSQL $_attrSQL"),'order'=>'date DESC'));
+			array('limit'=>$this->_limit,'where'=>array("nav in ({$this->getNavId()}) AND is_up=1 $_priceSQL $_brandSQL $_attrSQL"),'order'=>'date DESC'));
 			foreach($_allGoods as $_value)
 			{
 				if(Validate::isNullString($_value->thumbnail2))
@@ -173,6 +173,36 @@ class GoodsModel extends Model {
 		$this->_tables = array(DB_PREFIX.'goods');
 
 		return $_id;
+	}
+
+	public function isFlow()
+	{
+		$_goods = array();
+		foreach($_COOKIE['cart'] as $_key=>$_value)
+		{
+			$_temp = unserialize(stripslashes($_value));
+			$_goods[$_key] = null;
+			$_goods[$_key]->name = $_temp['name'];
+			$_goods[$_key]->num = $_temp['num'];
+		}
+		$_flag = false;
+		foreach($_goods as $_key=>$_value)
+		{
+			$_where = array("id='{$_key}' AND inventory<{$_value->num}");
+			if(!!$_obj=parent::select(array('id','inventory'), array('where'=>$_where, 'limit'=>'1')))
+			{
+				$this->_check->setMessage('您购买的“'.$_value->name.'”，超过了库存；您的购买量为：'.$_value->num.'，库存量为：'.$_obj[0]->inventory);
+				$_flag = true;
+			}
+		}
+		if($_flag)
+		{
+			$this->_check->error();
+		}
+		else
+		{
+			return true;
+		}
 	}
 
 	public function add()

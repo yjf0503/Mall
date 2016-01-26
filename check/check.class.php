@@ -18,6 +18,11 @@ class Check extends Validate{
         $this->_tpl = TPL::getInstance();
     }
 
+    public function setMessage($_message)
+    {
+        $this->_message[] = $_message;
+    }
+
     //获取消息集
     public function getMessage()
     {

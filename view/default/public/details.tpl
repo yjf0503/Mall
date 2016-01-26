@@ -84,7 +84,7 @@
 					<script type="text/javascript">
 						function postToWb(){
 							var _t = encodeURI(document.title);
-							var _url = encodeURIComponent('http://www.yc60.com');
+							var _url = encodeURIComponent(document.location);
 							var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
 							var _pic = encodeURI('http://www.yc60.com/video/dreamweavermain.png');//（列如：var _pic='图片url1|图片url2’）
 							var _site = '';//你的网站地址
@@ -102,7 +102,14 @@
 			<dd>销 售 量：<span class="sale_num">136</span> {$FrontGoods[0]->unit}</dd>
 			<dd>重　　量：{$FrontGoods[0]->weight} kg {if $FrontGoods[0]->is_freight == 1}<span class="gray">(免运费)</span>{/if}</dd>
 			<dd>数　　量：<input type="text" value="1" class="num" name="num" /> {$FrontGoods[0]->unit} <span class="gray">(目前库存：{$FrontGoods[0]->inventory}{$FrontGoods[0]->unit})</span></dd>
-			<dd class="buy_button"><input type="submit" name="send" class="submit" value="" /> <img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+			<dd class="buy_button">
+			{if $FrontGoods[0]->is_up==1}
+				<input type="submit" name="send" class="submit" value="" />
+				{else}
+				<strong class="is_up">此商品已下架</strong>
+			{/if}
+				<img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+
 		</dl>
 	</form>
 	<div class="content">

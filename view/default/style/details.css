@@ -146,6 +146,14 @@
 	float:left;
 	margin:0 10px 0 0;
 }
+#main dl.text dd strong.is_up{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	padding: 0 10px 0 0;
+	font-size: 16px;
+}
 #main dl.text dd.buy_button {
 	padding:10px 0 0 60px;
 }
