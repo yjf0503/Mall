@@ -11,6 +11,7 @@ class GoodsAction extends Action
     private $_nav = null;
     private $_brand = null;
     private $_attr = null;
+    private $_service = null;
 
     public function __construct()
     {
@@ -18,6 +19,7 @@ class GoodsAction extends Action
         $this->_nav = new NavModel();
         $this->_brand = new BrandModel();
         $this->_attr = new AttrModel();
+        $this->_service = new ServiceModel();
     }
 
     public function index()
@@ -41,6 +43,8 @@ class GoodsAction extends Action
             }
         }
         $this->_tpl->assign('addNav',$this->_nav->findAddGoodsNav());
+        $this->_tpl->assign('addService',$this->_service->findAddGoodsService());
+        $this->_tpl->assign('addServiceSelected',$this->_service->findAddGoodsServiceSelected());
         $this->_tpl->display(SMARTY_ADMIN.'goods/add.tpl');
     }
 
@@ -62,6 +66,8 @@ class GoodsAction extends Action
             $this->_tpl->assign('addNav',$this->_nav->findAddGoodsNav());
             $this->_tpl->assign('bool',array(1=>'是',2=>'否'));
             $this->_tpl->assign('OneGoods', $this->_model->findOne());
+            $this->_tpl->assign('addService',$this->_service->findAddGoodsService());
+            $this->_tpl->assign('addServiceSelected',$this->_service->findAddGoodsServiceSelected());
             $this->_tpl->display(SMARTY_ADMIN.'goods/update.tpl');
         }
     }

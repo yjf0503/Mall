@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-11 15:38:37
+<?php /* Smarty version 2.6.26, created on 2016-01-26 11:59:25
          compiled from admin/goods/add.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'admin/goods/add.tpl', 23, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'admin/goods/add.tpl', 23, false),array('function', 'html_radios', 'admin/goods/add.tpl', 43, false),)), $this); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -48,6 +48,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_option
 		</dd>
 		<dd><textarea id="TextArea1" name="content" class="ckeditor"></textarea></dd>
 		<dd>是否上架：<input type="radio" name="is_up" value="1" checked="checked" />是 <input type="radio" name="is_up" value="0" />否　　免 运 费：<input type="radio" name="is_freight" value="1" checked="checked" />是 <input type="radio" name="is_freight" value="0" />否</dd>
+		<dd>售后服务：<?php echo smarty_function_html_radios(array('name' => 'service','options' => ($this->_tpl_vars['addService']),'checked' => $this->_tpl_vars['addServiceSelected']), $this);?>
+</dd>
 		<dd>库　　存：<input type="text" name="inventory" value="100" class="text small" /> 库存告急：<input type="text" name="warn_inventory" value="1" class="text small" /> ( * 库存达到指定数量就会在后台提醒 )</dd>
 		<dd><input type="submit" name="send" value="新增商品" onclick="return addGoods();" /> <input type="reset" value="重置" /></dd>
 	</dl>

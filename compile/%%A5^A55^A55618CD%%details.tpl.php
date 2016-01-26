@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-25 22:56:19
+<?php /* Smarty version 2.6.26, created on 2016-01-26 12:11:00
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -162,7 +162,8 @@ unset($_smarty_tpl_vars);
 			成交记录
 		</div>
 		<div class="c4" id="c4" style="display:none;">
-			售后服务
+			<?php echo $this->_tpl_vars['FrontGoods'][0]->service; ?>
+
 		</div>
 	</div>
 </div>

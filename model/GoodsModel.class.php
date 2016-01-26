@@ -10,7 +10,7 @@ class GoodsModel extends Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->_fields = array('id','nav','brand','name','keyword','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
+		$this->_fields = array('id','nav','brand','service','name','keyword','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
 		$this->_tables = array( DB_PREFIX . 'goods' );
 		$this->_check  = new GoodsCheck();
 		list(
@@ -62,13 +62,13 @@ class GoodsModel extends Model {
 		{
 			$this->_check->error();
 		}
-		return parent::select(array('id','name','sn','attr','price_sale','price_market','price_cost','keyword','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','nav','brand'),
+		return parent::select(array('id','service','name','sn','attr','price_sale','price_market','price_cost','keyword','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','nav','brand'),
 			array('where'=>$_where, 'limit'=>'1'));
 	}
 
 	public function findDetailsGoods()
 	{
-		$_oneGoods = parent::select(array('id','brand','name','thumbnail','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+		$_oneGoods = parent::select(array('id','brand','service','name','thumbnail','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
 		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
 
 		$this->_tables = array(DB_PREFIX.'brand');
@@ -81,6 +81,12 @@ class GoodsModel extends Model {
 		{
 			$_oneGoods[0]->brandname = $_allBrand[$_oneGoods[0]->brand];
 		}
+
+		$this->_tables = array( DB_PREFIX . 'service' );
+		$_where = array("id='{$_oneGoods[0]->service}'");
+		$_service = parent::select(array('content'),array('where'=>$_where,'limit'=>'1'));
+		$_oneGoods[0]->service = htmlspecialchars_decode($_service[0]->content);
+		$this->_tables = array( DB_PREFIX . 'goods' );
 		return $_oneGoods;
 	}
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-13 21:03:39
+<?php /* Smarty version 2.6.26, created on 2016-01-26 12:05:07
          compiled from admin/goods/update.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'html_options', 'admin/goods/update.tpl', 26, false),array('function', 'html_radios', 'admin/goods/update.tpl', 45, false),)), $this); ?>
@@ -66,6 +66,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_option
 </textarea></dd>
         <dd>是否上架：<?php echo smarty_function_html_radios(array('options' => $this->_tpl_vars['bool'],'selected' => $this->_tpl_vars['OneGoods'][0]->is_up,'name' => 'is_up'), $this);?>
 　　免 运 费：<?php echo smarty_function_html_radios(array('options' => $this->_tpl_vars['bool'],'selected' => $this->_tpl_vars['OneGoods'][0]->is_freight,'name' => 'is_freight'), $this);?>
+</dd>
+        <dd>售后服务：<?php echo smarty_function_html_radios(array('name' => 'service','options' => ($this->_tpl_vars['addService']),'checked' => $this->_tpl_vars['OneGoods'][0]->service), $this);?>
 </dd>
         <dd>库　　存：<input type="text" name="inventory" value="<?php echo $this->_tpl_vars['OneGoods'][0]->inventory; ?>
 " class="text small" /> 库存告急：<input type="text" name="warn_inventory" value="<?php echo $this->_tpl_vars['OneGoods'][0]->warn_inventory; ?>

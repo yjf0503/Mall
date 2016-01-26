@@ -40,6 +40,7 @@
 		</dd>
 		<dd><textarea id="TextArea1" name="content" class="ckeditor"></textarea></dd>
 		<dd>是否上架：<input type="radio" name="is_up" value="1" checked="checked" />是 <input type="radio" name="is_up" value="0" />否　　免 运 费：<input type="radio" name="is_freight" value="1" checked="checked" />是 <input type="radio" name="is_freight" value="0" />否</dd>
+		<dd>售后服务：{html_radios name="service" options="$addService" checked=$addServiceSelected}</dd>
 		<dd>库　　存：<input type="text" name="inventory" value="100" class="text small" /> 库存告急：<input type="text" name="warn_inventory" value="1" class="text small" /> ( * 库存达到指定数量就会在后台提醒 )</dd>
 		<dd><input type="submit" name="send" value="新增商品" onclick="return addGoods();" /> <input type="reset" value="重置" /></dd>
 	</dl>

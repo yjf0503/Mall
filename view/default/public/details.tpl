@@ -122,7 +122,7 @@
 			成交记录
 		</div>
 		<div class="c4" id="c4" style="display:none;">
-			售后服务
+			{$FrontGoods[0]->service}
 		</div>
 	</div>
 </div>

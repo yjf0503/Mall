@@ -43,6 +43,7 @@
         </dd>
         <dd><textarea id="TextArea1" name="content" class="ckeditor">{$OneGoods[0]->content}</textarea></dd>
         <dd>是否上架：{html_radios options=$bool selected=$OneGoods[0]->is_up name=is_up}　　免 运 费：{html_radios options=$bool selected=$OneGoods[0]->is_freight name=is_freight}</dd>
+        <dd>售后服务：{html_radios name="service" options="$addService" checked=$OneGoods[0]->service}</dd>
         <dd>库　　存：<input type="text" name="inventory" value="{$OneGoods[0]->inventory}" class="text small" /> 库存告急：<input type="text" name="warn_inventory" value="{$OneGoods[0]->warn_inventory}" class="text small" /> ( * 库存达到指定数量就会在后台提醒 )</dd>
         <dd><input type="submit" name="send" value="修改商品" onclick="return updateGoods();" /> <input type="reset" value="重置" /></dd>
     </dl>
