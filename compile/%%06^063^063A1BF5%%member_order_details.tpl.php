@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-27 18:13:58
+<?php /* Smarty version 2.6.26, created on 2016-01-27 19:24:23
          compiled from default/public/member_order_details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -95,7 +95,15 @@ unset($_smarty_tpl_vars);
 
 	<p style="text-align:center;padding:10px;">
 		<?php if ($this->_tpl_vars['OneOrder'][0]->order_state == '已取消' || $this->_tpl_vars['OneOrder'][0]->order_pay == '已付款' || $this->_tpl_vars['OneOrder'][0]->order_delivery == '已配货' || $this->_tpl_vars['OneOrder'][0]->order_delivery == '已发货'): ?>
-			<span class="red">此订单已被锁定！无法支付！</span>
+			<?php if ($this->_tpl_vars['OneOrder'][0]->refund == 1): ?>
+				<span class="red">此订单正在申请退款中！</span>
+			<?php else: ?>
+				<?php if ($this->_tpl_vars['OneOrder'][0]->refund == 2): ?>
+					<span class="green">此订单已经退款成功！</span>
+				<?php else: ?>
+					<span class="red">此订单已被锁定！无法支付！</span>
+				<?php endif; ?>
+			<?php endif; ?>
 		<?php else: ?>
 			<a href="?a=member&m=alipay&id=<?php echo $this->_tpl_vars['OneOrder'][0]->id; ?>
 "><img src="view/default/images/fu.gif" alt="付款" style="border:none;" /></a>

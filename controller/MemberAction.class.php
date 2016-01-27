@@ -147,4 +147,16 @@ class MemberAction extends Action{
 	{
 		$this->_user->ajaxLogin();
 	}
+
+	public function refund()
+	{
+		if($this->_order->refund())
+		{
+			$this->_redirect->succ(Tool::getPrevPage());
+		}
+		else
+		{
+			$this->_redirect->error('申请退款失败，请重试');
+		}
+	}
 }

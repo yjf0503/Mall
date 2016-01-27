@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-27 18:18:29
+<?php /* Smarty version 2.6.26, created on 2016-01-27 19:16:20
          compiled from admin/order/update.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -99,8 +99,14 @@
 				运 单 号：<input type="text" name="delivery_number" class="text" value="<?php echo $this->_tpl_vars['OneOrder'][0]->delivery_number; ?>
 " />
 			</dd>
-			<dd><input type="submit" name="send" class="submit" value="修改订单" /></dd>
 		<?php endif; ?>
+		<?php if ($this->_tpl_vars['OneOrder'][0]->refund == 1): ?>
+			<dd><span class="red">此订单正在申请退款中，如确认无误，请勾上：</span> <label for="refund"><input type="checkbox" value="2" name="refund" id="refund" />确认退款</label></dd>
+		<?php endif; ?>
+		<?php if ($this->_tpl_vars['OneOrder'][0]->refund == 2): ?>
+			<dd><span class="red">此订单已经退款成功！</dd>
+		<?php endif; ?>
+		<dd><input type="submit" name="send" class="submit" value="修改订单" /></dd>
 	</dl>
 </form>
 

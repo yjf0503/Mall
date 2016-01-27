@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-27 10:53:40
+<?php /* Smarty version 2.6.26, created on 2016-01-27 19:15:11
          compiled from admin/order/show.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,19 +26,27 @@
 					<?php if ($this->_tpl_vars['value']->order_state == '已取消'): ?>
 						<span class="red">已取消</span>
 					<?php else: ?>
-						<?php if ($this->_tpl_vars['value']->order_delivery == '已发货'): ?>
-							<span class="green">已发货，等待收货</span>
+						<?php if ($this->_tpl_vars['value']->refund == 1): ?>
+							<span style="color:#666;">申请退款中</span>
 						<?php else: ?>
-							<?php if ($this->_tpl_vars['value']->order_delivery == '已配货'): ?>
-								<span class="green">已配货，等待发货</span>
+							<?php if ($this->_tpl_vars['value']->refund == 2): ?>
+								<span class="green">退款成功</span>
 							<?php else: ?>
-								<?php if ($this->_tpl_vars['value']->order_pay == '已付款'): ?>
-									<span class="green">已付款，等待配货</span>
+								<?php if ($this->_tpl_vars['value']->order_delivery == '已发货'): ?>
+									<span class="green">已发货，等待收货</span>
 								<?php else: ?>
-									<?php if ($this->_tpl_vars['value']->order_state == '已确认'): ?>
-										<span class="green">已确认，等待付款</span>
+									<?php if ($this->_tpl_vars['value']->order_delivery == '已配货'): ?>
+										<span class="green">已配货，等待发货</span>
 									<?php else: ?>
-										<span style="color:#666;">未确认</span>
+										<?php if ($this->_tpl_vars['value']->order_pay == '已付款'): ?>
+											<span class="green">已付款，等待配货</span>
+										<?php else: ?>
+											<?php if ($this->_tpl_vars['value']->order_state == '已确认'): ?>
+												<span class="green">已确认，等待付款</span>
+											<?php else: ?>
+												<span style="color:#666;">未确认</span>
+											<?php endif; ?>
+										<?php endif; ?>
 									<?php endif; ?>
 								<?php endif; ?>
 							<?php endif; ?>

@@ -59,7 +59,15 @@
 
 	<p style="text-align:center;padding:10px;">
 		{if $OneOrder[0]->order_state == '已取消' || $OneOrder[0]->order_pay == '已付款' || $OneOrder[0]->order_delivery == '已配货' || $OneOrder[0]->order_delivery == '已发货'}
-			<span class="red">此订单已被锁定！无法支付！</span>
+			{if $OneOrder[0]->refund == 1}
+				<span class="red">此订单正在申请退款中！</span>
+			{else}
+				{if $OneOrder[0]->refund == 2}
+					<span class="green">此订单已经退款成功！</span>
+				{else}
+					<span class="red">此订单已被锁定！无法支付！</span>
+				{/if}
+			{/if}
 		{else}
 			<a href="?a=member&m=alipay&id={$OneOrder[0]->id}"><img src="view/default/images/fu.gif" alt="付款" style="border:none;" /></a>
 		{/if}

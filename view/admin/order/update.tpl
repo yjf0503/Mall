@@ -71,8 +71,14 @@
 			<dd class="delivery">
 				运 单 号：<input type="text" name="delivery_number" class="text" value="{$OneOrder[0]->delivery_number}" />
 			</dd>
-			<dd><input type="submit" name="send" class="submit" value="修改订单" /></dd>
 		{/if}
+		{if $OneOrder[0]->refund == 1}
+			<dd><span class="red">此订单正在申请退款中，如确认无误，请勾上：</span> <label for="refund"><input type="checkbox" value="2" name="refund" id="refund" />确认退款</label></dd>
+		{/if}
+		{if $OneOrder[0]->refund == 2}
+			<dd><span class="red">此订单已经退款成功！</dd>
+		{/if}
+		<dd><input type="submit" name="send" class="submit" value="修改订单" /></dd>
 	</dl>
 </form>
 

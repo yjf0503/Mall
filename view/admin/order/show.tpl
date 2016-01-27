@@ -18,19 +18,27 @@
 					{if $value->order_state == '已取消'}
 						<span class="red">已取消</span>
 					{else}
-						{if $value->order_delivery == '已发货'}
-							<span class="green">已发货，等待收货</span>
+						{if $value->refund == 1}
+							<span style="color:#666;">申请退款中</span>
 						{else}
-							{if $value->order_delivery == '已配货'}
-								<span class="green">已配货，等待发货</span>
+							{if $value->refund == 2}
+								<span class="green">退款成功</span>
 							{else}
-								{if $value->order_pay == '已付款'}
-									<span class="green">已付款，等待配货</span>
+								{if $value->order_delivery == '已发货'}
+									<span class="green">已发货，等待收货</span>
 								{else}
-									{if $value->order_state == '已确认'}
-										<span class="green">已确认，等待付款</span>
+									{if $value->order_delivery == '已配货'}
+										<span class="green">已配货，等待发货</span>
 									{else}
-										<span style="color:#666;">未确认</span>
+										{if $value->order_pay == '已付款'}
+											<span class="green">已付款，等待配货</span>
+										{else}
+											{if $value->order_state == '已确认'}
+												<span class="green">已确认，等待付款</span>
+											{else}
+												<span style="color:#666;">未确认</span>
+											{/if}
+										{/if}
 									{/if}
 								{/if}
 							{/if}
