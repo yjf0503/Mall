@@ -126,6 +126,18 @@ class MemberAction extends Action{
 		}
 	}
 
+	public function cancel()
+	{
+		if($this->_order->cancel())
+		{
+			$this->_redirect->succ(Tool::getPrevPage());
+		}
+		else
+		{
+			$this->_redirect->error('订单取消失败，请重试');
+		}
+	}
+
 	public function isUser()
 	{
 		$this->_user->isUser();

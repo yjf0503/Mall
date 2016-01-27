@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-21 11:23:47
+<?php /* Smarty version 2.6.26, created on 2016-01-27 11:34:43
          compiled from default/public/member_order.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,28 +35,47 @@ unset($_smarty_tpl_vars);
 "><?php echo $this->_tpl_vars['value']->ordernum; ?>
 </a></td><td><?php echo $this->_tpl_vars['value']->date; ?>
 </td><td><?php echo $this->_tpl_vars['value']->price; ?>
-/元</td><td><?php echo $this->_tpl_vars['value']->order_state; ?>
-，
-					<?php if ($this->_tpl_vars['value']->order_pay == '未付款'): ?>
-						<span style="color:red;"><?php echo $this->_tpl_vars['value']->order_pay; ?>
-</span>
+/元</td><td>
+					<?php if ($this->_tpl_vars['value']->order_state == '已取消'): ?>
+						<span class="red">已取消</span>
 					<?php else: ?>
-						<span style="color:green;"><?php echo $this->_tpl_vars['value']->order_pay; ?>
-</span>
+						<?php if ($this->_tpl_vars['value']->order_delivery == '已发货'): ?>
+							<span class="green">已发货，等待收货</span>
+						<?php else: ?>
+							<?php if ($this->_tpl_vars['value']->order_delivery == '已配货'): ?>
+								<span class="green">已配货，等待发货</span>
+							<?php else: ?>
+								<?php if ($this->_tpl_vars['value']->order_pay == '已付款'): ?>
+									<span class="green">已付款，等待配货</span>
+								<?php else: ?>
+									<?php if ($this->_tpl_vars['value']->order_state == '已确认'): ?>
+										<span class="green">已确认，等待付款</span>
+									<?php else: ?>
+										<span style="color:#666;">未确认</span>
+									<?php endif; ?>
+								<?php endif; ?>
+							<?php endif; ?>
+						<?php endif; ?>
 					<?php endif; ?>
-					，
-					<?php echo $this->_tpl_vars['value']->order_delivery; ?>
-</td><td>
-					<?php if ($this->_tpl_vars['value']->order_pay == '未付款'): ?>
+				</td><td>
+					<?php if ($this->_tpl_vars['value']->order_state == '已取消' || $this->_tpl_vars['value']->order_pay == '已付款' || $this->_tpl_vars['value']->order_delivery == '已配货' || $this->_tpl_vars['value']->order_delivery == '已发货'): ?>
+						-----
+					<?php else: ?>
 						<a href="?a=member&m=alipay&id=<?php echo $this->_tpl_vars['value']->id; ?>
-">在线支付</a> |
+">在线支付</a> | <a href="?a=member&m=cancel&id=<?php echo $this->_tpl_vars['value']->id; ?>
+">取消订单</a>
 					<?php endif; ?>
-					取消</td></tr>
+				</td></tr>
 		<?php endforeach; endif; unset($_from); ?>
 	</table>
 	<div id="page"><?php echo $this->_tpl_vars['page']; ?>
 </div>
 </div>
 
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => 'default/public/footer.tpl', 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 </body>
 </html>

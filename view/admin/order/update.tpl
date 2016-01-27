@@ -5,6 +5,7 @@
 	<title>在线商城后台管理</title>
 	<link rel="stylesheet" type="text/css" href="view/admin/style/basic.css" />
 	<link rel="stylesheet" type="text/css" href="view/admin/style/order.css" />
+	<script type="text/javascript" src="view/admin/js/order.js"></script>
 </head>
 <body>
 
@@ -54,6 +55,21 @@
 				<input type="radio" name="order_delivery" {if $OneOrder[0]->order_delivery == '未发货'}checked="checked"{/if} value="未发货" /> 未发货
 				<input type="radio" name="order_delivery" {if $OneOrder[0]->order_delivery == '已配货'}checked="checked"{/if} value="已配货" /> 已配货
 				<input type="radio" name="order_delivery" {if $OneOrder[0]->order_delivery == '已发货'}checked="checked"{/if} value="已发货" /> 已发货
+			</dd>
+			<dd class="delivery">
+				物流配送：<select name="delivery_name" onchange="changeDelivery();">
+					<option value="0"> -- 请选择一家物流 -- </option>
+					{foreach from=$AllDelivery key=key item=value}
+						{if $OneOrder[0]->delivery_name == $value->name}
+							<option value="{$value->name}" url="{$value->url}" selected="selected">{$value->name}</option>
+						{else}
+							<option value="{$value->name}" url="{$value->url}">{$value->name}</option>
+						{/if}
+					{/foreach}
+				</select> <input type="hidden" value="{$OneOrder[0]->delivery_url}" name="delivery_url" />
+			</dd>
+			<dd class="delivery">
+				运 单 号：<input type="text" name="delivery_number" class="text" value="{$OneOrder[0]->delivery_number}" />
 			</dd>
 			<dd><input type="submit" name="send" class="submit" value="修改订单" /></dd>
 		{/if}

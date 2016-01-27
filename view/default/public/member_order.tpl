@@ -19,18 +19,35 @@
 	<table id="cart" cellspacing="1">
 		<tr><th>订单号</th><th>下单时间</th><th>总金额</th><th>订单状态</th><th>操作</th></tr>
 		{foreach from=$AllOrder key=key item=value}
-			<tr><td><a href="?a=member&m=order_details&id={$value->id}">{$value->ordernum}</a></td><td>{$value->date}</td><td>{$value->price}/元</td><td>{$value->order_state}，
-					{if $value->order_pay == '未付款'}
-						<span style="color:red;">{$value->order_pay}</span>
+			<tr><td><a href="?a=member&m=order_details&id={$value->id}">{$value->ordernum}</a></td><td>{$value->date}</td><td>{$value->price}/元</td><td>
+					{if $value->order_state == '已取消'}
+						<span class="red">已取消</span>
 					{else}
-						<span style="color:green;">{$value->order_pay}</span>
+						{if $value->order_delivery == '已发货'}
+							<span class="green">已发货，等待收货</span>
+						{else}
+							{if $value->order_delivery == '已配货'}
+								<span class="green">已配货，等待发货</span>
+							{else}
+								{if $value->order_pay == '已付款'}
+									<span class="green">已付款，等待配货</span>
+								{else}
+									{if $value->order_state == '已确认'}
+										<span class="green">已确认，等待付款</span>
+									{else}
+										<span style="color:#666;">未确认</span>
+									{/if}
+								{/if}
+							{/if}
+						{/if}
 					{/if}
-					，
-					{$value->order_delivery}</td><td>
-					{if $value->order_pay == '未付款'}
-						<a href="?a=member&m=alipay&id={$value->id}">在线支付</a> |
+				</td><td>
+					{if $value->order_state == '已取消' || $value->order_pay == '已付款' || $value->order_delivery == '已配货' || $value->order_delivery == '已发货'}
+						-----
+					{else}
+						<a href="?a=member&m=alipay&id={$value->id}">在线支付</a> | <a href="?a=member&m=cancel&id={$value->id}">取消订单</a>
 					{/if}
-					取消</td></tr>
+				</td></tr>
 		{/foreach}
 	</table>
 	<div id="page">{$page}</div>

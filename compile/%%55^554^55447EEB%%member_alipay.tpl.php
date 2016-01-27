@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-21 14:20:47
+<?php /* Smarty version 2.6.26, created on 2016-01-27 11:39:38
          compiled from default/public/member_alipay.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -69,24 +69,28 @@ unset($_smarty_tpl_vars);
 <div id="main">
 	<h2>在线支付</h2>
 	<div class="alipay">
-		<form action="alipay/alipayto.php" method="post">
-			<input type="hidden" name="out_trade_no" value="<?php echo $this->_tpl_vars['OneOrder'][0]->ordernum; ?>
+		<?php if ($this->_tpl_vars['OneOrder'][0]->order_state == '已取消' || $this->_tpl_vars['OneOrder'][0]->order_pay == '已付款' || $this->_tpl_vars['OneOrder'][0]->order_delivery == '已配货' || $this->_tpl_vars['OneOrder'][0]->order_delivery == '已发货'): ?>
+			<dl><dd>此订单已被锁定！<input type="button" value="返回" onclick="javascript:history.go(-1);" /></dd></dl>
+		<?php else: ?>
+			<form action="alipay/alipayto.php" method="post">
+				<input type="hidden" name="out_trade_no" value="<?php echo $this->_tpl_vars['OneOrder'][0]->ordernum; ?>
 " />
-			<input type="hidden" name="subject" value="瓢城Web俱乐部的订单" />
-			<input type="hidden" name="total_fee" value="<?php echo $this->_tpl_vars['OneOrder'][0]->price; ?>
+				<input type="hidden" name="subject" value="瓢城Web俱乐部的订单" />
+				<input type="hidden" name="total_fee" value="<?php echo $this->_tpl_vars['OneOrder'][0]->price; ?>
 " />
-			<input type="hidden" name="alibody" value="<?php echo $this->_tpl_vars['OneOrder'][0]->text; ?>
+				<input type="hidden" name="alibody" value="<?php echo $this->_tpl_vars['OneOrder'][0]->text; ?>
 " />
-			<dl>
-				<dd>订 单 号：<?php echo $this->_tpl_vars['OneOrder'][0]->ordernum; ?>
+				<dl>
+					<dd>订 单 号：<?php echo $this->_tpl_vars['OneOrder'][0]->ordernum; ?>
 </dd>
-				<dd>总 金 额：<?php echo $this->_tpl_vars['OneOrder'][0]->price; ?>
+					<dd>总 金 额：<?php echo $this->_tpl_vars['OneOrder'][0]->price; ?>
 /元</dd>
-				<dd>订单详情：<?php echo $this->_tpl_vars['OneOrder'][0]->text; ?>
+					<dd>订单详情：<?php echo $this->_tpl_vars['OneOrder'][0]->text; ?>
 </dd>
-				<dd><input type="submit" name="send" value="支付宝支付" /></dd>
-			</dl>
-		</form>
+					<dd><input type="submit" name="send" value="支付宝支付" /></dd>
+				</dl>
+			</form>
+		<?php endif; ?>
 	</div>
 </div>
 

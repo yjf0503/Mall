@@ -34,7 +34,7 @@
 	<dl style="display:none">
 		<dt>订单</dt>
 		<dd><a href="?a=order" target="in">订单列表</a></dd>
-		<dd><a href="###">订单2</a></dd>
+		<dd><a href="?a=delivery" target="in">物流配送</a></dd>
 		<dd><a href="###">订单3</a></dd>
 	</dl>
 	<dl style="display:none">

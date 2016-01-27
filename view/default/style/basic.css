@@ -19,6 +19,12 @@ a {
 a:hover {
 	text-decoration:underline;
 }
+span.red {
+	color:red;
+}
+span.green {
+	color:green;
+}
 #header {
 	height:60px;
 	margin:0 0 10px 0;
@@ -124,14 +130,14 @@ a:hover {
 #page select.select optgroup {
 	font-style:normal;
 }
-#footer{
-	width: 986px;
-	margin: 0 auto;
-	float: left;
-	text-align: center;
-	padding: 5px;
+#footer {
+	width:986px;
+	margin:0 auto;
+	float:left;
+	text-align:center;
+	padding:5px;
 	color:#666;
 }
-#footer p{
-	padding: 2px;
+#footer p {
+	padding:2px;
 }

@@ -10,7 +10,7 @@ class OrderModel extends Model{
     public function __construct()
     {
         parent::__construct();
-        $this->_fields = array('id','user','name','email','tel','address','goods','buildings','code','delivery','pay','price','text','ps','orderNum','order_state','order_pay','order_delivery');
+        $this->_fields = array('id','user','name','email','tel','address','goods','buildings','code','delivery','pay','price','text','ps','orderNum','order_state','order_pay','order_delivery','delivery_url','delivery_name','delivery_number');
         $this->_tables = array(DB_PREFIX.'order');
         //$this->_check = new ManageCheck();
         list($this->_R['id'],
@@ -100,7 +100,7 @@ class OrderModel extends Model{
 
     public function findUserDetails()
     {
-        $_orderDetails = parent::select(array('id','ordernum','goods','delivery','pay','price','text','ps','order_state','order_pay','order_delivery'),array('where'=>array("id='{$this->_R['id']}'")));
+        $_orderDetails = parent::select(array('id','ordernum','goods','delivery','pay','price','text','ps','order_state','order_pay','order_delivery','delivery_url','delivery_number','delivery_name'),array('where'=>array("id='{$this->_R['id']}'")));
 
         $_orderDetails[0]->goods = unserialize(htmlspecialchars_decode($_orderDetails[0]->goods));
         foreach($_orderDetails[0]->goods as $_key=>$_value)
@@ -128,5 +128,22 @@ class OrderModel extends Model{
         {
             return parent::total();
         }
+    }
+
+    public function cancel()
+    {
+        $_where = array("id='{$this->_R['id']}'");
+        $_goods = array();
+        $_obj = parent::select(array('goods'),array('where'=>$_where));
+        $_goods = unserialize(htmlspecialchars_decode($_obj[0]->goods));
+        $this->_tables = array(DB_PREFIX.'goods');
+        foreach($_goods as $_key=>$_value)
+        {
+            $_temp = unserialize($_value);
+            parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num'])));
+        }
+        $this->_tables = array(DB_PREFIX.'order');
+        $_updateData['order_state'] = '已取消';
+        return parent::update($_where,$_updateData);
     }
 }

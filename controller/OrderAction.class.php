@@ -8,9 +8,11 @@
 //订单控制器
 class OrderAction extends Action
 {
+    private $_delivery;
     public function __construct()
     {
         parent::__construct();
+        $this->_delivery = new DeliveryModel();
     }
 
     //管理员列表
@@ -38,6 +40,7 @@ class OrderAction extends Action
         if(isset($_GET['id']))
         {
             $this->_tpl->assign('OneOrder',$this->_model->findUserDetails());
+            $this->_tpl->assign('AllDelivery',$this->_delivery->findUpdateOrder());
             $this->_tpl->display(SMARTY_ADMIN.'order/update.tpl');
         }
     }
