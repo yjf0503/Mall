@@ -53,8 +53,21 @@ class OrderAction extends Action
             }
             else
             {
-                $this->_redirect->error('订单删除失败');
+                $this->_redirect->error('订单删除失败！请确认订单是取消状态');
             }
+        }
+    }
+
+    //清理未确认的订单
+    public function clear()
+    {
+        if($this->_model->clear())
+        {
+            $this->_redirect->succ(Tool::getPrevPage(),'清理成功');
+        }
+        else
+        {
+            $this->_redirect->error('没有找到可清理的订单');
         }
     }
 

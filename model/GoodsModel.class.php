@@ -205,6 +205,23 @@ class GoodsModel extends Model {
 		}
 	}
 
+	public function setInventory()
+	{
+		$_goods = array();
+		foreach($_COOKIE['cart'] as $_key=>$_value)
+		{
+			$_temp = unserialize(stripslashes($_value));
+			$_goods[$_key] = null;
+			$_goods[$_key]->num = $_temp['num'];
+		}
+
+		foreach($_goods as $_key=>$_value)
+		{
+			$_where =array("id='{$_key}'");
+			parent::update($_where,array('inventory'=>array('inventory-'.$_value->num)));
+		}
+	}
+
 	public function add()
 	{
 		$_where = array("sn='{$this->_R['sn']}'");

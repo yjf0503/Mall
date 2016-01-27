@@ -82,6 +82,7 @@ class CartAction extends Action{
 			$_id = $this->_order->getNextId();
 			if($this->_order->order())
 			{
+				$this->_goods->setInventory();
 				$this->_redirect->succ('?a=member&m=alipay&id='.$_id);
 			}
 		}

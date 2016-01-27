@@ -49,6 +49,41 @@ class OrderModel extends Model{
     {
         $_where = array("id='{$this->_R['id']}'");
         $_updateData = $this->getRequest()->filter($this->_fields);
+        if($_updateData['order_state'] == '已取消')
+        {
+            $_goods = array();
+            $_obj = parent::select(array('goods'),array('where'=>$_where));
+            $_goods = unserialize(htmlspecialchars_decode($_obj[0]->goods));
+            $this->_tables = array(DB_PREFIX.'goods');
+            foreach($_goods as $_key=>$_value)
+            {
+                $_temp = unserialize($_value);
+                parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num'])));
+            }
+            $this->_tables = array(DB_PREFIX.'order');
+        }
+        return parent::update($_where,$_updateData);
+    }
+
+    public function clear()
+    {
+        $_where = array("HOUR(TIMEDIFF(NOW(),date))>24 AND order_state='未确认' AND order_pay='未付款' AND order_delivery='未发货'");
+        $_obj = parent::select(array('goods'),array('where'=>$_where));
+
+        $this->_tables = array(DB_PREFIX.'goods');
+        foreach($_obj as $_key=>$_value)
+        {
+            $_goods = unserialize(htmlspecialchars_decode($_obj[$_key]->goods));
+            foreach($_goods as $_key=>$_value)
+            {
+                $_temp = unserialize($_value);
+                parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num'])));
+
+            }
+        }
+        $this->_tables = array(DB_PREFIX.'order');
+
+        $_updateData['order_state'] = '已取消';
         return parent::update($_where,$_updateData);
     }
 
@@ -59,7 +94,7 @@ class OrderModel extends Model{
 
     public function delete()
     {
-        $_where = array("id='{$this->_R['id']}'");
+        $_where = array("id='{$this->_R['id']}' AND order_state='已取消'");
         return parent::delete($_where);
     }
 
