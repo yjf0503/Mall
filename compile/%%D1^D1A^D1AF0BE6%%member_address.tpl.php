@@ -1,13 +1,12 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-25 19:07:03
+<?php /* Smarty version 2.6.26, created on 2016-01-28 12:22:00
          compiled from default/public/member_address.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>在线商城系统</title>
-<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
-<link rel="stylesheet" type="text/css" href="view/default/style/member.css" />
-	<script type="text/javascript" src="view/default/js/address.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>在线商城系统</title>
+	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
+	<link rel="stylesheet" type="text/css" href="view/default/style/member.css" />
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -32,32 +31,33 @@ unset($_smarty_tpl_vars);
 		<?php $_from = $this->_tpl_vars['AllAddress']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-		<tr><td><?php echo $this->_tpl_vars['value']->name; ?>
+			<tr><td><?php echo $this->_tpl_vars['value']->name; ?>
 </td><td><?php echo $this->_tpl_vars['value']->address; ?>
 </td><td><?php echo $this->_tpl_vars['value']->code; ?>
 </td><td><?php echo $this->_tpl_vars['value']->tel; ?>
 </td><td><?php echo $this->_tpl_vars['value']->email; ?>
 </td><td><?php echo $this->_tpl_vars['value']->buildings; ?>
 </td><td>
-		<?php if ($this->_tpl_vars['value']->selected == 1): ?>
-		<span style="color:green;'">是</span>
-		<?php else: ?>
-		<a href="?a=member&m=selected&id=<?php echo $this->_tpl_vars['value']->id; ?>
+					<?php if ($this->_tpl_vars['value']->selected == 1): ?>
+						<span style="color:green;'">是</span>
+					<?php else: ?>
+						<a href="?a=member&m=selected&id=<?php echo $this->_tpl_vars['value']->id; ?>
 ">首选</a>
-		<?php endif; ?>	
-		 | 修改 | 删除</td></tr>
+					<?php endif; ?>
+					| 修改 | 删除</td></tr>
 		<?php endforeach; endif; unset($_from); ?>
 	</table>
 	<p style="text-align:center;margin:5px 0;"><a href="?a=cart&m=flow">[去结算中心]</a></p>
-		<form action="" method="post" name="address">
+	<form action="" method="post">
 		<dl>
+			<dd>江 浙 沪：<input type="radio" name="flag" value="1" checked="checked" /> 是 <input type="radio" name="flag" value="0" /> 否</dd>
 			<dd>收 货 人：<input type="text" name="name" class="text" /></dd>
 			<dd>收货地址：<input type="text" name="address" class="text" /></dd>
 			<dd>电子邮件：<input type="text" name="email" class="text" /></dd>
 			<dd>邮政编码：<input type="text" name="code" class="text" /></dd>
 			<dd>手机号码：<input type="text" name="tel" class="text" /></dd>
 			<dd>标志建筑：<input type="text" name="buildings" class="text" /></dd>
-			<dd><input type="submit" name="send" value="" onclick="return addressCheck();" class="submit" /></dd>
+			<dd><input type="submit" name="send" value="" class="submit" /></dd>
 		</dl>
 	</form>
 </div>

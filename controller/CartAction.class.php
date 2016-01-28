@@ -12,6 +12,7 @@ class CartAction extends Action{
 	private $_order = null;
 	private $_address = null;
 	private $_goods = null;
+	private $_delivery = null;
 	public function __construct()
 	{
 		parent::__construct();
@@ -24,6 +25,8 @@ class CartAction extends Action{
 		$this->_order = new OrderModel();
 		$this->_address = new AddressModel();
 		$this->_goods = new GoodsModel();
+		$this->_delivery = new DeliveryModel();
+
 	}
 
 	//显示购物车
@@ -96,6 +99,7 @@ class CartAction extends Action{
 	{
 		if($this->_goods->isFlow())
 		{
+			$this->_tpl->assign('FrontDelivery',$this->_delivery->findAllFlow());
 			$this->_tpl->assign('FrontCart',$this->_cart->getProduct());
 			$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
 			$this->_tpl->assign('FrontAddress',$this->_address->findOne());

@@ -30,6 +30,7 @@ class Cart{
 								'attr'=>$_POST['attr'],
 								'num'=>$_POST['num'],
 								'sn'=>$_POST['sn'],
+								'weight'=>$_POST['weight'],
 								'price_sale'=>$_POST['price_sale']
 		)),time()+60*60*24*7);
 	}

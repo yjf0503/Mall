@@ -10,7 +10,7 @@ class AddressModel extends Model{
     public function __construct()
     {
         parent::__construct();
-        $this->_fields = array('id','user','name','email','tel','code','buildings','address','selected');
+        $this->_fields = array('id','user','name','email','tel','code','buildings','address','selected','flag');
         $this->_tables = array(DB_PREFIX.'address');
         $this->_check = new AddressCheck();
         list($this->_R['id']
@@ -30,7 +30,7 @@ class AddressModel extends Model{
 //        {
 //            $this->_check->error();
 //        }
-        return parent::select(array('id','user','name','email','tel','code','buildings','address'),
+        return parent::select(array('id','user','name','email','tel','code','buildings','address','flag'),
                               array('where'=>$_where,'limit'=>'1'));
     }
 

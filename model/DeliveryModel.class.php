@@ -9,7 +9,7 @@
 class DeliveryModel extends Model {
 	public function __construct() {
 		parent::__construct();
-		$this->_fields = array( 'id','name','info','url','date');
+		$this->_fields = array( 'id','name','info','url','date','price_in','price_out','price_add');
 		$this->_tables = array( DB_PREFIX . 'delivery' );
 		$this->_check  = new DeliveryCheck();
 		list( $this->_R['id'],$this->_R['name']) = $this->getRequest()->getParam( array( isset( $_GET['id'] ) ? $_GET['id'] : null,isset( $_POST['name'] ) ? $_POST['name'] : null ) );
@@ -17,7 +17,12 @@ class DeliveryModel extends Model {
 
 	public function findAll()
 	{
-		return parent::select(array('id','name','url','info'),array('limit'=>$this->_limit,'order'=>'date DESC'));
+		return parent::select(array('id','name','url','info','price_in','price_out','price_add'),array('limit'=>$this->_limit,'order'=>'date DESC'));
+	}
+
+	public function findAllFlow()
+	{
+		return parent::select(array('id','name','url','info','price_in','price_out','price_add'));
 	}
 
 	public function findUpdateOrder()
@@ -38,7 +43,7 @@ class DeliveryModel extends Model {
 		{
 			$this->_check->error();
 		}
-		return parent::select(array('id','name','url','info'),
+		return parent::select(array('id','name','url','info','price_in','price_out','price_add'),
 			array('where'=>$_where,'limit'=>'1'));
 	}
 

@@ -11,8 +11,10 @@ window.onload = function ()
     {
         if (fm.delivery_radio[i].checked == true)
         {
-            document.getElementById('delivery').innerHTML = fm.delivery_radio[i].value;
-            total.getElementsByTagName('strong')[1].innerHTML = fm.delivery_radio[i].value;
+            document.getElementById('price1').innerHTML = fm.delivery_radio[i].value;
+            document.getElementById('price2').innerHTML = fm.delivery_radio[i].getAttribute('add');
+            total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = document.getElementById('price3').innerHTML = parseFloat(fm.delivery_radio[i].value)+(parseFloat(fm.delivery_radio[i].getAttribute('weight'))-10)*parseFloat(fm.delivery_radio[i].getAttribute('add'));
+
             fm.delivery.value = fm.delivery_radio[i].title;
         }
     }
@@ -41,8 +43,10 @@ function changeDelivery(delivery)
     var fm = document.flow;
     var sum = 0;
     var total = document.getElementById('total');
-    document.getElementById('delivery').innerHTML = delivery.value;
-    total.getElementsByTagName('strong')[1].innerHTML = delivery.value;
+    document.getElementById('price1').innerHTML = delivery.value;
+    document.getElementById('price2').innerHTML = delivery.getAttribute('add');
+    total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = document.getElementById('price3').innerHTML = parseFloat(delivery.value)+(parseFloat(delivery.getAttribute('weight'))-10)*parseFloat(delivery.getAttribute('add'));
+
     fm.delivery.value = delivery.title;
 
     for (var k = 0;k < total.getElementsByTagName('strong').length; k++)
@@ -59,6 +63,7 @@ function changePay(pay)
     var fm = document.flow;
     var sum = 0;
     var total = document.getElementById('total');
+
     document.getElementById('pay').innerHTML = pay.value;
     total.getElementsByTagName('strong')[2].innerHTML = pay.value;
     fm.pay.value = pay.title;

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-26 18:26:46
+<?php /* Smarty version 2.6.26, created on 2016-01-28 12:31:17
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -97,6 +97,8 @@ unset($_smarty_tpl_vars);
 " />
 		<input type="hidden" name="sn" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->sn; ?>
 " />
+		<input type="hidden" name="weight" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->weight; ?>
+" />
 		<h2><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 </h2>
 		<dl class="pic">
@@ -115,7 +117,7 @@ unset($_smarty_tpl_vars);
 							var _t = encodeURI(document.title);
 							var _url = encodeURIComponent(document.location);
 							var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
-							var _pic = encodeURI(\'http://www.yc60.com/video/dreamweavermain.png\');//（列如：var _pic=\'图片url1|图片url2’）
+							var _pic = encodeURI(thumbnail);//（列如：var _pic=\'图片url1|图片url2’）
 							var _site = \'\';//你的网站地址
 							var _u =\'http://v.t.qq.com/share/share.php?title=\'+_t+\'&url=\'+_url+\'&appkey=\'+_appkey+\'&site=\'+_site+\'&pic=\'+_pic;window.open( _u,\'转播到腾讯微博\', \'width=700, height=680, top=0, left=0,toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no\' );
 						}
@@ -142,13 +144,12 @@ unset($_smarty_tpl_vars);
 <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
 )</span></dd>
 			<dd class="buy_button">
-			<?php if ($this->_tpl_vars['FrontGoods'][0]->is_up == 1): ?>
-				<input type="submit" name="send" class="submit" value="" />
+				<?php if ($this->_tpl_vars['FrontGoods'][0]->is_up == 1): ?>
+					<input type="submit" name="send" class="submit" value="" />
 				<?php else: ?>
-				<strong class="is_up">此商品已下架</strong>
-			<?php endif; ?>
+					<strong class="is_up">此商品已下架</strong>
+				<?php endif; ?>
 				<img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
-
 		</dl>
 	</form>
 	<div class="content">

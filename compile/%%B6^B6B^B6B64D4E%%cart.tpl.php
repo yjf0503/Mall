@@ -1,14 +1,14 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-21 13:43:34
+<?php /* Smarty version 2.6.26, created on 2016-01-28 12:32:51
          compiled from default/public/cart.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>在线商城系统</title>
-<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
-<link rel="stylesheet" type="text/css" href="view/default/style/cart.css" />
-<script type="text/javascript" src="view/default/js/ajax.js"></script>
-<script type="text/javascript" src="view/default/js/cart.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>在线商城系统</title>
+	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
+	<link rel="stylesheet" type="text/css" href="view/default/style/cart.css" />
+	<script type="text/javascript" src="view/default/js/ajax.js"></script>
+	<script type="text/javascript" src="view/default/js/cart.js"></script>
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -22,28 +22,29 @@ unset($_smarty_tpl_vars);
 
 
 <table id="cart" cellspacing="1">
-	<tr><th>编号</th><th>名称</th><th>属性</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th><th class="th">操作</th></tr>
+	<tr><th>编号</th><th>名称</th><th>属性</th><th>重量</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th><th class="th">操作</th></tr>
 	<?php $this->assign('total', 0); ?>
 	<?php $_from = $this->_tpl_vars['FrontCart']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
-	<tr><td><?php echo $this->_tpl_vars['value']['sn']; ?>
+		<tr><td><?php echo $this->_tpl_vars['value']['sn']; ?>
 </td><td><?php echo $this->_tpl_vars['value']['name']; ?>
 </td><td>
-	<?php $_from = $this->_tpl_vars['value']['attr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+				<?php $_from = $this->_tpl_vars['value']['attr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k1'] => $this->_tpl_vars['v1']):
 ?>
-	<?php echo $this->_tpl_vars['k1']; ?>
+					<?php echo $this->_tpl_vars['k1']; ?>
 :
-	<?php $_from = $this->_tpl_vars['v1']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+					<?php $_from = $this->_tpl_vars['v1']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['v2']):
 ?>
-	<?php echo $this->_tpl_vars['v2']; ?>
+						<?php echo $this->_tpl_vars['v2']; ?>
 
-	<?php endforeach; endif; unset($_from); ?>
-	<?php endforeach; endif; unset($_from); ?>
-	<?php $this->assign('total', $this->_tpl_vars['total']+$this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']); ?>
-	</td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']; ?>
+					<?php endforeach; endif; unset($_from); ?>
+				<?php endforeach; endif; unset($_from); ?>
+				<?php $this->assign('total', $this->_tpl_vars['total']+$this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']); ?>
+			</td><td><?php echo $this->_tpl_vars['value']['weight']; ?>
+/kg</td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']; ?>
 /元</td><td><input type="text" name="num" onkeyup="changeNum(<?php echo $this->_tpl_vars['value']['id']; ?>
 ,this.value);" class="small" value="<?php echo $this->_tpl_vars['value']['num']; ?>
 " /></td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']; ?>

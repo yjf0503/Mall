@@ -74,6 +74,7 @@
 		<input type="hidden" name="name" value="{$FrontGoods[0]->name}" />
 		<input type="hidden" name="price_sale" value="{$FrontGoods[0]->price_sale}" />
 		<input type="hidden" name="sn" value="{$FrontGoods[0]->sn}" />
+		<input type="hidden" name="weight" value="{$FrontGoods[0]->weight}" />
 		<h2>{$FrontGoods[0]->name}</h2>
 		<dl class="pic">
 			<dt><a href="###"><img src="{$FrontGoods[0]->thumbnail}" alt="{$FrontGoods[0]->name}" title="{$FrontGoods[0]->name}" /></a></dt>
@@ -86,7 +87,7 @@
 							var _t = encodeURI(document.title);
 							var _url = encodeURIComponent(document.location);
 							var _appkey = encodeURI("appkey");//你从腾讯获得的appkey
-							var _pic = encodeURI('http://www.yc60.com/video/dreamweavermain.png');//（列如：var _pic='图片url1|图片url2’）
+							var _pic = encodeURI(thumbnail);//（列如：var _pic='图片url1|图片url2’）
 							var _site = '';//你的网站地址
 							var _u ='http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic;window.open( _u,'转播到腾讯微博', 'width=700, height=680, top=0, left=0,toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
 						}
@@ -103,13 +104,12 @@
 			<dd>重　　量：{$FrontGoods[0]->weight} kg {if $FrontGoods[0]->is_freight == 1}<span class="gray">(免运费)</span>{/if}</dd>
 			<dd>数　　量：<input type="text" value="1" class="num" name="num" /> {$FrontGoods[0]->unit} <span class="gray">(目前库存：{$FrontGoods[0]->inventory}{$FrontGoods[0]->unit})</span></dd>
 			<dd class="buy_button">
-			{if $FrontGoods[0]->is_up==1}
-				<input type="submit" name="send" class="submit" value="" />
+				{if $FrontGoods[0]->is_up == 1}
+					<input type="submit" name="send" class="submit" value="" />
 				{else}
-				<strong class="is_up">此商品已下架</strong>
-			{/if}
+					<strong class="is_up">此商品已下架</strong>
+				{/if}
 				<img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
-
 		</dl>
 	</form>
 	<div class="content">
