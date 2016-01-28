@@ -13,7 +13,8 @@ window.onload = function ()
         {
             document.getElementById('price1').innerHTML = fm.delivery_radio[i].value;
             document.getElementById('price2').innerHTML = fm.delivery_radio[i].getAttribute('add');
-            total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = document.getElementById('price3').innerHTML = parseFloat(fm.delivery_radio[i].value)+(parseFloat(fm.delivery_radio[i].getAttribute('weight'))-10)*parseFloat(fm.delivery_radio[i].getAttribute('add'));
+            var weight = (parseFloat(fm.delivery_radio[i].getAttribute('weight'))-10)<0 ? 0 : parseFloat(fm.delivery_radio[i].getAttribute('weight'))-10;
+            total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = document.getElementById('price3').innerHTML = parseFloat(fm.delivery_radio[i].value)+(weight)*parseFloat(fm.delivery_radio[i].getAttribute('add'));
 
             fm.delivery.value = fm.delivery_radio[i].title;
         }
@@ -45,8 +46,8 @@ function changeDelivery(delivery)
     var total = document.getElementById('total');
     document.getElementById('price1').innerHTML = delivery.value;
     document.getElementById('price2').innerHTML = delivery.getAttribute('add');
-    total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = document.getElementById('price3').innerHTML = parseFloat(delivery.value)+(parseFloat(delivery.getAttribute('weight'))-10)*parseFloat(delivery.getAttribute('add'));
-
+    var weight = (parseFloat(delivery.getAttribute('weight')) - 10) <0 ? 0 : (parseFloat(delivery.getAttribute('weight')) - 10);    total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = document.getElementById('price3').innerHTML = parseFloat(delivery.value)+(weight)*parseFloat(delivery.getAttribute('add'));
+    document.getElementById('price3').innerHTML = total.getElementsByTagName('strong')[1].innerHTML = document.getElementById('delivery').innerHTML = parseFloat(delivery.value) + (weight) * parseFloat(delivery.getAttribute('add'));
     fm.delivery.value = delivery.title;
 
     for (var k = 0;k < total.getElementsByTagName('strong').length; k++)

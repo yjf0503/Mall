@@ -88,7 +88,19 @@ class CartAction extends Action{
 				if($this->_order->order())
 				{
 					$this->_goods->setInventory();
-					$this->_redirect->succ('?a=member&m=alipay&id='.$_id);
+					$this->_cart->clearProduct();
+					if($_POST['pay'] == '支付宝')
+					{
+						$this->_redirect->succ('?a=member&m=alipay&id='.$_id);
+					}
+					elseif($_POST['pay'] == '银行转账/汇款')
+					{
+						$this->_redirect->succ('?a=member&m=alipay2&id='.$_id);
+					}
+					elseif($_POST['pay'] == '货到付款')
+					{
+						$this->_redirect->succ('?a=member&m=alipay3&id='.$_id);
+					}
 				}
 			}
 		}

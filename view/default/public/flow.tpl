@@ -63,7 +63,7 @@
 		<tr><th width="10%"></th><th width="20%">名称</th><th width="50%">描述</th><th>手续费</th></tr>
 		<tr><td><input type="radio" name="pay_radio" value="0" title="支付宝" onclick="changePay(this);" checked="checked" /></td><td>支付宝</td><td>通过支付宝在线支付</td><td>0/元</td></tr>
 		<tr><td><input type="radio" name="pay_radio" value="2" title="银行转账/汇款" onclick="changePay(this);" /></td><td>银行转账/汇款</td><td>通过转账汇款，联系客服，提供汇款清单和商品订单号</td><td>2/元</td></tr>
-		<tr><td><input type="radio" name="pay_radio" value="0" title="货到付" onclick="changePay(this);" /></td><td>货到付款</td><td>通过配送人员，送货上门，收取费用</td><td>0/元</td></tr>
+		<tr><td><input type="radio" name="pay_radio" value="0" title="货到付款" onclick="changePay(this);" /></td><td>货到付款</td><td>通过配送人员，送货上门，收取费用</td><td>0/元</td></tr>
 	</table>
 
 	<p>您要支付的手运费为：<strong id="pay"></strong>/元</p>
