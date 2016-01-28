@@ -79,11 +79,14 @@ class CartAction extends Action{
 	{
 		if(isset($_POST['send']))
 		{
-			$_id = $this->_order->getNextId();
-			if($this->_order->order())
+			if($this->_order->isCart())
 			{
-				$this->_goods->setInventory();
-				$this->_redirect->succ('?a=member&m=alipay&id='.$_id);
+				$_id = $this->_order->getNextId();
+				if($this->_order->order())
+				{
+					$this->_goods->setInventory();
+					$this->_redirect->succ('?a=member&m=alipay&id='.$_id);
+				}
 			}
 		}
 	}

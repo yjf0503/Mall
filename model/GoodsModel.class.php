@@ -178,12 +178,15 @@ class GoodsModel extends Model {
 	public function isFlow()
 	{
 		$_goods = array();
-		foreach($_COOKIE['cart'] as $_key=>$_value)
+		if(isset($_COOKIE['cart']))
 		{
-			$_temp = unserialize(stripslashes($_value));
-			$_goods[$_key] = null;
-			$_goods[$_key]->name = $_temp['name'];
-			$_goods[$_key]->num = $_temp['num'];
+			foreach($_COOKIE['cart'] as $_key=>$_value)
+			{
+				$_temp = unserialize(stripslashes($_value));
+				$_goods[$_key] = null;
+				$_goods[$_key]->name = $_temp['name'];
+				$_goods[$_key]->num = $_temp['num'];
+			}
 		}
 		$_flag = false;
 		foreach($_goods as $_key=>$_value)

@@ -42,7 +42,12 @@
 	<table id="cart" cellspacing="1">
 		<caption>配送信息</caption>
 		<tr><th>配送状态</th><th>物流方式</th><th>运单号</th></tr>
-		<tr><td>{$OneOrder[0]->order_delivery}</td><td><a href="{$OneOrder[0]->delivery_url}" target="_blank">{$OneOrder[0]->delivery_name}</a></td><td>{$OneOrder[0]->delivery_number}</td></tr>
+		<tr><td>{$OneOrder[0]->order_delivery}</td>
+			{if $OneOrder[0]->order_delivery == '已发货'}
+				<td><a href="{$OneOrder[0]->delivery_url}" target="_blank">{$OneOrder[0]->delivery_name}</a></td>
+			{/if}
+			<td>{$OneOrder[0]->delivery_number}</td>
+		</tr>
 	</table>
 
 	<table id="cart" cellspacing="1">

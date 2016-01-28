@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-27 19:16:20
+<?php /* Smarty version 2.6.26, created on 2016-01-28 11:20:42
          compiled from admin/order/update.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,6 +14,15 @@
 <h2><a href="?a=order">返回订单列表</a>订单 -- 修改订单</h2>
 
 <div id="list">
+
+	<table id="cart" cellspacing="1">
+		<caption>订单信息</caption>
+		<tr><th>订单编号</th><th>下单时间</th></tr>
+		<tr><td><?php echo $this->_tpl_vars['OneOrder'][0]->ordernum; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->date; ?>
+</td></tr>
+	</table>
+
 	<table id="cart" cellspacing="1">
 		<caption>商品列表</caption>
 		<tr><th>编号</th><th>名称</th><th>属性</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th></tr>
@@ -42,6 +51,34 @@
 </td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']; ?>
 /元</td></tr>
 		<?php endforeach; endif; unset($_from); ?>
+	</table>
+
+	<table id="cart" cellspacing="1">
+		<caption>用户信息</caption>
+		<tr><th>用户名</th><th>收货人</th><th>电子邮件</th></tr>
+		<tr><td><?php echo $this->_tpl_vars['OneOrder'][0]->user; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->name; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->email; ?>
+</td></tr>
+	</table>
+
+	<table id="cart" cellspacing="1">
+		<caption>送货信息</caption>
+		<tr><th>邮政编码</th><th>手机号码</th><th>标志性建筑</th><th>收货地址</th></tr>
+		<tr><td><?php echo $this->_tpl_vars['OneOrder'][0]->code; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->tel; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->buildings; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->address; ?>
+</td></tr>
+	</table>
+
+	<table id="cart" cellspacing="1">
+		<caption>支付信息</caption>
+		<tr><th>物流方式</th><th>支付方式</th><th>费用</th></tr>
+		<tr><td><?php echo $this->_tpl_vars['OneOrder'][0]->delivery; ?>
+</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->tel; ?>
+</td><td><span class="red"><?php echo $this->_tpl_vars['OneOrder'][0]->price; ?>
+/元</span></td></tr>
 	</table>
 
 	<table id="cart" cellspacing="1">

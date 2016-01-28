@@ -12,7 +12,6 @@ class OrderModel extends Model{
         parent::__construct();
         $this->_fields = array('id','user','name','refund','email','tel','address','goods','buildings','code','delivery','pay','price','text','ps','orderNum','order_state','order_pay','order_delivery','delivery_url','delivery_name','delivery_number');
         $this->_tables = array(DB_PREFIX.'order');
-        //$this->_check = new ManageCheck();
         list($this->_R['id'],
             $this->_R['out_trade_no']
             ) = $this->getRequest()->getParam(array(
@@ -49,7 +48,7 @@ class OrderModel extends Model{
     {
         $_where = array("id='{$this->_R['id']}'");
         $_updateData = $this->getRequest()->filter($this->_fields);
-        if($_updateData['order_state'] == '已取消')
+        if($_updateData['order_state'] == '已取消' || $_updateData['refund'] == 2)
         {
             $_goods = array();
             $_obj = parent::select(array('goods'),array('where'=>$_where));
@@ -92,6 +91,20 @@ class OrderModel extends Model{
         return parent::nextId();
     }
 
+    public function isCart()
+    {
+        if(isset($_COOKIE['cart']))
+        {
+            return true;
+        }
+        else
+        {
+            $this->_check = new Check();
+            $this->_check->setMessage('结算列表中没有商品，无法生成订单');
+            $this->_check->error();
+        }
+    }
+
     public function delete()
     {
         $_where = array("id='{$this->_R['id']}' AND order_state='已取消'");
@@ -100,12 +113,15 @@ class OrderModel extends Model{
 
     public function findUserDetails()
     {
-        $_orderDetails = parent::select(array('id','ordernum','goods','refund','delivery','pay','price','text','ps','order_state','order_pay','order_delivery','delivery_url','delivery_number','delivery_name'),array('where'=>array("id='{$this->_R['id']}'")));
+        $_orderDetails = parent::select(array('id','user','buildings','code','address','tel','name','email','ordernum','date','goods','refund','delivery','pay','price','text','ps','order_state','order_pay','order_delivery','delivery_url','delivery_number','delivery_name'),array('where'=>array("id='{$this->_R['id']}'")));
 
         $_orderDetails[0]->goods = unserialize(htmlspecialchars_decode($_orderDetails[0]->goods));
-        foreach($_orderDetails[0]->goods as $_key=>$_value)
+        if(Validate::isArray($_orderDetails[0]->goods))
         {
-            $_orderDetails[0]->goods[$_key] = unserialize($_value);
+            foreach($_orderDetails[0]->goods as $_key=>$_value)
+            {
+                $_orderDetails[0]->goods[$_key] = unserialize($_value);
+            }
         }
         return $_orderDetails;
     }
