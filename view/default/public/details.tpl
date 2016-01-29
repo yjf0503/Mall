@@ -71,10 +71,12 @@
 		<input type="hidden" id="attrid" name="attrid" value="{$FrontGoods[0]->attr}" />
 		<input type="hidden" id="attrtype" name="attrtype" value="{$attrType}" />
 		<input type="hidden" name="id" value="{$FrontGoods[0]->id}" />
+		<input type="hidden" name="nav" value="{$FrontGoods[0]->nav}" />
 		<input type="hidden" name="name" value="{$FrontGoods[0]->name}" />
 		<input type="hidden" name="price_sale" value="{$FrontGoods[0]->price_sale}" />
 		<input type="hidden" name="sn" value="{$FrontGoods[0]->sn}" />
 		<input type="hidden" name="weight" value="{$FrontGoods[0]->weight}" />
+		<input type="hidden" name="thumbnail2" value="{$FrontGoods[0]->thumbnail2}" />
 		<h2>{$FrontGoods[0]->name}</h2>
 		<dl class="pic">
 			<dt><a href="###"><img src="{$FrontGoods[0]->thumbnail}" alt="{$FrontGoods[0]->name}" title="{$FrontGoods[0]->name}" /></a></dt>
@@ -123,7 +125,23 @@
 			{$FrontGoods[0]->content}
 		</div>
 		<div class="c2" id="c2" style="display:none;">
-			评价列表
+			{foreach from=$Commend key=key item=value}
+				<div class="commend_left">
+					<p>{$value->user}</p>
+					<p class="star">
+					{if $value->star == 5}<span class="star">★★★★★</span>{/if}
+					{if $value->star == 4}<span class="star">★★★★</span>{/if}
+					{if $value->star == 3}<span class="star">★★★</span>{/if}
+					{if $value->star == 2}<span class="star">★★</span>{/if}
+					{if $value->star == 1}<span class="star">★</span>{/if}
+					</p>
+				</div>
+				<div class="commend_right">
+					<p><em>{$value->date}</em>{$value->content}</p>
+					<p class="attr">{$value->attr}</p>
+				</div>
+			{/foreach}
+
 		</div>
 		<div class="c3" id="c3" style="display:none;">
 			成交记录

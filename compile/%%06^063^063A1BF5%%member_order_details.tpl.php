@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-27 19:24:23
+<?php /* Smarty version 2.6.26, created on 2016-01-29 19:42:02
          compiled from default/public/member_order_details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -38,14 +38,16 @@ unset($_smarty_tpl_vars);
 
 	<table id="cart" cellspacing="1">
 		<caption>商品列表</caption>
-		<tr><th>编号</th><th>名称</th><th>属性</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th></tr>
+		<tr><th>编号</th><th>名称</th><th>属性</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th><th>评价</th></tr>
 		<?php $this->assign('total', 0); ?>
 		<?php $_from = $this->_tpl_vars['OneOrder'][0]->goods; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
 ?>
 			<tr><td><?php echo $this->_tpl_vars['value']['sn']; ?>
-</td><td><?php echo $this->_tpl_vars['value']['name']; ?>
-</td><td>
+</td><td><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']['nav']; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']['id']; ?>
+" target="_blank"><?php echo $this->_tpl_vars['value']['name']; ?>
+</a></td><td>
 					<?php $_from = $this->_tpl_vars['value']['attr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k1'] => $this->_tpl_vars['v1']):
 ?>
@@ -62,7 +64,16 @@ unset($_smarty_tpl_vars);
 				</td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']; ?>
 /元</td><td><?php echo $this->_tpl_vars['value']['num']; ?>
 </td><td class="price"><?php echo $this->_tpl_vars['value']['price_sale']*$this->_tpl_vars['value']['num']; ?>
-/元</td></tr>
+/元</td>
+				<td>
+					<?php if ($this->_tpl_vars['OneOrder'][0]->order_delivery == '已发货'): ?>
+					<a href="?a=member&m=commend&goods_id=<?php echo $this->_tpl_vars['value']['id']; ?>
+&order_id=<?php echo $this->_tpl_vars['OneOrder'][0]->id; ?>
+">评价</a></td>
+					<?php else: ?>
+					---
+					<?php endif; ?>
+			</tr>
 		<?php endforeach; endif; unset($_from); ?>
 	</table>
 
@@ -70,9 +81,13 @@ unset($_smarty_tpl_vars);
 		<caption>配送信息</caption>
 		<tr><th>配送状态</th><th>物流方式</th><th>运单号</th></tr>
 		<tr><td><?php echo $this->_tpl_vars['OneOrder'][0]->order_delivery; ?>
-</td><td><a href="<?php echo $this->_tpl_vars['OneOrder'][0]->delivery_url; ?>
+</td><td>
+				<?php if ($this->_tpl_vars['OneOrder'][0]->order_delivery == '已发货'): ?>
+					<a href="<?php echo $this->_tpl_vars['OneOrder'][0]->delivery_url; ?>
 " target="_blank"><?php echo $this->_tpl_vars['OneOrder'][0]->delivery_name; ?>
-</a></td><td><?php echo $this->_tpl_vars['OneOrder'][0]->delivery_number; ?>
+</a>
+				<?php endif; ?>
+			</td><td><?php echo $this->_tpl_vars['OneOrder'][0]->delivery_number; ?>
 </td></tr>
 	</table>
 
@@ -120,4 +135,5 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 </body>
+</html>
 </html>

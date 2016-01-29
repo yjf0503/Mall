@@ -68,7 +68,7 @@ class GoodsModel extends Model {
 
 	public function findDetailsGoods()
 	{
-		$_oneGoods = parent::select(array('id','brand','service','is_up','name','thumbnail','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+		$_oneGoods = parent::select(array('id','brand','nav','service','is_up','name','thumbnail','thumbnail2','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
 		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
 
 		$this->_tables = array(DB_PREFIX.'brand');

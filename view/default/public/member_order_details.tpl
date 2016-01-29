@@ -24,10 +24,10 @@
 
 	<table id="cart" cellspacing="1">
 		<caption>商品列表</caption>
-		<tr><th>编号</th><th>名称</th><th>属性</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th></tr>
+		<tr><th>编号</th><th>名称</th><th>属性</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th><th>评价</th></tr>
 		{assign var=total value=0}
 		{foreach from=$OneOrder[0]->goods key=key item=value}
-			<tr><td>{$value.sn}</td><td>{$value.name}</td><td>
+			<tr><td>{$value.sn}</td><td><a href="?a=details&navid={$value.nav}&goodsid={$value.id}" target="_blank">{$value.name}</a></td><td>
 					{foreach from=$value.attr key=k1 item=v1}
 						{$k1}:
 						{foreach from=$v1 item=v2}
@@ -35,19 +35,25 @@
 						{/foreach}
 					{/foreach}
 					{assign var=total value=$total+$value.price_sale*$value.num}
-				</td><td class="price">{$value.price_sale}/元</td><td>{$value.num}</td><td class="price">{$value.price_sale*$value.num}/元</td></tr>
+				</td><td class="price">{$value.price_sale}/元</td><td>{$value.num}</td><td class="price">{$value.price_sale*$value.num}/元</td>
+				<td>
+					{if $OneOrder[0]->order_delivery == '已发货'}
+					<a href="?a=member&m=commend&goods_id={$value.id}&order_id={$OneOrder[0]->id}">评价</a></td>
+					{else}
+					---
+					{/if}
+			</tr>
 		{/foreach}
 	</table>
 
 	<table id="cart" cellspacing="1">
 		<caption>配送信息</caption>
 		<tr><th>配送状态</th><th>物流方式</th><th>运单号</th></tr>
-		<tr><td>{$OneOrder[0]->order_delivery}</td>
-			{if $OneOrder[0]->order_delivery == '已发货'}
-				<td><a href="{$OneOrder[0]->delivery_url}" target="_blank">{$OneOrder[0]->delivery_name}</a></td>
-			{/if}
-			<td>{$OneOrder[0]->delivery_number}</td>
-		</tr>
+		<tr><td>{$OneOrder[0]->order_delivery}</td><td>
+				{if $OneOrder[0]->order_delivery == '已发货'}
+					<a href="{$OneOrder[0]->delivery_url}" target="_blank">{$OneOrder[0]->delivery_name}</a>
+				{/if}
+			</td><td>{$OneOrder[0]->delivery_number}</td></tr>
 	</table>
 
 	<table id="cart" cellspacing="1">
@@ -83,4 +89,5 @@
 
 {include file='default/public/footer.tpl'}
 </body>
+</html>
 </html>

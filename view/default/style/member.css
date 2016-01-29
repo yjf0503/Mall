@@ -206,3 +206,34 @@
 	height:80px;
 	background:#fff;
 }
+.commend {
+	margin:10px 0;
+}
+.commend img {
+	display:block;
+	border:1px solid #ccc;
+	float:left;
+}
+.commend dl {
+	float:left;
+	padding:0 10px;
+}
+.commend dl dt {
+	font-size:14px;
+}
+.commend dl dd {
+	padding:10px 0;
+	color:#666;
+}
+.commend dl dd span.star {
+	color:orange;
+}
+.commend dl dd textarea {
+	width:380px;
+	height:75px;
+	background:#fff;
+	border:1px solid #ccc;
+}
+.commend dl dd input {
+	cursor:pointer;
+}

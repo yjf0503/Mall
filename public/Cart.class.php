@@ -26,11 +26,13 @@ class Cart{
 	{
 		return setcookie('cart['.$_POST['id'].']',serialize(array(
 								'id'=>$_POST['id'],
+								'nav'=>$_POST['nav'],
 								'name'=>$_POST['name'],
 								'attr'=>$_POST['attr'],
 								'num'=>$_POST['num'],
 								'sn'=>$_POST['sn'],
 								'weight'=>$_POST['weight'],
+								'thumbnail2'=>$_POST['thumbnail2'],
 								'price_sale'=>$_POST['price_sale']
 		)),time()+60*60*24*7);
 	}

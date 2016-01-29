@@ -13,10 +13,14 @@ class OrderModel extends Model{
         $this->_fields = array('id','user','name','refund','email','tel','address','goods','buildings','code','delivery','pay','price','text','ps','orderNum','order_state','order_pay','order_delivery','delivery_url','delivery_name','delivery_number');
         $this->_tables = array(DB_PREFIX.'order');
         list($this->_R['id'],
-            $this->_R['out_trade_no']
+            $this->_R['out_trade_no'],
+            $this->_R['goods_id'],
+            $this->_R['order_id']
             ) = $this->getRequest()->getParam(array(
             isset($_GET['id'])?$_GET['id']:null,
-            isset($_GET['out_trade_no'])?$_GET['out_trade_no']:null));
+            isset($_GET['out_trade_no'])?$_GET['out_trade_no']:null,
+            isset($_GET['goods_id'])?$_GET['goods_id']:null,
+            isset($_GET['order_id'])?$_GET['order_id']:null));
     }
 
     public function findAll()
@@ -44,10 +48,31 @@ class OrderModel extends Model{
         return parent::add($_orderData);
     }
 
+    //判断订单是否已发货
+    public function isCommendOrder()
+    {
+        $_where = array("id='{$this->_R['order_id']}'");
+        $_obj = parent::select(array('order_delivery'),array('where'=>$_where,'limit'=>'1'));
+        if($_obj[0]->order_delivery != '已发货')
+        {
+           $this->_check = new Check();
+            $this->_check->setMessage('您的订单尚未发货，此商品无法进行评价');
+            $this->_check->error();
+        }
+        else
+        {
+
+        }
+    }
+
     public function update()
     {
         $_where = array("id='{$this->_R['id']}'");
         $_updateData = $this->getRequest()->filter($this->_fields);
+        if(!isset($_updateData['refund']))
+        {
+            $_updateData['refund'] = '';
+        }
         if($_updateData['order_state'] == '已取消' || $_updateData['refund'] == 2)
         {
             $_goods = array();
@@ -124,6 +149,18 @@ class OrderModel extends Model{
             }
         }
         return $_orderDetails;
+    }
+
+    public function findCommendOrder()
+    {
+        $_where = array("id='{$this->_R['order_id']}'");
+//        if(!$this->_check->oneCheck($this,$_where))
+//        {
+//            $this->_check->error();
+//        }
+        $_obj =  parent::select(array('goods'),array('where'=>$_where,'limit'=>'1'));
+        $_obj = unserialize(htmlspecialchars_decode($_obj[0]->goods));
+        return unserialize($_obj[$this->_R['goods_id']]);
     }
 
     public function updateOrderNum()

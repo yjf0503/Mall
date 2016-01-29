@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-28 12:31:17
+<?php /* Smarty version 2.6.26, created on 2016-01-29 21:04:06
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -91,6 +91,8 @@ unset($_smarty_tpl_vars);
 " />
 		<input type="hidden" name="id" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->id; ?>
 " />
+		<input type="hidden" name="nav" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->nav; ?>
+" />
 		<input type="hidden" name="name" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 " />
 		<input type="hidden" name="price_sale" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->price_sale; ?>
@@ -98,6 +100,8 @@ unset($_smarty_tpl_vars);
 		<input type="hidden" name="sn" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->sn; ?>
 " />
 		<input type="hidden" name="weight" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->weight; ?>
+" />
+		<input type="hidden" name="thumbnail2" value="<?php echo $this->_tpl_vars['FrontGoods'][0]->thumbnail2; ?>
 " />
 		<h2><?php echo $this->_tpl_vars['FrontGoods'][0]->name; ?>
 </h2>
@@ -164,7 +168,29 @@ unset($_smarty_tpl_vars);
 
 		</div>
 		<div class="c2" id="c2" style="display:none;">
-			评价列表
+			<?php $_from = $this->_tpl_vars['Commend']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+				<div class="commend_left">
+					<p><?php echo $this->_tpl_vars['value']->user; ?>
+</p>
+					<p class="star">
+					<?php if ($this->_tpl_vars['value']->star == 5): ?><span class="star">★★★★★</span><?php endif; ?>
+					<?php if ($this->_tpl_vars['value']->star == 4): ?><span class="star">★★★★</span><?php endif; ?>
+					<?php if ($this->_tpl_vars['value']->star == 3): ?><span class="star">★★★</span><?php endif; ?>
+					<?php if ($this->_tpl_vars['value']->star == 2): ?><span class="star">★★</span><?php endif; ?>
+					<?php if ($this->_tpl_vars['value']->star == 1): ?><span class="star">★</span><?php endif; ?>
+					</p>
+				</div>
+				<div class="commend_right">
+					<p><em><?php echo $this->_tpl_vars['value']->date; ?>
+</em><?php echo $this->_tpl_vars['value']->content; ?>
+</p>
+					<p class="attr"><?php echo $this->_tpl_vars['value']->attr; ?>
+</p>
+				</div>
+			<?php endforeach; endif; unset($_from); ?>
+
 		</div>
 		<div class="c3" id="c3" style="display:none;">
 			成交记录

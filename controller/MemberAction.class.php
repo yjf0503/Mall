@@ -11,6 +11,7 @@ class MemberAction extends Action{
 	private $_user = null;
 	private $_address = null;
 	private $_order = null;
+	private $_commend = null;
 	public function __construct()
 	{
 		parent::__construct();
@@ -18,7 +19,7 @@ class MemberAction extends Action{
 		$this->_user = new UserModel();
 		$this->_address = new AddressModel();
 		$this->_order = new OrderModel();
-
+		$this->_commend = new CommendModel();
 	}
 
 	public function index()
@@ -54,6 +55,26 @@ class MemberAction extends Action{
 		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
 		$this->_tpl->assign('AllOrder',$this->_order->findUserAll());
 		$this->_tpl->display(SMARTY_FRONT.'public/member_order.tpl');
+	}
+
+	public function commend()
+	{
+		if (isset($_POST['send']))
+		{
+			if($this->_commend->add())
+			{
+				$this->_redirect->succ(Tool::getPrevPage());
+			}
+			else
+			{
+				$this->_redirect->error('发表评价失败');
+			}
+		}
+		$this->_order->isCommendOrder();
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('GoodsOne',$this->_order->findCommendOrder());
+		$this->_tpl->assign('CommendOne',$this->_commend->findOne());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_commend.tpl');
 	}
 
 	public function order_details()
