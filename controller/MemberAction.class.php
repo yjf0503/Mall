@@ -18,6 +18,7 @@ class MemberAction extends Action{
 		$this->_user = new UserModel();
 		$this->_address = new AddressModel();
 		$this->_order = new OrderModel();
+
 	}
 
 	public function index()
