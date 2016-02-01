@@ -30,6 +30,7 @@
 		<dd><a href="?a=price" target="in">价格区间</a></dd>
 		<dd><a href="?a=brand" target="in">品牌列表</a></dd>
 		<dd><a href="?a=service" target="in">售后服务</a></dd>
+		<dd><a href="?a=commend" target="in">评价管理</a></dd>
 	</dl>
 	<dl style="display:none">
 		<dt>订单</dt>

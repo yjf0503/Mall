@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-27 12:53:16
+<?php /* Smarty version 2.6.26, created on 2016-02-01 10:57:27
          compiled from admin/public/admin.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,6 +34,7 @@
 		<dd><a href="?a=price" target="in">价格区间</a></dd>
 		<dd><a href="?a=brand" target="in">品牌列表</a></dd>
 		<dd><a href="?a=service" target="in">售后服务</a></dd>
+		<dd><a href="?a=commend" target="in">评价管理</a></dd>
 	</dl>
 	<dl style="display:none">
 		<dt>订单</dt>

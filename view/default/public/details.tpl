@@ -139,6 +139,11 @@
 				<div class="commend_right">
 					<p><em>{$value->date}</em>{$value->content}</p>
 					<p class="attr">{$value->attr}</p>
+					<p>
+						{if $value->re_content}
+							<span class="red" >商家回复：{$value->re_content}</span>
+						{/if}
+					</p>
 				</div>
 			{/foreach}
 

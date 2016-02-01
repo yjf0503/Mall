@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-29 21:04:06
+<?php /* Smarty version 2.6.26, created on 2016-02-01 12:14:23
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -188,6 +188,12 @@ unset($_smarty_tpl_vars);
 </p>
 					<p class="attr"><?php echo $this->_tpl_vars['value']->attr; ?>
 </p>
+					<p>
+						<?php if ($this->_tpl_vars['value']->re_content): ?>
+							<span class="red" >商家回复：<?php echo $this->_tpl_vars['value']->re_content; ?>
+</span>
+						<?php endif; ?>
+					</p>
 				</div>
 			<?php endforeach; endif; unset($_from); ?>
 

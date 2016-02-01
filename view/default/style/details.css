@@ -146,13 +146,13 @@
 	float:left;
 	margin:0 10px 0 0;
 }
-#main dl.text dd strong.is_up{
-	display: block;
-	height: 35px;
-	line-height: 35px;
-	float: left;
-	padding: 0 10px 0 0;
-	font-size: 16px;
+#main dl.text dd strong.is_up {
+	display:block;
+	height:35px;
+	line-height:35px;
+	float:left;
+	padding:0 10px 0 0;
+	font-size:16px;
 }
 #main dl.text dd.buy_button {
 	padding:10px 0 0 60px;
@@ -183,34 +183,34 @@
 #main div.content div.c1,#main div.content div.c2, #main div.content div.c3, #main div.content div.c4 {
 	padding:10px 0;
 }
-.commend_left{
-	width: 100px;
-	height: 50px;
-	float: left;
-	border-bottom: 1px dashed #ccc ;
-	margin: 10px 0;
+.commend_left {
+	width:100px;
+	height:70px;
+	border-bottom:1px dashed #ccc;
+	float:left;
+	margin:10px 0;
 }
-.commend_left p{
-	padding: 0 0 5px 0;
+.commend_left p {
+	padding:0 0 5px 0;
 }
-.commend_left .star{
-	color: orange;
+.commend_left .star {
+	color:orange;
 }
-.commend_right{
-	width: 685px;
-	height: 50px;
-	float: right;
-	border-bottom: 1px dashed #ccc ;
-	margin: 10px 0;
+.commend_right {
+	width:685px;
+	height:70px;
+	float:right;
+	border-bottom:1px dashed #ccc;
+	margin:10px 0;
 }
-.commend_right p{
-	padding: 0 0 5px 0;
+.commend_right p {
+	padding:0 0 5px 0;
 }
-.commend_right .attr{
-	color: #666666;
+.commend_right .attr {
+	color:#666;
 }
-.commend_right em{
-	float: right;
-	color: #666666;
-	font-style: normal;
+.commend_right em {
+	float:right;
+	color:#666;
+	font-style:normal;
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-29 20:35:59
+<?php /* Smarty version 2.6.26, created on 2016-02-01 12:22:35
          compiled from default/public/member_commend.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -64,7 +64,7 @@ unset($_smarty_tpl_vars);
 					;
 				<?php endforeach; endif; unset($_from); ?>
 			</dd>
-			<?php if ($this->_tpl_vars['CommendOne'][0]): ?>
+
 				<dd>评分：
 					<?php if ($this->_tpl_vars['CommendOne'][0]->star == 5): ?><span class="star">★★★★★</span><?php endif; ?>
 					<?php if ($this->_tpl_vars['CommendOne'][0]->star == 4): ?><span class="star">★★★★</span><?php endif; ?>
@@ -74,6 +74,10 @@ unset($_smarty_tpl_vars);
 				</dd>
 				<dd><?php echo $this->_tpl_vars['CommendOne'][0]->content; ?>
 </dd>
+				<dd>
+					<?php if ($this->_tpl_vars['CommendOne'][0]->re_content): ?>
+				<span class="red">商家回复：<?php echo $this->_tpl_vars['CommendOne'][0]->re_content; ?>
+</span> </dd>
 				<dd><a href="?a=member&m=order_details&id=<?php echo $_GET['order_id']; ?>
 ">[返回订单]</a></dd>
 				<?php else: ?>

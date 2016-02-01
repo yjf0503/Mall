@@ -70,11 +70,21 @@ class MemberAction extends Action{
 				$this->_redirect->error('发表评价失败');
 			}
 		}
+
 		$this->_order->isCommendOrder();
 		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
 		$this->_tpl->assign('GoodsOne',$this->_order->findCommendOrder());
 		$this->_tpl->assign('CommendOne',$this->_commend->findOne());
 		$this->_tpl->display(SMARTY_FRONT.'public/member_commend.tpl');
+	}
+
+	public function mycommend()
+	{
+		parent::page(20,$this->_commend);
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('MyCommend',$this->_commend->findMyCommend());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_mycommend.tpl');
+
 	}
 
 	public function order_details()

@@ -237,3 +237,32 @@
 .commend dl dd input {
 	cursor:pointer;
 }
+.mycommend {
+	width:785px;
+	border-bottom:1px dashed #ccc;
+	margin:10px 0;
+	font-size:14px;
+	float:left;
+}
+.mycommend p {
+	padding:0 0 10px 0;
+}
+.mycommend p img {
+	width:150px;
+	height:150px;
+	border:1px solid #ccc;
+	margin:10px 0;
+	margin-right:10px;
+	float:left;
+}
+.mycommend .attr {
+	color:#666;
+}
+.mycommend em {
+	float:right;
+	color:#666;
+	font-style:normal;
+}
+.star {
+	color:orange;
+}

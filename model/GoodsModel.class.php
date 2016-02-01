@@ -52,6 +52,7 @@ class GoodsModel extends Model {
 				$_value->brand = $_allBrand[$_value->brand];
 			}
 		}
+		$this->_tables = array(DB_PREFIX.'goods');
 		return $_allGoods;
 	}
 

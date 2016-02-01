@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-20 10:52:40
+<?php /* Smarty version 2.6.26, created on 2016-02-01 12:22:35
          compiled from default/public/member_sidebar.tpl */ ?>
 <div id="sidebar">
 	<h2>个人中心</h2>
@@ -6,5 +6,7 @@
 		<li><a href="?a=member">起始页</a></li>
 		<li><a href="?a=member&m=address">收货地址</a></li>
 		<li><a href="?a=member&m=order">订单列表</a></li>
+		<li><a href="?a=member&m=mycommend">我的评价</a></li>
+
 	</ul>
 </div>

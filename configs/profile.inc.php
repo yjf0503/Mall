@@ -14,7 +14,7 @@ define('SMARTY_RIGHT_DELIMITER', '}');
 //设置数据库连接参数
 define('DB_DNS','mysql:host=localhost;dbname=mall');
 define('DB_USER','root');
-define('DB_PASS','root');
+define('DB_PASS','');
 define('DB_CHARSET','UTF8');
 define('DB_PREFIX','mall_');
 

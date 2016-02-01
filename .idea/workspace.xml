@@ -2,485 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff74b8f1-beb9-4b44-8f33-e146cb5e2be7" name="Default" comment="Test">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/220x220" afterPath="$PROJECT_DIR$/220x220" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/images/alipay.gif" afterPath="$PROJECT_DIR$/alipay/images/alipay.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/images/new-btn-fixed.png" afterPath="$PROJECT_DIR$/alipay/images/new-btn-fixed.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/images/spacer.gif" afterPath="$PROJECT_DIR$/ckeditor/images/spacer.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/about/dialogs/logo_ckeditor.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/flash/images/placeholder.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/flash/images/placeholder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/images/hiddenfield.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/images/hiddenfield.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/iframe/images/placeholder.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/iframe/images/placeholder.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/link/images/anchor.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/link/images/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/pagebreak/images/pagebreak.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/placeholder/placeholder.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/placeholder/placeholder.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_address.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_address.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_blockquote.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_blockquote.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_div.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_div.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h1.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h2.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h3.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h4.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h5.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h6.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_h6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_p.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_p.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_pre.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/showblocks/images/block_pre.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/angel_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/angel_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/angry_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/angry_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/broken_heart.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/broken_heart.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/confused_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/confused_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/cry_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/cry_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/devil_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/devil_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/embaressed_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/envelope.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/envelope.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/heart.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/heart.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/kiss.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/kiss.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/lightbulb.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/lightbulb.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/omg_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/omg_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/regular_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/regular_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/sad_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/sad_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/shades_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/shades_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/teeth_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/teeth_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/thumbs_down.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/thumbs_down.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/thumbs_up.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/thumbs_up.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/tounge_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/tounge_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/wink_smile.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/images/wink_smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/images/template1.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/images/template1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/images/template2.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/images/template2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/images/template3.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/images/template3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/uicolor.gif" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/uicolor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/hue_bg.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/hue_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/hue_thumb.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/hue_thumb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/picker_mask.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/picker_mask.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/picker_thumb.png" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/picker_thumb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/icons.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/icons.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/icons_rtl.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/icons_rtl.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/dialog_sides.gif" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/dialog_sides.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/dialog_sides.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/dialog_sides.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/dialog_sides_rtl.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/dialog_sides_rtl.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/mini.gif" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/mini.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/noimage.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/noimage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/sprites.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/sprites.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/sprites_ie6.png" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/sprites_ie6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/images/toolbar_start.gif" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/images/toolbar_start.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/font/elephant.ttf" afterPath="$PROJECT_DIR$/font/elephant.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20120429/20120429223334777.jpg" afterPath="$PROJECT_DIR$/uploads/20120429/20120429223334777.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20120429/20120429223334777220x220.jpg" afterPath="$PROJECT_DIR$/uploads/20120429/20120429223334777220x220.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20120429/20120429225057295.jpg" afterPath="$PROJECT_DIR$/uploads/20120429/20120429225057295.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20120429/20120429225057295220x220.jpg" afterPath="$PROJECT_DIR$/uploads/20120429/20120429225057295220x220.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20130604/20130604182722819220x220.png" afterPath="$PROJECT_DIR$/uploads/20130604/20130604182722819220x220.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20160112/20160112195019346.jpg" afterPath="$PROJECT_DIR$/uploads/20160112/20160112195019346.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20160112/20160112195019346220x220.jpg" afterPath="$PROJECT_DIR$/uploads/20160112/20160112195019346220x220.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20160125/20160125192711889.jpg" afterPath="$PROJECT_DIR$/uploads/20160125/20160125192711889.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20160125/20160125192711889220x220.jpg" afterPath="$PROJECT_DIR$/uploads/20160125/20160125192711889220x220.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20160125/20160125192721236.jpg" afterPath="$PROJECT_DIR$/uploads/20160125/20160125192721236.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/20160126/20160126120818196.png" afterPath="$PROJECT_DIR$/uploads/20160126/20160126120818196.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/add.gif" afterPath="$PROJECT_DIR$/view/admin/images/add.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/alogo.png" afterPath="$PROJECT_DIR$/view/admin/images/alogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/drop.gif" afterPath="$PROJECT_DIR$/view/admin/images/drop.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/edit.gif" afterPath="$PROJECT_DIR$/view/admin/images/edit.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/login.png" afterPath="$PROJECT_DIR$/view/admin/images/login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/nav1.gif" afterPath="$PROJECT_DIR$/view/admin/images/nav1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/nav2.gif" afterPath="$PROJECT_DIR$/view/admin/images/nav2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/th_bg.gif" afterPath="$PROJECT_DIR$/view/admin/images/th_bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/images/yc.png" afterPath="$PROJECT_DIR$/view/admin/images/yc.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/address.gif" afterPath="$PROJECT_DIR$/view/default/images/address.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/bg_code1.png" afterPath="$PROJECT_DIR$/view/default/images/bg_code1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/bg_code2.png" afterPath="$PROJECT_DIR$/view/default/images/bg_code2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/bg_code3.png" afterPath="$PROJECT_DIR$/view/default/images/bg_code3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/bnt_log.gif" afterPath="$PROJECT_DIR$/view/default/images/bnt_log.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/bnt_reg.gif" afterPath="$PROJECT_DIR$/view/default/images/bnt_reg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/buy.gif" afterPath="$PROJECT_DIR$/view/default/images/buy.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/checkout.gif" afterPath="$PROJECT_DIR$/view/default/images/checkout.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/collect.gif" afterPath="$PROJECT_DIR$/view/default/images/collect.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/content_bg.png" afterPath="$PROJECT_DIR$/view/default/images/content_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/content_bg_point.png" afterPath="$PROJECT_DIR$/view/default/images/content_bg_point.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/fu.gif" afterPath="$PROJECT_DIR$/view/default/images/fu.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/h2_bg.png" afterPath="$PROJECT_DIR$/view/default/images/h2_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/list_h2_bg.png" afterPath="$PROJECT_DIR$/view/default/images/list_h2_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/logo.png" afterPath="$PROJECT_DIR$/view/default/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/nav_bg.png" afterPath="$PROJECT_DIR$/view/default/images/nav_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/order.gif" afterPath="$PROJECT_DIR$/view/default/images/order.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/pro_details.jpg" afterPath="$PROJECT_DIR$/view/default/images/pro_details.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/pro_list_demo.jpg" afterPath="$PROJECT_DIR$/view/default/images/pro_list_demo.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/pro_list_demo_small.jpg" afterPath="$PROJECT_DIR$/view/default/images/pro_list_demo_small.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/sait_bg.png" afterPath="$PROJECT_DIR$/view/default/images/sait_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/search_bgline.png" afterPath="$PROJECT_DIR$/view/default/images/search_bgline.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/sidebar_line.png" afterPath="$PROJECT_DIR$/view/default/images/sidebar_line.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/images/yinhang.jpg" afterPath="$PROJECT_DIR$/view/default/images/yinhang.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/alipay.config.php" afterPath="$PROJECT_DIR$/alipay/alipay.config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/alipayto.php" afterPath="$PROJECT_DIR$/alipay/alipayto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/index.php" afterPath="$PROJECT_DIR$/alipay/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/lib/alipay_core.function.php" afterPath="$PROJECT_DIR$/alipay/lib/alipay_core.function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/lib/alipay_notify.class.php" afterPath="$PROJECT_DIR$/alipay/lib/alipay_notify.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/lib/alipay_service.class.php" afterPath="$PROJECT_DIR$/alipay/lib/alipay_service.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/lib/alipay_submit.class.php" afterPath="$PROJECT_DIR$/alipay/lib/alipay_submit.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/log.txt" afterPath="$PROJECT_DIR$/alipay/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/notify_url.php" afterPath="$PROJECT_DIR$/alipay/notify_url.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/readme.txt" afterPath="$PROJECT_DIR$/alipay/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alipay/return_url.php" afterPath="$PROJECT_DIR$/alipay/return_url.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/AddressCheck.class.php" afterPath="$PROJECT_DIR$/check/AddressCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/AttrCheck.class.php" afterPath="$PROJECT_DIR$/check/AttrCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/BrandCheck.class.php" afterPath="$PROJECT_DIR$/check/BrandCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/DeliveryCheck.class.php" afterPath="$PROJECT_DIR$/check/DeliveryCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/GoodsCheck.class.php" afterPath="$PROJECT_DIR$/check/GoodsCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/ManageCheck.class.php" afterPath="$PROJECT_DIR$/check/ManageCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/NavCheck.class.php" afterPath="$PROJECT_DIR$/check/NavCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/PriceCheck.class.php" afterPath="$PROJECT_DIR$/check/PriceCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/ServiceCheck.class.php" afterPath="$PROJECT_DIR$/check/ServiceCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/UserCheck.class.php" afterPath="$PROJECT_DIR$/check/UserCheck.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check/check.class.php" afterPath="$PROJECT_DIR$/check/check.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/.htaccess" afterPath="$PROJECT_DIR$/ckeditor/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/CHANGES.html" afterPath="$PROJECT_DIR$/ckeditor/CHANGES.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/INSTALL.html" afterPath="$PROJECT_DIR$/ckeditor/INSTALL.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/LICENSE.html" afterPath="$PROJECT_DIR$/ckeditor/LICENSE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/adapters/jquery.js" afterPath="$PROJECT_DIR$/ckeditor/adapters/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor.js" afterPath="$PROJECT_DIR$/ckeditor/ckeditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor.pack" afterPath="$PROJECT_DIR$/ckeditor/ckeditor.pack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor.php" afterPath="$PROJECT_DIR$/ckeditor/ckeditor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor_basic.js" afterPath="$PROJECT_DIR$/ckeditor/ckeditor_basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor_basic_source.js" afterPath="$PROJECT_DIR$/ckeditor/ckeditor_basic_source.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor_php4.php" afterPath="$PROJECT_DIR$/ckeditor/ckeditor_php4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor_php5.php" afterPath="$PROJECT_DIR$/ckeditor/ckeditor_php5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/ckeditor_source.js" afterPath="$PROJECT_DIR$/ckeditor/ckeditor_source.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/config.js" afterPath="$PROJECT_DIR$/ckeditor/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/contents.css" afterPath="$PROJECT_DIR$/ckeditor/contents.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/lang/_languages.js" afterPath="$PROJECT_DIR$/ckeditor/lang/_languages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/lang/en.js" afterPath="$PROJECT_DIR$/ckeditor/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/lang/zh-cn.js" afterPath="$PROJECT_DIR$/ckeditor/lang/zh-cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/a11yhelp/lang/en.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/a11yhelp/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/a11yhelp/lang/he.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/a11yhelp/lang/he.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/about/dialogs/about.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/about/dialogs/about.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/adobeair/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/adobeair/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/ajax/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/ajax/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/autogrow/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/autogrow/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/bbcode/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/bbcode/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/clipboard/dialogs/paste.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/clipboard/dialogs/paste.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/colordialog/dialogs/colordialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/devtools/lang/en.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/devtools/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/devtools/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/devtools/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/dialog/dialogDefinition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/div/dialogs/div.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/div/dialogs/div.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/docprops/dialogs/docprops.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/docprops/dialogs/docprops.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/docprops/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/docprops/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/find/dialogs/find.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/find/dialogs/find.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/flash/dialogs/flash.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/flash/dialogs/flash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/button.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/checkbox.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/checkbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/form.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/hiddenfield.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/radio.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/radio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/select.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/textarea.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/textarea.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/textfield.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/forms/dialogs/textfield.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/iframe/dialogs/iframe.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/iframe/dialogs/iframe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/iframedialog/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/iframedialog/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/image/dialogs/image.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/image/dialogs/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/link/dialogs/anchor.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/link/dialogs/anchor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/link/dialogs/link.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/link/dialogs/link.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/liststyle/dialogs/liststyle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/pastefromword/filter/default.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/pastefromword/filter/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/pastetext/dialogs/pastetext.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/pastetext/dialogs/pastetext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/placeholder/dialogs/placeholder.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/placeholder/dialogs/placeholder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/placeholder/lang/en.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/placeholder/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/placeholder/lang/he.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/placeholder/lang/he.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/placeholder/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/placeholder/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/scayt/dialogs/options.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/scayt/dialogs/options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="$PROJECT_DIR$/ckeditor/plugins/scayt/dialogs/toolbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/smiley/dialogs/smiley.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/smiley/dialogs/smiley.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/specialchar/dialogs/specialchar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/specialchar/lang/en.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/specialchar/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/styles/styles/default.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/styles/styles/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/stylesheetparser/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/stylesheetparser/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/table/dialogs/table.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/table/dialogs/table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/tableresize/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/tableresize/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/tabletools/dialogs/tableCell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/templates/dialogs/templates.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/templates/dialogs/templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/default.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/templates/templates/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/dialogs/uicolor.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/dialogs/uicolor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/lang/en.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/lang/he.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/lang/he.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/yui.css" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/assets/yui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/yui.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/uicolor/yui/yui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/ciframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/wsc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/wsc.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/wsc/dialogs/wsc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/plugins/xml/plugin.js" afterPath="$PROJECT_DIR$/ckeditor/plugins/xml/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/dialog.css" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/editor.css" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/editor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/skin.js" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/skin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/skins/kama/templates.css" afterPath="$PROJECT_DIR$/ckeditor/skins/kama/templates.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ckeditor/themes/default/theme.js" afterPath="$PROJECT_DIR$/ckeditor/themes/default/theme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%06^061^06106A66%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%06^061^06106A66%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%06^063^063A1BF5%%member_order_details.tpl.php" afterPath="$PROJECT_DIR$/compile/%%06^063^063A1BF5%%member_order_details.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%0B^0B6^0B6E95DD%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%0B^0B6^0B6E95DD%%update.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%12^126^126C71C0%%member_sidebar.tpl.php" afterPath="$PROJECT_DIR$/compile/%%12^126^126C71C0%%member_sidebar.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%13^133^1335A384%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%13^133^1335A384%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%16^160^160CED68%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%16^160^160CED68%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%1E^1EB^1EBE0FE0%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%1E^1EB^1EBE0FE0%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%41^415^4155DDB4%%member_alipay2.tpl.php" afterPath="$PROJECT_DIR$/compile/%%41^415^4155DDB4%%member_alipay2.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%44^44F^44FB663C%%main.tpl.php" afterPath="$PROJECT_DIR$/compile/%%44^44F^44FB663C%%main.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%48^487^48729B13%%upfile.tpl.php" afterPath="$PROJECT_DIR$/compile/%%48^487^48729B13%%upfile.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%48^489^48921023%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%48^489^48921023%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%4A^4AF^4AFFDB55%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%4A^4AF^4AFFDB55%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%55^554^55447EEB%%member_alipay.tpl.php" afterPath="$PROJECT_DIR$/compile/%%55^554^55447EEB%%member_alipay.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%56^561^56181E10%%footer.tpl.php" afterPath="$PROJECT_DIR$/compile/%%56^561^56181E10%%footer.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%5A^5A7^5A7425E5%%login.tpl.php" afterPath="$PROJECT_DIR$/compile/%%5A^5A7^5A7425E5%%login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%5D^5D7^5D7DEAE8%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%5D^5D7^5D7DEAE8%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%66^66E^66E97760%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%66^66E^66E97760%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%67^676^6769497F%%flow.tpl.php" afterPath="$PROJECT_DIR$/compile/%%67^676^6769497F%%flow.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%6E^6E3^6E338CCF%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%6E^6E3^6E338CCF%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%6E^6E7^6E798342%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%6E^6E7^6E798342%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%72^729^729B9286%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%72^729^729B9286%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%75^75C^75C3D8F0%%index.tpl.php" afterPath="$PROJECT_DIR$/compile/%%75^75C^75C3D8F0%%index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%7C^7C3^7C35F404%%member_alipay3.tpl.php" afterPath="$PROJECT_DIR$/compile/%%7C^7C3^7C35F404%%member_alipay3.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%7D^7DF^7DFDC1F0%%member.tpl.php" afterPath="$PROJECT_DIR$/compile/%%7D^7DF^7DFDC1F0%%member.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%7E^7E0^7E07F3F3%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%7E^7E0^7E07F3F3%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%97^972^9725C220%%list.tpl.php" afterPath="$PROJECT_DIR$/compile/%%97^972^9725C220%%list.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%98^98C^98C41300%%reg.tpl.php" afterPath="$PROJECT_DIR$/compile/%%98^98C^98C41300%%reg.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%9D^9D5^9D5091B5%%manage.tpl.php" afterPath="$PROJECT_DIR$/compile/%%9D^9D5^9D5091B5%%manage.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%9F^9FF^9FF4AB78%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%9F^9FF^9FF4AB78%%show.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%15^159^159386DB%%member_commend.tpl.php" afterPath="$PROJECT_DIR$/compile/%%15^159^159386DB%%member_commend.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%A5^A55^A55618CD%%details.tpl.php" afterPath="$PROJECT_DIR$/compile/%%A5^A55^A55618CD%%details.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%A9^A9C^A9C480B3%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%A9^A9C^A9C480B3%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%AF^AFA^AFAB2AC1%%header.tpl.php" afterPath="$PROJECT_DIR$/compile/%%AF^AFA^AFAB2AC1%%header.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%B6^B6B^B6B64D4E%%cart.tpl.php" afterPath="$PROJECT_DIR$/compile/%%B6^B6B^B6B64D4E%%cart.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%B7^B73^B736D418%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%B7^B73^B736D418%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%BB^BBD^BBD713D3%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%BB^BBD^BBD713D3%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%BD^BDD^BDD156FA%%member_order.tpl.php" afterPath="$PROJECT_DIR$/compile/%%BD^BDD^BDD156FA%%member_order.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%C4^C48^C48F7D04%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%C4^C48^C48F7D04%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%CB^CBF^CBFC0FE0%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%CB^CBF^CBFC0FE0%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%D1^D1A^D1AF0BE6%%member_address.tpl.php" afterPath="$PROJECT_DIR$/compile/%%D1^D1A^D1AF0BE6%%member_address.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%D4^D47^D4783163%%update.tpl.php" afterPath="$PROJECT_DIR$/compile/%%D4^D47^D4783163%%update.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%D5^D5F^D5F3C795%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%D5^D5F^D5F3C795%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%D7^D71^D71D3A80%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%D7^D71^D71D3A80%%show.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%E3^E38^E38EEECA%%admin.tpl.php" afterPath="$PROJECT_DIR$/compile/%%E3^E38^E38EEECA%%admin.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%E6^E66^E669F2D3%%error.tpl.php" afterPath="$PROJECT_DIR$/compile/%%E6^E66^E669F2D3%%error.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%E7^E75^E7501A2F%%succ.tpl.php" afterPath="$PROJECT_DIR$/compile/%%E7^E75^E7501A2F%%succ.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%E7^E78^E787F650%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%E7^E78^E787F650%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%EB^EBD^EBDB4A85%%login.tpl.php" afterPath="$PROJECT_DIR$/compile/%%EB^EBD^EBDB4A85%%login.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%EE^EEF^EEF530CF%%add.tpl.php" afterPath="$PROJECT_DIR$/compile/%%EE^EEF^EEF530CF%%add.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compile/%%F1^F1D^F1D54B20%%show.tpl.php" afterPath="$PROJECT_DIR$/compile/%%F1^F1D^F1D54B20%%show.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs/config.conf" afterPath="$PROJECT_DIR$/configs/config.conf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs/profile.inc.php" afterPath="$PROJECT_DIR$/configs/profile.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs/run.inc.php" afterPath="$PROJECT_DIR$/configs/run.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Action.class.php" afterPath="$PROJECT_DIR$/controller/Action.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/AdminAction.class.php" afterPath="$PROJECT_DIR$/controller/AdminAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/AttrAction.class.php" afterPath="$PROJECT_DIR$/controller/AttrAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/BrandAction.class.php" afterPath="$PROJECT_DIR$/controller/BrandAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CallAction.class.php" afterPath="$PROJECT_DIR$/controller/CallAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CartAction.class.php" afterPath="$PROJECT_DIR$/controller/CartAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/DeliveryAction.class.php" afterPath="$PROJECT_DIR$/controller/DeliveryAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/DetailsAction.class.php" afterPath="$PROJECT_DIR$/controller/DetailsAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/GoodsAction.class.php" afterPath="$PROJECT_DIR$/controller/GoodsAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/IndexAction.class.php" afterPath="$PROJECT_DIR$/controller/IndexAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ListAction.class.php" afterPath="$PROJECT_DIR$/controller/ListAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ManageAction.class.php" afterPath="$PROJECT_DIR$/controller/ManageAction.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/MemberAction.class.php" afterPath="$PROJECT_DIR$/controller/MemberAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/NavAction.class.php" afterPath="$PROJECT_DIR$/controller/NavAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/OrderAction.class.php" afterPath="$PROJECT_DIR$/controller/OrderAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/PriceAction.class.php" afterPath="$PROJECT_DIR$/controller/PriceAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ServiceAction.class.php" afterPath="$PROJECT_DIR$/controller/ServiceAction.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/AddressModel.class.php" afterPath="$PROJECT_DIR$/model/AddressModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/AttrModel.class.php" afterPath="$PROJECT_DIR$/model/AttrModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/BrandModel.class.php" afterPath="$PROJECT_DIR$/model/BrandModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/DeliveryModel.class.php" afterPath="$PROJECT_DIR$/model/DeliveryModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/CommendModel.class.php" afterPath="$PROJECT_DIR$/model/CommendModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/GoodsModel.class.php" afterPath="$PROJECT_DIR$/model/GoodsModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/LevelModel.class.php" afterPath="$PROJECT_DIR$/model/LevelModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/ManageModel.class.php" afterPath="$PROJECT_DIR$/model/ManageModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Model.class.php" afterPath="$PROJECT_DIR$/model/Model.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/NavModel.class.php" afterPath="$PROJECT_DIR$/model/NavModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/OrderModel.class.php" afterPath="$PROJECT_DIR$/model/OrderModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/PriceModel.class.php" afterPath="$PROJECT_DIR$/model/PriceModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/ServiceModel.class.php" afterPath="$PROJECT_DIR$/model/ServiceModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/UserModel.class.php" afterPath="$PROJECT_DIR$/model/UserModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Cart.class.php" afterPath="$PROJECT_DIR$/public/Cart.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/DB.class.php" afterPath="$PROJECT_DIR$/public/DB.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Factory.class.php" afterPath="$PROJECT_DIR$/public/Factory.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/FileUpload.class.php" afterPath="$PROJECT_DIR$/public/FileUpload.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Image.class.php" afterPath="$PROJECT_DIR$/public/Image.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Page.class.php" afterPath="$PROJECT_DIR$/public/Page.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Redirect.class.php" afterPath="$PROJECT_DIR$/public/Redirect.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Request.class.php" afterPath="$PROJECT_DIR$/public/Request.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/TPL.class.php" afterPath="$PROJECT_DIR$/public/TPL.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Tool.class.php" afterPath="$PROJECT_DIR$/public/Tool.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Tree.class.php" afterPath="$PROJECT_DIR$/public/Tree.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/Validate.class.php" afterPath="$PROJECT_DIR$/public/Validate.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ValidateCode.class.php" afterPath="$PROJECT_DIR$/public/ValidateCode.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/Config_File.class.php" afterPath="$PROJECT_DIR$/smarty/Config_File.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/Smarty.class.php" afterPath="$PROJECT_DIR$/smarty/Smarty.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/Smarty_Compiler.class.php" afterPath="$PROJECT_DIR$/smarty/Smarty_Compiler.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/debug.tpl" afterPath="$PROJECT_DIR$/smarty/debug.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.assemble_plugin_filepath.php" afterPath="$PROJECT_DIR$/smarty/internals/core.assemble_plugin_filepath.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.assign_smarty_interface.php" afterPath="$PROJECT_DIR$/smarty/internals/core.assign_smarty_interface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.create_dir_structure.php" afterPath="$PROJECT_DIR$/smarty/internals/core.create_dir_structure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.display_debug_console.php" afterPath="$PROJECT_DIR$/smarty/internals/core.display_debug_console.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.get_include_path.php" afterPath="$PROJECT_DIR$/smarty/internals/core.get_include_path.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.get_microtime.php" afterPath="$PROJECT_DIR$/smarty/internals/core.get_microtime.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.get_php_resource.php" afterPath="$PROJECT_DIR$/smarty/internals/core.get_php_resource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.is_secure.php" afterPath="$PROJECT_DIR$/smarty/internals/core.is_secure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.is_trusted.php" afterPath="$PROJECT_DIR$/smarty/internals/core.is_trusted.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.load_plugins.php" afterPath="$PROJECT_DIR$/smarty/internals/core.load_plugins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.load_resource_plugin.php" afterPath="$PROJECT_DIR$/smarty/internals/core.load_resource_plugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.process_cached_inserts.php" afterPath="$PROJECT_DIR$/smarty/internals/core.process_cached_inserts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.process_compiled_include.php" afterPath="$PROJECT_DIR$/smarty/internals/core.process_compiled_include.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.read_cache_file.php" afterPath="$PROJECT_DIR$/smarty/internals/core.read_cache_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.rm_auto.php" afterPath="$PROJECT_DIR$/smarty/internals/core.rm_auto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.rmdir.php" afterPath="$PROJECT_DIR$/smarty/internals/core.rmdir.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.run_insert_handler.php" afterPath="$PROJECT_DIR$/smarty/internals/core.run_insert_handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.smarty_include_php.php" afterPath="$PROJECT_DIR$/smarty/internals/core.smarty_include_php.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.write_cache_file.php" afterPath="$PROJECT_DIR$/smarty/internals/core.write_cache_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.write_compiled_include.php" afterPath="$PROJECT_DIR$/smarty/internals/core.write_compiled_include.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.write_compiled_resource.php" afterPath="$PROJECT_DIR$/smarty/internals/core.write_compiled_resource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/internals/core.write_file.php" afterPath="$PROJECT_DIR$/smarty/internals/core.write_file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/block.nocache.php" afterPath="$PROJECT_DIR$/smarty/plugins/block.nocache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/block.textformat.php" afterPath="$PROJECT_DIR$/smarty/plugins/block.textformat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/block.textlee.php" afterPath="$PROJECT_DIR$/smarty/plugins/block.textlee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/compiler.assign.php" afterPath="$PROJECT_DIR$/smarty/plugins/compiler.assign.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.assign_debug_info.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.assign_debug_info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.config_load.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.config_load.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.counter.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.counter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.cycle.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.cycle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.debug.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.debug.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.eval.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.eval.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.fetch.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.fetch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_checkboxes.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_checkboxes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_image.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_options.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_radios.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_radios.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_select_date.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_select_date.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_select_time.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_select_time.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.html_table.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.html_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.info.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.mailto.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.mailto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.math.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.math.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.popup.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.popup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/function.popup_init.php" afterPath="$PROJECT_DIR$/smarty/plugins/function.popup_init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.capitalize.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.capitalize.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.cat.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.cat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.count_characters.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.count_characters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.count_paragraphs.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.count_paragraphs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.count_sentences.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.count_sentences.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.count_words.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.count_words.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.date_format.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.date_format.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.debug_print_var.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.debug_print_var.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.default.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.escape.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.escape.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.indent.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.indent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.lee.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.lee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.lower.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.lower.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.nl2br.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.nl2br.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.regex_replace.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.regex_replace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.replace.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.replace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.spacify.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.spacify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.string_format.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.string_format.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.strip.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.strip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.strip_tags.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.strip_tags.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.truncate.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.truncate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.upper.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.upper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/modifier.wordwrap.php" afterPath="$PROJECT_DIR$/smarty/plugins/modifier.wordwrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/outputfilter.trimwhitespace.php" afterPath="$PROJECT_DIR$/smarty/plugins/outputfilter.trimwhitespace.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/shared.escape_special_chars.php" afterPath="$PROJECT_DIR$/smarty/plugins/shared.escape_special_chars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smarty/plugins/shared.make_timestamp.php" afterPath="$PROJECT_DIR$/smarty/plugins/shared.make_timestamp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/attr/add.tpl" afterPath="$PROJECT_DIR$/view/admin/attr/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/attr/show.tpl" afterPath="$PROJECT_DIR$/view/admin/attr/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/attr/update.tpl" afterPath="$PROJECT_DIR$/view/admin/attr/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/brand/add.tpl" afterPath="$PROJECT_DIR$/view/admin/brand/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/brand/show.tpl" afterPath="$PROJECT_DIR$/view/admin/brand/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/brand/update.tpl" afterPath="$PROJECT_DIR$/view/admin/brand/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/delivery/add.tpl" afterPath="$PROJECT_DIR$/view/admin/delivery/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/delivery/show.tpl" afterPath="$PROJECT_DIR$/view/admin/delivery/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/delivery/update.tpl" afterPath="$PROJECT_DIR$/view/admin/delivery/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/goods/add.tpl" afterPath="$PROJECT_DIR$/view/admin/goods/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/goods/show.tpl" afterPath="$PROJECT_DIR$/view/admin/goods/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/goods/update.tpl" afterPath="$PROJECT_DIR$/view/admin/goods/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/ajax.js" afterPath="$PROJECT_DIR$/view/admin/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/attr.js" afterPath="$PROJECT_DIR$/view/admin/js/attr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/brand.js" afterPath="$PROJECT_DIR$/view/admin/js/brand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/channel.js" afterPath="$PROJECT_DIR$/view/admin/js/channel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/delivery.js" afterPath="$PROJECT_DIR$/view/admin/js/delivery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/goods.js" afterPath="$PROJECT_DIR$/view/admin/js/goods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/goods_update.js" afterPath="$PROJECT_DIR$/view/admin/js/goods_update.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/iframe.js" afterPath="$PROJECT_DIR$/view/admin/js/iframe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/login.js" afterPath="$PROJECT_DIR$/view/admin/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/manage.js" afterPath="$PROJECT_DIR$/view/admin/js/manage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/nav.js" afterPath="$PROJECT_DIR$/view/admin/js/nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/order.js" afterPath="$PROJECT_DIR$/view/admin/js/order.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/js/service.js" afterPath="$PROJECT_DIR$/view/admin/js/service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/manage/add.tpl" afterPath="$PROJECT_DIR$/view/admin/manage/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/manage/show.tpl" afterPath="$PROJECT_DIR$/view/admin/manage/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/manage/update.tpl" afterPath="$PROJECT_DIR$/view/admin/manage/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/nav/add.tpl" afterPath="$PROJECT_DIR$/view/admin/nav/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/nav/show.tpl" afterPath="$PROJECT_DIR$/view/admin/nav/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/nav/update.tpl" afterPath="$PROJECT_DIR$/view/admin/nav/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/order/show.tpl" afterPath="$PROJECT_DIR$/view/admin/order/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/order/update.tpl" afterPath="$PROJECT_DIR$/view/admin/order/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/price/add.tpl" afterPath="$PROJECT_DIR$/view/admin/price/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/price/show.tpl" afterPath="$PROJECT_DIR$/view/admin/price/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/price/update.tpl" afterPath="$PROJECT_DIR$/view/admin/price/update.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/admin.tpl" afterPath="$PROJECT_DIR$/view/admin/public/admin.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/error.tpl" afterPath="$PROJECT_DIR$/view/admin/public/error.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/login.tpl" afterPath="$PROJECT_DIR$/view/admin/public/login.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/main.tpl" afterPath="$PROJECT_DIR$/view/admin/public/main.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/succ.tpl" afterPath="$PROJECT_DIR$/view/admin/public/succ.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/public/upfile.tpl" afterPath="$PROJECT_DIR$/view/admin/public/upfile.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/service/add.tpl" afterPath="$PROJECT_DIR$/view/admin/service/add.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/service/show.tpl" afterPath="$PROJECT_DIR$/view/admin/service/show.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/service/update.tpl" afterPath="$PROJECT_DIR$/view/admin/service/update.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/admin.css" afterPath="$PROJECT_DIR$/view/admin/style/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/attr.css" afterPath="$PROJECT_DIR$/view/admin/style/attr.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/basic.css" afterPath="$PROJECT_DIR$/view/admin/style/basic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/brand.css" afterPath="$PROJECT_DIR$/view/admin/style/brand.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/delivery.css" afterPath="$PROJECT_DIR$/view/admin/style/delivery.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/error.css" afterPath="$PROJECT_DIR$/view/admin/style/error.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/goods.css" afterPath="$PROJECT_DIR$/view/admin/style/goods.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/login.css" afterPath="$PROJECT_DIR$/view/admin/style/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/main.css" afterPath="$PROJECT_DIR$/view/admin/style/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/manage.css" afterPath="$PROJECT_DIR$/view/admin/style/manage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/nav.css" afterPath="$PROJECT_DIR$/view/admin/style/nav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/order.css" afterPath="$PROJECT_DIR$/view/admin/style/order.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/price.css" afterPath="$PROJECT_DIR$/view/admin/style/price.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/service.css" afterPath="$PROJECT_DIR$/view/admin/style/service.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin/style/succ.css" afterPath="$PROJECT_DIR$/view/admin/style/succ.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/address.js" afterPath="$PROJECT_DIR$/view/default/js/address.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/ajax.js" afterPath="$PROJECT_DIR$/view/default/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/attr.js" afterPath="$PROJECT_DIR$/view/default/js/attr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/browserdetect.js" afterPath="$PROJECT_DIR$/view/default/js/browserdetect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/cart.js" afterPath="$PROJECT_DIR$/view/default/js/cart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/channel.js" afterPath="$PROJECT_DIR$/view/default/js/channel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/flow.js" afterPath="$PROJECT_DIR$/view/default/js/flow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/login.js" afterPath="$PROJECT_DIR$/view/default/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/js/reg.js" afterPath="$PROJECT_DIR$/view/default/js/reg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/cart.tpl" afterPath="$PROJECT_DIR$/view/default/public/cart.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/details.tpl" afterPath="$PROJECT_DIR$/view/default/public/details.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/flow.tpl" afterPath="$PROJECT_DIR$/view/default/public/flow.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/footer.tpl" afterPath="$PROJECT_DIR$/view/default/public/footer.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/header.tpl" afterPath="$PROJECT_DIR$/view/default/public/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/index.tpl" afterPath="$PROJECT_DIR$/view/default/public/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/list.tpl" afterPath="$PROJECT_DIR$/view/default/public/list.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/login.tpl" afterPath="$PROJECT_DIR$/view/default/public/login.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member.tpl" afterPath="$PROJECT_DIR$/view/default/public/member.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_address.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_address.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_alipay.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_alipay.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_alipay2.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_alipay2.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_alipay3.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_alipay3.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_order.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_order.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_order_details.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_order_details.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_commend.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_commend.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/member_sidebar.tpl" afterPath="$PROJECT_DIR$/view/default/public/member_sidebar.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/public/reg.tpl" afterPath="$PROJECT_DIR$/view/default/public/reg.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/alipay.css" afterPath="$PROJECT_DIR$/view/default/style/alipay.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/basic.css" afterPath="$PROJECT_DIR$/view/default/style/basic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/cart.css" afterPath="$PROJECT_DIR$/view/default/style/cart.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/details.css" afterPath="$PROJECT_DIR$/view/default/style/details.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/flow.css" afterPath="$PROJECT_DIR$/view/default/style/flow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/index.css" afterPath="$PROJECT_DIR$/view/default/style/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/list.css" afterPath="$PROJECT_DIR$/view/default/style/list.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/member.css" afterPath="$PROJECT_DIR$/view/default/style/member.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/style/reg.css" afterPath="$PROJECT_DIR$/view/default/style/reg.css" />
     </list>
     <ignored path="Mall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -505,18 +40,32 @@
       <file leaf-file-name="MemberAction.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/MemberAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1666665">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <marker date="1454301164000" expanded="true" signature="1695:1849" placeholder="{...}" />
+                <marker date="1454301164000" expanded="true" signature="1729:1788" placeholder="{...}" />
+                <marker date="1454301164000" expanded="true" signature="1796:1845" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/profile.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.inc.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/configs/profile.inc.php">
+      <file leaf-file-name="CommendModel.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/CommendModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40699524">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.15213946">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -527,6 +76,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="member_commend.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/default/public/member_commend.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -598,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/default/public/reg.tpl" />
         <option value="$PROJECT_DIR$/view/default/js/attr.js" />
         <option value="$PROJECT_DIR$/controller/DetailsAction.class.php" />
         <option value="$PROJECT_DIR$/public/Tool.class.php" />
@@ -649,6 +207,7 @@
         <option value="$PROJECT_DIR$/controller/CartAction.class.php" />
         <option value="$PROJECT_DIR$/controller/MemberAction.class.php" />
         <option value="$PROJECT_DIR$/configs/profile.inc.php" />
+        <option value="$PROJECT_DIR$/model/CommendModel.class.php" />
       </list>
     </option>
   </component>
@@ -747,20 +306,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -811,6 +356,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="230" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -970,12 +520,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28109854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28513733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3154574" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33021808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -983,6 +532,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1032,20 +582,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/ServiceAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin/goods/update.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4420881">
-          <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/admin/goods/add.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56606853">
@@ -1120,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.35494328">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.25">
           <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,16 +918,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/MemberAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1666665">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <marker date="1454301164000" expanded="true" signature="1695:1849" placeholder="{...}" />
+            <marker date="1454301164000" expanded="true" signature="1729:1788" placeholder="{...}" />
+            <marker date="1454301164000" expanded="true" signature="1796:1845" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/profile.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40699524">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/default/public/member_commend.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/CommendModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15213946">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding />
         </state>
       </provider>
