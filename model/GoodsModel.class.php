@@ -10,7 +10,7 @@ class GoodsModel extends Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->_fields = array('id','nav','brand','service','name','keyword','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
+		$this->_fields = array('id','nav','thumbnail2','brand','service','name','keyword','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
 		$this->_tables = array( DB_PREFIX . 'goods' );
 		$this->_check  = new GoodsCheck();
 		list(
@@ -71,7 +71,6 @@ class GoodsModel extends Model {
 	{
 		$_oneGoods = parent::select(array('id','brand','nav','service','is_up','name','thumbnail','thumbnail2','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
 		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
-
 		$this->_tables = array(DB_PREFIX.'brand');
 		$_allBrand = Tool::setFormItem(parent::select(array('id','name')),'id','name');
 		if($_oneGoods[0]->brand == 0)
@@ -88,7 +87,55 @@ class GoodsModel extends Model {
 		$_service = parent::select(array('content'),array('where'=>$_where,'limit'=>'1'));
 		$_oneGoods[0]->service = htmlspecialchars_decode($_service[0]->content);
 		$this->_tables = array( DB_PREFIX . 'goods' );
+
+		if(isset($_COOKIE['record'][$_oneGoods[0]->id]))
+		{
+			setcookie('record['.$_oneGoods[0]->id.']','',time()-60*60*24*7);
+		}
+
+		setcookie('record['.$_oneGoods[0]->id.']', serialize(array(
+			'id'=>$_oneGoods[0]->id,
+			'nav'=>$_oneGoods[0]->nav,
+			'name'=>$_oneGoods[0]->name,
+			'thumbnail2'=>$_oneGoods[0]->thumbnail2,
+			'price'=>$_oneGoods[0]->price_sale
+		)), time() + 60 * 60 * 24 * 7);
+
+		if(isset($_COOKIE['record']))
+		{
+			if(count($_COOKIE['record']) > 2)
+			{
+				$_keys = array_keys($_COOKIE['record']);
+				setcookie('record['.$_keys[0].']','',time()-60*60*24*7);
+			}
+		}
+
 		return $_oneGoods;
+	}
+
+	public function getRecord()
+	{
+		$_recordArr = array();
+		if(isset($_COOKIE['record']))
+		{
+			foreach($_COOKIE['record'] as $_key=>$_value)
+			{
+				$_recordArr[$_key] = unserialize(stripslashes($_value));
+			}
+		}
+		return array_reverse($_recordArr);
+	}
+
+	public function delRecord()
+	{
+		if(isset($_COOKIE['record']))
+		{
+			foreach($_COOKIE['record'] as $_key=>$_value)
+			{
+				setcookie('record['.$_key.']','',time()-60*60*24*7);
+			}
+			return true;
+		}
 	}
 
 	public function findListGoods()

@@ -26,7 +26,6 @@ class DetailsAction extends Action{
 		parent::page(20,$this->_commend);
 		parent::page(20,$this->_record);
 		$this->_tpl->assign('Commend',$this->_commend->findDetailsCommend());
-		print_r($this->_commend->findDetailsCommend());
 		$this->_tpl->assign('FrontNav',$this->_nav->findFrontNav());
 		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
 		$this->_tpl->assign('FrontGoods', $this->_goods->findDetailsGoods());

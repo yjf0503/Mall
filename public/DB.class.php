@@ -126,7 +126,7 @@ class DB
         }
         $_selectFields = implode(',',$_field);
         $_table = isset($_tables[1])?$_tables[0].','.$_tables[1]:$_tables[0];
-        $_sql = "SELECT $_selectFields FROM $_table $_where $_like $_order $_limit";
+        $_sql = "SELECT $_selectFields FROM $_table $_where $_like $_order $_limit ";
         $_stmt = $this->execute($_sql);
         $_result = array();
         while(!!$_objs = $_stmt->fetchObject())
