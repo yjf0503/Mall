@@ -63,6 +63,7 @@
 </div>
 
 <form method="post" name="update" action="?a=order&m=update&id={$OneOrder[0]->id}">
+	<input type="hidden" name="user" value="{$OneOrder[0]->user}"/>
 	<dl class="form">
 		{if $OneOrder[0]->order_state == '已取消'}
 			<dd>订单状态：<span class="red">已取消，此订单已失效，可以删除！</span></dd>

@@ -129,27 +129,33 @@
 				<div class="commend_left">
 					<p>{$value->user}</p>
 					<p class="star">
-					{if $value->star == 5}<span class="star">★★★★★</span>{/if}
-					{if $value->star == 4}<span class="star">★★★★</span>{/if}
-					{if $value->star == 3}<span class="star">★★★</span>{/if}
-					{if $value->star == 2}<span class="star">★★</span>{/if}
-					{if $value->star == 1}<span class="star">★</span>{/if}
+						{if $value->star == 5}<span class="star">★★★★★</span>{/if}
+						{if $value->star == 4}<span class="star">★★★★</span>{/if}
+						{if $value->star == 3}<span class="star">★★★</span>{/if}
+						{if $value->star == 2}<span class="star">★★</span>{/if}
+						{if $value->star == 1}<span class="star">★</span>{/if}
 					</p>
 				</div>
 				<div class="commend_right">
 					<p><em>{$value->date}</em>{$value->content}</p>
-					<p class="attr">{$value->attr}</p>
+					<p class="attr">{$value->attr} </p>
 					<p>
 						{if $value->re_content}
-							<span class="red" >商家回复：{$value->re_content}</span>
+							<span class="red">商家回复：{$value->re_content}</span>
 						{/if}
 					</p>
 				</div>
 			{/foreach}
-
+			<div id="page">{$page}</div>
 		</div>
 		<div class="c3" id="c3" style="display:none;">
-			成交记录
+			<table border="0" cellspacing="0" width="100%" class="record">
+				<tr><th>购买者</th><th>商品名称</th><th>购买价格</th><th>购买数量</th><th>成交时间</th></tr>
+				{foreach from=$record key=key item=value}
+					<tr><td>{$value->user}</td><td style="text-align:left;padding:0 0 0 25px;line-height:180%;">{$value->name}<br /><span style="color:#666;">{$value->attr}</span></td><td>{$value->price}</td><td>{$value->num}</td><td>{$value->date}</td></tr>
+				{/foreach}
+			</table>
+			<div id="page">{$page}</div>
 		</div>
 		<div class="c4" id="c4" style="display:none;">
 			{$FrontGoods[0]->service}

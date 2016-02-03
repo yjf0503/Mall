@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-02-01 12:14:23
+<?php /* Smarty version 2.6.26, created on 2016-02-03 18:35:22
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -175,11 +175,11 @@ unset($_smarty_tpl_vars);
 					<p><?php echo $this->_tpl_vars['value']->user; ?>
 </p>
 					<p class="star">
-					<?php if ($this->_tpl_vars['value']->star == 5): ?><span class="star">★★★★★</span><?php endif; ?>
-					<?php if ($this->_tpl_vars['value']->star == 4): ?><span class="star">★★★★</span><?php endif; ?>
-					<?php if ($this->_tpl_vars['value']->star == 3): ?><span class="star">★★★</span><?php endif; ?>
-					<?php if ($this->_tpl_vars['value']->star == 2): ?><span class="star">★★</span><?php endif; ?>
-					<?php if ($this->_tpl_vars['value']->star == 1): ?><span class="star">★</span><?php endif; ?>
+						<?php if ($this->_tpl_vars['value']->star == 5): ?><span class="star">★★★★★</span><?php endif; ?>
+						<?php if ($this->_tpl_vars['value']->star == 4): ?><span class="star">★★★★</span><?php endif; ?>
+						<?php if ($this->_tpl_vars['value']->star == 3): ?><span class="star">★★★</span><?php endif; ?>
+						<?php if ($this->_tpl_vars['value']->star == 2): ?><span class="star">★★</span><?php endif; ?>
+						<?php if ($this->_tpl_vars['value']->star == 1): ?><span class="star">★</span><?php endif; ?>
 					</p>
 				</div>
 				<div class="commend_right">
@@ -187,19 +187,35 @@ unset($_smarty_tpl_vars);
 </em><?php echo $this->_tpl_vars['value']->content; ?>
 </p>
 					<p class="attr"><?php echo $this->_tpl_vars['value']->attr; ?>
-</p>
+ </p>
 					<p>
 						<?php if ($this->_tpl_vars['value']->re_content): ?>
-							<span class="red" >商家回复：<?php echo $this->_tpl_vars['value']->re_content; ?>
+							<span class="red">商家回复：<?php echo $this->_tpl_vars['value']->re_content; ?>
 </span>
 						<?php endif; ?>
 					</p>
 				</div>
 			<?php endforeach; endif; unset($_from); ?>
-
+			<div id="page"><?php echo $this->_tpl_vars['page']; ?>
+</div>
 		</div>
 		<div class="c3" id="c3" style="display:none;">
-			成交记录
+			<table border="0" cellspacing="0" width="100%" class="record">
+				<tr><th>购买者</th><th>商品名称</th><th>购买价格</th><th>购买数量</th><th>成交时间</th></tr>
+				<?php $_from = $this->_tpl_vars['record']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+					<tr><td><?php echo $this->_tpl_vars['value']->user; ?>
+</td><td style="text-align:left;padding:0 0 0 25px;line-height:180%;"><?php echo $this->_tpl_vars['value']->name; ?>
+<br /><span style="color:#666;"><?php echo $this->_tpl_vars['value']->attr; ?>
+</span></td><td><?php echo $this->_tpl_vars['value']->price; ?>
+</td><td><?php echo $this->_tpl_vars['value']->num; ?>
+</td><td><?php echo $this->_tpl_vars['value']->date; ?>
+</td></tr>
+				<?php endforeach; endif; unset($_from); ?>
+			</table>
+			<div id="page"><?php echo $this->_tpl_vars['page']; ?>
+</div>
 		</div>
 		<div class="c4" id="c4" style="display:none;">
 			<?php echo $this->_tpl_vars['FrontGoods'][0]->service; ?>

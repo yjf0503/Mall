@@ -15,12 +15,14 @@ class OrderModel extends Model{
         list($this->_R['id'],
             $this->_R['out_trade_no'],
             $this->_R['goods_id'],
-            $this->_R['order_id']
+            $this->_R['order_id'],
+            $this->_R['user']
             ) = $this->getRequest()->getParam(array(
             isset($_GET['id'])?$_GET['id']:null,
             isset($_GET['out_trade_no'])?$_GET['out_trade_no']:null,
             isset($_GET['goods_id'])?$_GET['goods_id']:null,
-            isset($_GET['order_id'])?$_GET['order_id']:null));
+            isset($_GET['order_id'])?$_GET['order_id']:null,
+            isset($_POST['user'])?$_POST['user']:null));
     }
 
     public function findAll()
@@ -86,7 +88,43 @@ class OrderModel extends Model{
             }
             $this->_tables = array(DB_PREFIX.'order');
         }
+        //执行成交表入库
+        if($_updateData['order_pay'] == '已付款')
+        {
+            $this->record();
+        }
         return parent::update($_where,$_updateData);
+    }
+
+    public function record()
+    {
+        $_where = array("id='{$this->_R['id']}'");
+        $_goods = array();
+        $_obj = parent::select(array('goods'),array('where'=>$_where));
+        $_goods = unserialize(htmlspecialchars_decode($_obj[0]->goods));
+        $this->_tables = array(DB_PREFIX.'record');
+        foreach($_goods as $_key=>$_value)
+        {
+            $_temp = unserialize($_value);
+            $_addData['goods_id'] = $_temp['id'];
+            $_addData['name'] = $_temp['name'];
+            $_addData['num'] = $_temp['num'];
+            $_addData['price'] = $_temp['price_sale'];
+            $_addData['attr'] = '';
+            foreach($_temp['attr'] as $_key2=>$_value2)
+            {
+                $_addData['attr'] .= $_key2.'：';
+                foreach ($_value2 as $_key3=>$_value3)
+                {
+                    $_addData['attr'] .= $_value3.',';
+                }
+            }
+            $_addData['attr'] = substr($_addData['attr'],0,-1).';';
+            $_addData['user'] = $this->_R['user'];
+            $_addData['date'] = Tool::getDate();
+            parent::add($_addData);
+        }
+        $this->_tables = array(DB_PREFIX.'order');
     }
 
     public function clear()
@@ -168,6 +206,8 @@ class OrderModel extends Model{
         $_where = array("ordernum='{$this->_R['out_trade_no']}'");
         $_updateData = $this->getRequest()->filter($this->_fields);
         $_updateData['order_pay'] = '已付款';
+        //执行成交表入库
+        $this->record();
         return parent::update($_where,$_updateData);
     }
 

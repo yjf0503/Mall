@@ -214,3 +214,21 @@
 	color:#666;
 	font-style:normal;
 }
+.record th {
+	background:#eee;
+	padding:10px 0;
+}
+.record td {
+	padding:25px 0;
+	text-align:center;
+	border-bottom:1px dashed #ccc;
+}
+
+
+
+
+
+
+
+
+

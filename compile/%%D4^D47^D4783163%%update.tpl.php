@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-28 11:20:42
+<?php /* Smarty version 2.6.26, created on 2016-02-03 18:16:27
          compiled from admin/order/update.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -93,6 +93,8 @@
 
 <form method="post" name="update" action="?a=order&m=update&id=<?php echo $this->_tpl_vars['OneOrder'][0]->id; ?>
 ">
+	<input type="hidden" name="user" value="<?php echo $this->_tpl_vars['OneOrder'][0]->user; ?>
+"/>
 	<dl class="form">
 		<?php if ($this->_tpl_vars['OneOrder'][0]->order_state == '已取消'): ?>
 			<dd>订单状态：<span class="red">已取消，此订单已失效，可以删除！</span></dd>
