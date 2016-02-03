@@ -133,7 +133,6 @@ class GoodsModel extends Model {
 					parent::update(array("id='$_value->id'"), array('thumbnail2'=>$_img->getPath()));
 				}
 			}
-
 		return $_allGoods;
 	}
 

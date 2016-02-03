@@ -160,8 +160,21 @@ class NavModel extends Model{
        {
            $this->_check->error('./');
        }
-        $_allNav = parent::select(array('id','name','sid'));
-        return Tree::getInstance()->getTree($_allNav,$this->_R['navid']);
+        $_allNav = parent::select(array('id','name','sid'),array('order'=>'sort ASC'));
+        $_obj = Tree::getInstance()->getTree($_allNav,$this->_R['navid']);
+        $this->_tables = array(DB_PREFIX.'goods');
+        if(isset($_obj[0]->child))
+        {
+            foreach($_obj[0]->child as $_key=>$_value)
+            {
+                $_count = parent::select(array('COUNT(*) AS count'),array('where'=>array("nav='{$_value->id}' AND is_up=1")));
+
+                $_value->count = $_count[0]->count;
+            }
+        }
+        $this->_tables = array(DB_PREFIX.'nav');
+
+        return $_obj;
 
     }
 

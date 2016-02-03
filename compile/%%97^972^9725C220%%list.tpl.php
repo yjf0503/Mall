@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-21 13:43:27
+<?php /* Smarty version 2.6.26, created on 2016-02-03 19:02:15
          compiled from default/public/list.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,7 +34,8 @@ unset($_smarty_tpl_vars);
 ?>
 		<li><a href="?a=list&navid=<?php echo $this->_tpl_vars['value']->id; ?>
 "><?php echo $this->_tpl_vars['value']->name; ?>
-<span class="gray">(1000)</span></a></li>
+<span class="gray">(<?php echo $this->_tpl_vars['value']->count; ?>
+)</span></a></li>
 		<?php endforeach; endif; unset($_from); ?>
 	</ul>
 	<h2>当月热销</h2>

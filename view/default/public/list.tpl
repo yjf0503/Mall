@@ -19,7 +19,7 @@
 	<h2>{$FrontNav[0]->name}</h2>
 	<ul style="margin:0 0 10px 0">
 		{foreach from=$FrontNav[0]->child key=key item=value}
-		<li><a href="?a=list&navid={$value->id}">{$value->name}<span class="gray">(1000)</span></a></li>
+		<li><a href="?a=list&navid={$value->id}">{$value->name}<span class="gray">({$value->count})</span></a></li>
 		{/foreach}
 	</ul>
 	<h2>当月热销</h2>
