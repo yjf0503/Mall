@@ -6,8 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 	<link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
 	<script type="text/javascript" src="view/default/js/browserdetect.js"></script>
-	<script type="text/javascript" src="view/default/js/attr.js"></script>
-	<script type="text/javascript" src="view/default/js/channel.js"></script>
+	<script type="text/javascript" src="view/default/js/details.js"></script>
 </head>
 <body>
 {include file='default/public/header.tpl'}
@@ -23,46 +22,34 @@
 	<h2>{$FrontNav[0]->name}</h2>
 	<ul style="margin:0 0 10px 0">
 		{foreach from=$FrontNav[0]->child key=key item=value}
-			<li><a href="?a=list&navid={$value->id}">{$value->name}<span class="gray">(1000)</span></a></li>
+			<li><a href="?a=list&navid={$value->id}">{$value->name}<span class="gray">({$value->count})</span></a></li>
 		{/foreach}
 	</ul>
 	<h2>当月热销</h2>
 	<div style="margin:0 0 10px 0">
-		<dl style="border:none;">
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
+		{foreach from=$NavSort key=key item=value}
+			{if $key < 5}
+				<dl style="border:none;">
+					<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank"><img src="{$value->thumbnail2}" style="width:100px;height:100px;" alt="{$value->name}" title="{$value->name}" /></a></dt>
+					<dd class="price">￥{$value->price_sale}</dd>
+					<dd class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">{$value->name}</a></dd>
+				</dl>
+			{/if}
+		{/foreach}
 		<p><a href="###">查看更多</a></p>
 	</div>
 	<h2>浏览记录</h2>
 	<div style="margin:0 0 10px 0">
-		<dl style="border:none;">
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<p><a href="###">查看更多</a> <a href="###">清空</a></p>
+		{foreach from=$FrontRecord key=key item=value}
+			{if $key < 2}
+				<dl style="border:none;">
+					<dt><a href="?a=details&navid={$value.nav}&goodsid={$value.id}" target="_blank"><img src="{$value.thumbnail2}" style="width:100px;height:100px;" alt="{$value.name}" title="{$value.name}" /></a></dt>
+					<dd class="price">￥{$value.price}</dd>
+					<dd class="title"><a href="?a=details&navid={$value.nav}&goodsid={$value.id}" target="_blank">{$value.name}</a></dd>
+				</dl>
+			{/if}
+		{/foreach}
+		<p><a href="?a=list&m=delRecord">清空记录</a></p>
 	</div>
 </div>
 
@@ -102,7 +89,7 @@
 			<dd>售　　价：<span class="sale">￥{$FrontGoods[0]->price_sale}</span><span class="market">￥{$FrontGoods[0]->price_market}</span></dd>
 			<dd>商品编号：{$FrontGoods[0]->sn}</dd>
 			<dd>所属品牌：{$FrontGoods[0]->brandname}</dd>
-			<dd>销 售 量：<span class="sale_num">136</span> {$FrontGoods[0]->unit}</dd>
+			<dd>销 售 量：<span class="sale_num">{$FrontGoods[0]->sales}</span> {$FrontGoods[0]->unit}</dd>
 			<dd>重　　量：{$FrontGoods[0]->weight} kg {if $FrontGoods[0]->is_freight == 1}<span class="gray">(免运费)</span>{/if}</dd>
 			<dd>数　　量：<input type="text" value="1" class="num" name="num" /> {$FrontGoods[0]->unit} <span class="gray">(目前库存：{$FrontGoods[0]->inventory}{$FrontGoods[0]->unit})</span></dd>
 			<dd class="buy_button">
@@ -115,6 +102,7 @@
 		</dl>
 	</form>
 	<div class="content">
+		<a name="commend"></a>
 		<ul>
 			<li id="button1" onclick="channel(1)" class="first">商品详情</li>
 			<li id="button2" onclick="channel(2)">评价列表</li>

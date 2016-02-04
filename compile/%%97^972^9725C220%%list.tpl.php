@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-02-03 21:15:29
+<?php /* Smarty version 2.6.26, created on 2016-02-04 12:50:48
          compiled from default/public/list.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,21 +40,26 @@ unset($_smarty_tpl_vars);
 	</ul>
 	<h2>当月热销</h2>
 	<div style="margin:0 0 10px 0">
-		<dl style="border:none;">
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
+		<?php $_from = $this->_tpl_vars['NavSort']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+			<?php if ($this->_tpl_vars['key'] < 5): ?>
+				<dl style="border:none;">
+					<dt><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
+" target="_blank"><img src="<?php echo $this->_tpl_vars['value']->thumbnail2; ?>
+" style="width:100px;height:100px;" alt="<?php echo $this->_tpl_vars['value']->name; ?>
+" title="<?php echo $this->_tpl_vars['value']->name; ?>
+" /></a></dt>
+					<dd class="price">￥<?php echo $this->_tpl_vars['value']->price_sale; ?>
+</dd>
+					<dd class="title"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
+" target="_blank"><?php echo $this->_tpl_vars['value']->name; ?>
+</a></dd>
+				</dl>
+			<?php endif; ?>
+		<?php endforeach; endif; unset($_from); ?>
 		<p><a href="###">查看更多</a></p>
 	</div>
 	<h2>浏览记录</h2>
@@ -67,7 +72,9 @@ unset($_smarty_tpl_vars);
 					<dt><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']['nav']; ?>
 &goodsid=<?php echo $this->_tpl_vars['value']['id']; ?>
 " target="_blank"><img src="<?php echo $this->_tpl_vars['value']['thumbnail2']; ?>
-" style="width:100px;height:100px;" alt="连衣裙" title="连衣裙" /></a></dt>
+" style="width:100px;height:100px;" alt="<?php echo $this->_tpl_vars['value']['name']; ?>
+" title="<?php echo $this->_tpl_vars['value']['name']; ?>
+" /></a></dt>
 					<dd class="price">￥<?php echo $this->_tpl_vars['value']['price']; ?>
 </dd>
 					<dd class="title"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']['nav']; ?>
@@ -166,7 +173,12 @@ unset($_smarty_tpl_vars);
 &goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
 " target="_blank"><?php echo $this->_tpl_vars['value']->name; ?>
 </a></dd>
-				<dd class="commend"><a href="###">已有34人评价</a></dd>
+				<dd class="commend"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
+#commend">已有<?php echo $this->_tpl_vars['value']->count; ?>
+人评价</a><span class="green">（销售<strong><?php echo $this->_tpl_vars['value']->sales; ?>
+</strong><?php echo $this->_tpl_vars['value']->unit; ?>
+）</span></dd>
 				<dd class="buy"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
 &goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
 " target="_blank">购买</a> | <a href="###">收藏</a> | <a href="###">比较</a></dd>

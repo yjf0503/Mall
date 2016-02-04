@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-02-03 18:35:22
+<?php /* Smarty version 2.6.26, created on 2016-02-04 12:51:59
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,8 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 	<link rel="stylesheet" type="text/css" href="view/default/style/details.css" />
 	<script type="text/javascript" src="view/default/js/browserdetect.js"></script>
-	<script type="text/javascript" src="view/default/js/attr.js"></script>
-	<script type="text/javascript" src="view/default/js/channel.js"></script>
+	<script type="text/javascript" src="view/default/js/details.js"></script>
 </head>
 <body>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -40,46 +39,57 @@ unset($_smarty_tpl_vars);
 ?>
 			<li><a href="?a=list&navid=<?php echo $this->_tpl_vars['value']->id; ?>
 "><?php echo $this->_tpl_vars['value']->name; ?>
-<span class="gray">(1000)</span></a></li>
+<span class="gray">(<?php echo $this->_tpl_vars['value']->count; ?>
+)</span></a></li>
 		<?php endforeach; endif; unset($_from); ?>
 	</ul>
 	<h2>当月热销</h2>
 	<div style="margin:0 0 10px 0">
-		<dl style="border:none;">
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
+		<?php $_from = $this->_tpl_vars['NavSort']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+			<?php if ($this->_tpl_vars['key'] < 5): ?>
+				<dl style="border:none;">
+					<dt><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
+" target="_blank"><img src="<?php echo $this->_tpl_vars['value']->thumbnail2; ?>
+" style="width:100px;height:100px;" alt="<?php echo $this->_tpl_vars['value']->name; ?>
+" title="<?php echo $this->_tpl_vars['value']->name; ?>
+" /></a></dt>
+					<dd class="price">￥<?php echo $this->_tpl_vars['value']->price_sale; ?>
+</dd>
+					<dd class="title"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
+" target="_blank"><?php echo $this->_tpl_vars['value']->name; ?>
+</a></dd>
+				</dl>
+			<?php endif; ?>
+		<?php endforeach; endif; unset($_from); ?>
 		<p><a href="###">查看更多</a></p>
 	</div>
 	<h2>浏览记录</h2>
 	<div style="margin:0 0 10px 0">
-		<dl style="border:none;">
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<p><a href="###">查看更多</a> <a href="###">清空</a></p>
+		<?php $_from = $this->_tpl_vars['FrontRecord']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['value']):
+?>
+			<?php if ($this->_tpl_vars['key'] < 2): ?>
+				<dl style="border:none;">
+					<dt><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']['nav']; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']['id']; ?>
+" target="_blank"><img src="<?php echo $this->_tpl_vars['value']['thumbnail2']; ?>
+" style="width:100px;height:100px;" alt="<?php echo $this->_tpl_vars['value']['name']; ?>
+" title="<?php echo $this->_tpl_vars['value']['name']; ?>
+" /></a></dt>
+					<dd class="price">￥<?php echo $this->_tpl_vars['value']['price']; ?>
+</dd>
+					<dd class="title"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']['nav']; ?>
+&goodsid=<?php echo $this->_tpl_vars['value']['id']; ?>
+" target="_blank"><?php echo $this->_tpl_vars['value']['name']; ?>
+</a></dd>
+				</dl>
+			<?php endif; ?>
+		<?php endforeach; endif; unset($_from); ?>
+		<p><a href="?a=list&m=delRecord">清空记录</a></p>
 	</div>
 </div>
 
@@ -139,7 +149,8 @@ unset($_smarty_tpl_vars);
 </dd>
 			<dd>所属品牌：<?php echo $this->_tpl_vars['FrontGoods'][0]->brandname; ?>
 </dd>
-			<dd>销 售 量：<span class="sale_num">136</span> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
+			<dd>销 售 量：<span class="sale_num"><?php echo $this->_tpl_vars['FrontGoods'][0]->sales; ?>
+</span> <?php echo $this->_tpl_vars['FrontGoods'][0]->unit; ?>
 </dd>
 			<dd>重　　量：<?php echo $this->_tpl_vars['FrontGoods'][0]->weight; ?>
  kg <?php if ($this->_tpl_vars['FrontGoods'][0]->is_freight == 1): ?><span class="gray">(免运费)</span><?php endif; ?></dd>
@@ -157,6 +168,7 @@ unset($_smarty_tpl_vars);
 		</dl>
 	</form>
 	<div class="content">
+		<a name="commend"></a>
 		<ul>
 			<li id="button1" onclick="channel(1)" class="first">商品详情</li>
 			<li id="button2" onclick="channel(2)">评价列表</li>

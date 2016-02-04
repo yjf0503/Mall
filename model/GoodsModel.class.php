@@ -10,7 +10,7 @@ class GoodsModel extends Model {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->_fields = array('id','nav','thumbnail2','brand','service','name','keyword','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
+		$this->_fields = array('id','nav','thumbnail2','brand','service','name','keyword','sales','sn','attr','price_sale','price_market','price_cost','unit','weight','thumbnail','content','is_up','is_freight','inventory','warn_inventory','date');
 		$this->_tables = array( DB_PREFIX . 'goods' );
 		$this->_check  = new GoodsCheck();
 		list(
@@ -69,7 +69,7 @@ class GoodsModel extends Model {
 
 	public function findDetailsGoods()
 	{
-		$_oneGoods = parent::select(array('id','brand','nav','service','is_up','name','thumbnail','thumbnail2','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
+		$_oneGoods = parent::select(array('id','brand','nav','service','is_up','name','sales','thumbnail','thumbnail2','sn','attr','price_sale','price_market','unit','weight','content','is_freight','inventory'),array('where'=>array("id='{$this->_R['goodsid']}'")));
 		$_oneGoods[0]->content = htmlspecialchars_decode($_oneGoods[0]->content);
 		$this->_tables = array(DB_PREFIX.'brand');
 		$_allBrand = Tool::setFormItem(parent::select(array('id','name')),'id','name');
@@ -167,9 +167,13 @@ class GoodsModel extends Model {
 			$_attrSQL = "AND attr LIKE '%$_attr[0]%$_attr[1]%'";
 		}
 
-		$_allGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2'),
-			array('limit'=>$this->_limit,'where'=>array("nav in ({$this->getNavId()}) AND is_up=1 $_priceSQL $_brandSQL $_attrSQL"),'order'=>'date DESC'));
-			foreach($_allGoods as $_value)
+		$_getNavId = $this->getNavId();
+		$this->_tables =array(DB_PREFIX.'goods a');
+		$_allGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2','unit','sales','(SELECT COUNT(*) FROM mall_commend b WHERE flag=0 AND b.goods_id=a.id ) AS count'),
+			array('limit'=>$this->_limit,'where'=>array("nav in ($_getNavId) AND is_up=1 $_priceSQL $_brandSQL $_attrSQL"),'order'=>'date DESC'));
+		$this->_tables =array(DB_PREFIX.'goods a');
+
+		foreach($_allGoods as $_value)
 			{
 				if(Validate::isNullString($_value->thumbnail2))
 				{
@@ -180,7 +184,16 @@ class GoodsModel extends Model {
 					parent::update(array("id='$_value->id'"), array('thumbnail2'=>$_img->getPath()));
 				}
 			}
+
 		return $_allGoods;
+	}
+
+	public function navSort()
+	{
+		$_getNavId = $this->getNavId();
+		$_sortGoods = parent::select(array('id','nav','name','price_sale','thumbnail2'),
+			array('limit'=>'0,5','where'=>array("nav in ($_getNavId) AND is_up=1"),'order'=>'sales DESC'));
+		return $_sortGoods;
 	}
 
 	public function total()
@@ -268,7 +281,7 @@ class GoodsModel extends Model {
 		foreach($_goods as $_key=>$_value)
 		{
 			$_where =array("id='{$_key}'");
-			parent::update($_where,array('inventory'=>array('inventory-'.$_value->num)));
+			parent::update($_where,array('inventory'=>array('inventory-'.$_value->num),'sales'=>array('sales+'.$_value->num)));
 		}
 	}
 

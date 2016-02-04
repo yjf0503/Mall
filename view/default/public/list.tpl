@@ -24,21 +24,15 @@
 	</ul>
 	<h2>当月热销</h2>
 	<div style="margin:0 0 10px 0">
-		<dl style="border:none;">
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
-		<dl>
-			<dt><a href="###"><img src="view/default/images/pro_list_demo_small.jpg" alt="连衣裙" title="连衣裙" /></a></dt>
-			<dd class="price">￥158.00</dd>
-			<dd class="title"><a href="###">春秋装韩版蕾丝打底长袖修身性感连衣裙品质显瘦女裙子</a></dd>
-		</dl>
+		{foreach from=$NavSort key=key item=value}
+			{if $key < 5}
+				<dl style="border:none;">
+					<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank"><img src="{$value->thumbnail2}" style="width:100px;height:100px;" alt="{$value->name}" title="{$value->name}" /></a></dt>
+					<dd class="price">￥{$value->price_sale}</dd>
+					<dd class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">{$value->name}</a></dd>
+				</dl>
+			{/if}
+		{/foreach}
 		<p><a href="###">查看更多</a></p>
 	</div>
 	<h2>浏览记录</h2>
@@ -46,7 +40,7 @@
 		{foreach from=$FrontRecord key=key item=value}
 			{if $key < 2}
 				<dl style="border:none;">
-					<dt><a href="?a=details&navid={$value.nav}&goodsid={$value.id}" target="_blank"><img src="{$value.thumbnail2}" style="width:100px;height:100px;" alt="连衣裙" title="连衣裙" /></a></dt>
+					<dt><a href="?a=details&navid={$value.nav}&goodsid={$value.id}" target="_blank"><img src="{$value.thumbnail2}" style="width:100px;height:100px;" alt="{$value.name}" title="{$value.name}" /></a></dt>
 					<dd class="price">￥{$value.price}</dd>
 					<dd class="title"><a href="?a=details&navid={$value.nav}&goodsid={$value.id}" target="_blank">{$value.name}</a></dd>
 				</dl>
@@ -106,7 +100,7 @@
 				<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank"><img src="{$value->thumbnail2}" alt="连衣裙" title="连衣裙" /></a></dt>
 				<dd class="price"><strong>￥{$value->price_sale}</strong> <del>￥{$value->price_market}</del></dd>
 				<dd class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">{$value->name}</a></dd>
-				<dd class="commend"><a href="###">已有34人评价</a></dd>
+				<dd class="commend"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}#commend">已有{$value->count}人评价</a><span class="green">（销售<strong>{$value->sales}</strong>{$value->unit}）</span></dd>
 				<dd class="buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">购买</a> | <a href="###">收藏</a> | <a href="###">比较</a></dd>
 			</dl>
 		{/foreach}

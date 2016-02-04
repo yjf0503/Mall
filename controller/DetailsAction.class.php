@@ -31,6 +31,8 @@ class DetailsAction extends Action{
 		$this->_tpl->assign('FrontGoods', $this->_goods->findDetailsGoods());
 		$this->_tpl->assign('attrType',$this->_attr->getAttrType());
 		$this->_tpl->assign('record',$this->_record->findDetailsRecord());
+		$this->_tpl->assign('FrontRecord', $this->_goods->getRecord());
+		$this->_tpl->assign('NavSort', $this->_goods->navSort());
 		$this->_tpl->assign('domain',Tool::getDomain());
 		$this->_tpl->display(SMARTY_FRONT.'public/details.tpl');
 	}

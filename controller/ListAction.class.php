@@ -26,6 +26,7 @@ class ListAction extends Action{
 		$this->_tpl->assign('FrontBrand', $this->_nav->findFrontBrand());
 		$this->_tpl->assign('FrontAttr', $this->_nav->findFrontAttr());
 		$this->_tpl->assign('FrontRecord', $this->_goods->getRecord());
+		$this->_tpl->assign('NavSort', $this->_goods->navSort());
 		$this->_tpl->assign('url', Tool::getUrl());
 		$this->_tpl->display(SMARTY_FRONT.'public/list.tpl');
 	}

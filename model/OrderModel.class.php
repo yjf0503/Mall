@@ -84,7 +84,7 @@ class OrderModel extends Model{
             foreach($_goods as $_key=>$_value)
             {
                 $_temp = unserialize($_value);
-                parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num'])));
+                parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num']),'sales'=>array('sales-'.$_temp['num'])));
             }
             $this->_tables = array(DB_PREFIX.'order');
         }
@@ -139,7 +139,7 @@ class OrderModel extends Model{
             foreach($_goods as $_key=>$_value)
             {
                 $_temp = unserialize($_value);
-                parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num'])));
+                parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num']),'sales'=>array('sales-'.$_temp['num'])));
 
             }
         }
@@ -233,7 +233,7 @@ class OrderModel extends Model{
         foreach($_goods as $_key=>$_value)
         {
             $_temp = unserialize($_value);
-            parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num'])));
+            parent::update(array("id='{$_key}'"),array('inventory'=>array('inventory+'.$_temp['num']),'sales'=>array('sales-'.$_temp['num'])));
         }
         $this->_tables = array(DB_PREFIX.'order');
         $_updateData['order_state'] = '已取消';
