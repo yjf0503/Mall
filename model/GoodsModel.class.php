@@ -138,6 +138,72 @@ class GoodsModel extends Model {
 		}
 	}
 
+	public function setCompare()
+	{
+		if(isset($_COOKIE['compare']))
+		{
+			if($this->_R['navid'] == current($_COOKIE['compare']))
+			{
+				if(count($_COOKIE['compare']) < 3)
+				{
+					setcookie('compare['.$this->_R['goodsid'].']', $this->_R['navid'], time() + 60 * 60 * 24 * 7);
+				}
+			}
+			else
+			{
+				$this->_check->setMessage('不同类别的商品无法进行添加对比');
+				$this->_check->error();
+			}
+		}
+		else
+		{
+			setcookie('compare['.$this->_R['goodsid'].']', $this->_R['navid'], time() + 60 * 60 * 24 * 7);
+		}
+	}
+
+	public function getCompare()
+	{
+		if(isset($_COOKIE['compare']))
+		{
+			$_compareArr = array_keys($_COOKIE['compare']);
+			$_compareStr = implode(',',$_compareArr);
+			$this->_tables =array(DB_PREFIX.'goods a');
+			$_compareGoods = parent::select(array('id','nav','name','(SELECT name FROM mall_brand c WHERE c.id=a.brand) AS brand','sn','attr','weight','price_sale','price_market','thumbnail2','unit','sales','(SELECT COUNT(*) FROM mall_commend b WHERE flag=0 AND b.goods_id=a.id ) AS count'),
+				array('where'=>array("id in ($_compareStr)")));
+			$this->_tables =array(DB_PREFIX.'goods');
+			foreach($_compareArr as $_key=>$_value)
+			{
+				foreach($_compareGoods as $_key2=>$_value2)
+				{
+					if($_value == $_value2->id)
+					{
+						$_compareArr[$_key] = $_compareGoods[$_key2];
+					}
+				}
+			}
+			return $_compareArr;
+		}
+	}
+
+	public function delCompare()
+	{
+		if(isset($_COOKIE['compare']))
+		{
+			setcookie('compare['.$this->_R['goodsid'].']','',time()-60*60*24*7);
+		}
+	}
+
+	public function clearCompare()
+	{
+		if(isset($_COOKIE['compare']))
+		{
+			foreach($_COOKIE['compare'] as $_key=>$_value)
+			{
+				setcookie('compare['.$_key.']','',time()-60*60*24*7);
+			}
+		}
+	}
+
 	public function findListGoods()
 	{
 		$_priceSQL = '';
@@ -171,7 +237,7 @@ class GoodsModel extends Model {
 		$this->_tables =array(DB_PREFIX.'goods a');
 		$_allGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2','unit','sales','(SELECT COUNT(*) FROM mall_commend b WHERE flag=0 AND b.goods_id=a.id ) AS count'),
 			array('limit'=>$this->_limit,'where'=>array("nav in ($_getNavId) AND is_up=1 $_priceSQL $_brandSQL $_attrSQL"),'order'=>'date DESC'));
-		$this->_tables =array(DB_PREFIX.'goods a');
+		$this->_tables =array(DB_PREFIX.'goods');
 
 		foreach($_allGoods as $_value)
 			{
