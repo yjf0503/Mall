@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+dl.form span.middle {
+	vertical-align:480px;
+}
+dl.form input.text {
+	width:200px;
+}
+dl.form select {
+	width:202px;
+}
+dl.form textarea {
+	width:200px;
+	height:80px;
+}
+dl.form input.submit {
+	margin:0 0 0 59px;
+	padding:2px 0;
+}

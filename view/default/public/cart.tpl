@@ -11,9 +11,8 @@
 <body>
 {include file='default/public/header.tpl'}
 <div id="sait">
-	当前位置：<a href="./">首页</a> &gt; 购物车
+	当前位置：<a href="./">首页</a> > 购物车
 </div>
-
 
 <table id="cart" cellspacing="1">
 	<tr><th>编号</th><th>名称</th><th>属性</th><th>重量</th><th class="th">售价</th><th class="th">数量</th><th class="th">小计</th><th class="th">操作</th></tr>
