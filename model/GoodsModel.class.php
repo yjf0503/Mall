@@ -272,9 +272,7 @@ class GoodsModel extends Model {
 		$this->_tables =array(DB_PREFIX.'goods a');
 		$_collectGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2','unit','sales','(SELECT COUNT(*) FROM mall_commend b WHERE flag=0 AND b.goods_id=a.id ) AS count'),
 			array('limit'=>$this->_limit,'where'=>array("id in ($_collectStr) AND is_up=1 ")));
-
 		$this->_tables =array(DB_PREFIX.'goods');
-
 		return $_collectGoods;
 	}
 
@@ -284,6 +282,35 @@ class GoodsModel extends Model {
 		$_sortGoods = parent::select(array('id','nav','name','price_sale','thumbnail2'),
 			array('limit'=>'0,5','where'=>array("nav in ($_getNavId) AND is_up=1"),'order'=>'sales DESC'));
 		return $_sortGoods;
+	}
+
+	public function salesGoods()
+	{
+		$this->_tables =array(DB_PREFIX.'goods a');
+		$_salesGoods = parent::select(array('id','nav','name','price_sale','thumbnail2','price_market','sales','(SELECT COUNT(*) FROM mall_commend b WHERE flag=0 AND b.goods_id=a.id ) AS count'),
+			array('limit'=>'0,5','where'=>array("is_up=1"),'order'=>'sales DESC'));
+		$this->_tables =array(DB_PREFIX.'goods');
+		return $_salesGoods;
+	}
+
+	public function downGoodsCount()
+	{
+		$_downGoodsCount = parent::select(array('COUNT(*) AS count'),
+			array('where'=>array("is_up=0")));
+		return $_downGoodsCount[0]->count;
+	}
+
+	public function allGoodsCount()
+	{
+		$_allGoodsCount = parent::select(array('COUNT(*) AS count'));
+		return $_allGoodsCount[0]->count;
+	}
+
+	public function inventoryGoodsCount()
+	{
+		$_inventoryGoodsCount = parent::select(array('COUNT(*) AS count'),
+			array('where'=>array("inventory<=warn_inventory")));
+		return $_inventoryGoodsCount[0]->count;
 	}
 
 	public function total()

@@ -8,11 +8,15 @@
 class AdminAction extends Action
 {
     private $_manage = null;
+    private $_goods = null;
+    private $_order = null;
 
     public function __construct()
     {
         parent::__construct();
         $this->_manage = new ManageModel();
+        $this->_goods = new GoodsModel();
+        $this->_order = new OrderModel();
     }
 
     public function index()
@@ -31,6 +35,13 @@ class AdminAction extends Action
 
     public function main()
     {
+        $this->_tpl->assign('DownGoodsCount',$this->_goods->downGoodsCount());
+        $this->_tpl->assign('AllGoodsCount',$this->_goods->allGoodsCount());
+        $this->_tpl->assign('InventoryGoodsCount',$this->_goods->inventoryGoodsCount());
+        $this->_tpl->assign('RefundGoodsCount',$this->_order->refundGoodsCount());
+        $this->_tpl->assign('UnconfirmedGoodsCount',$this->_order->unconfirmedGoodsCount());
+        $this->_tpl->assign('UnpayedGoodsCount',$this->_order->unpayedGoodsCount());
+        $this->_tpl->assign('UndeliveredGoodsCount',$this->_order->undeliveredGoodsCount());
         $this->_tpl->display(SMARTY_ADMIN.'public/main.tpl');
     }
 

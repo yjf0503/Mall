@@ -47,8 +47,8 @@
 	<dl style="display:none">
 		<dt>系统</dt>
 		<dd><a href="?a=manage" target="in">管理员列表</a></dd>
-		<dd><a href="###">等级列表（自行完成）</a></dd>
-		<dd><a href="###">权限管理（自行完成）</a></dd>
+		<dd><a href="###">等级列表(自行完成)</a></dd>
+		<dd><a href="###">权限管理(自行完成)</a></dd>
 	</dl>
 </div>
 

@@ -149,6 +149,34 @@ class OrderModel extends Model{
         return parent::update($_where,$_updateData);
     }
 
+    public function refundGoodsCount()
+    {
+        $_refundGoodsCount = parent::select(array('COUNT(*) AS count'),
+            array('where'=>array("refund=1")));
+        return $_refundGoodsCount[0]->count;
+    }
+
+    public function unconfirmedGoodsCount()
+    {
+        $_unconfirmedGoodsCount = parent::select(array('COUNT(*) AS count'),
+            array('where'=>array("order_state='未确认'")));
+        return $_unconfirmedGoodsCount[0]->count;
+    }
+
+    public function unpayedGoodsCount()
+    {
+        $_unpayedGoodsCount = parent::select(array('COUNT(*) AS count'),
+            array('where'=>array("order_pay='未付款' AND order_state='已确认'")));
+        return $_unpayedGoodsCount[0]->count;
+    }
+
+    public function undeliveredGoodsCount()
+    {
+        $_undeliveredGoodsCount = parent::select(array('COUNT(*) AS count'),
+            array('where'=>array("order_pay='已付款' AND order_state='已确认' AND order_delivery='未发货'")));
+        return $_undeliveredGoodsCount[0]->count;
+    }
+
     public function getNextId()
     {
         return parent::nextId();

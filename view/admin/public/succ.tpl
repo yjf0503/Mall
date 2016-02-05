@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>在线商城后台管理</title>
-	<meta http-equiv="refresh" content="1;url={$url}" />
+<meta http-equiv="refresh" content="1;url={$url}" />
 <link rel="stylesheet" type="text/css" href="view/admin/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/admin/style/succ.css" />
 </head>

@@ -81,9 +81,13 @@ span.green {
 	color:#fff;
 }
 #search {
-	height:36px;
+	height:28px;
 	border:1px solid #5CB4E6;
 	background:url(../images/search_bgline.png);
+	padding:8px 0 0 530px;
+}
+#search a {
+	color:#fff;
 }
 #sait {
 	height:36px;

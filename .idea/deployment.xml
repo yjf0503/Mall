@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Online Mall">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Online Mall" uploadOnCheckin="129a4bde-7a0f-48db-bfc9-704d6c2b1d3d">
     <serverData>
       <paths name="Online Mall">
         <serverdata>
@@ -13,6 +13,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="Online Mall" />
     <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>
