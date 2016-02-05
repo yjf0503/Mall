@@ -98,7 +98,7 @@
 				{else}
 					<strong class="is_up">此商品已下架</strong>
 				{/if}
-				<img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+				<a href="?a=member&m=addCollect&id={$FrontGoods[0]->id}"><img border="0" src="view/default/images/collect.gif" alt="收藏" title="收藏" /></a></dd>
 		</dl>
 	</form>
 	<div class="content">

@@ -254,6 +254,30 @@ class GoodsModel extends Model {
 		return $_allGoods;
 	}
 
+	public function collectGoods()
+	{
+		$this->_tables =array(DB_PREFIX.'collect');
+		$_collectId = parent::select(array('goods_id'),array('where'=>array("user='{$_COOKIE['user']}'"),'order'=>'date DESC'));
+		$_collectStr = '';
+		foreach($_collectId as $_key=>$_value)
+		{
+			$_collectStr .= $_value->goods_id.',';
+		}
+		$_collectStr = substr($_collectStr,0,-1);
+		if(strlen($_collectStr) == 0)
+		{
+			$this->_tables =array(DB_PREFIX.'goods');
+			return null;
+		}
+		$this->_tables =array(DB_PREFIX.'goods a');
+		$_collectGoods = parent::select(array('id','nav','name','price_sale','price_market','thumbnail','thumbnail2','unit','sales','(SELECT COUNT(*) FROM mall_commend b WHERE flag=0 AND b.goods_id=a.id ) AS count'),
+			array('limit'=>$this->_limit,'where'=>array("id in ($_collectStr) AND is_up=1 ")));
+
+		$this->_tables =array(DB_PREFIX.'goods');
+
+		return $_collectGoods;
+	}
+
 	public function navSort()
 	{
 		$_getNavId = $this->getNavId();

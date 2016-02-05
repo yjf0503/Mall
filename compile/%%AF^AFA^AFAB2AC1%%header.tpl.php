@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-01-20 10:53:10
+<?php /* Smarty version 2.6.26, created on 2016-02-04 23:30:05
          compiled from default/public/header.tpl */ ?>
 <div id="header">
 	<h1><a href="./">瓢城Web俱乐部</a></h1>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-02-04 13:43:14
+<?php /* Smarty version 2.6.26, created on 2016-02-05 09:49:12
          compiled from default/public/list.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -181,7 +181,8 @@ unset($_smarty_tpl_vars);
 ）</span></dd>
 				<dd class="buy"><a href="?a=details&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
 &goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
-" target="_blank">购买</a> | <a href="###">收藏</a> | <a href="?a=compare&m=setCompare&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
+" target="_blank">购买</a> | <a href="?a=member&m=addCollect&id=<?php echo $this->_tpl_vars['value']->id; ?>
+" target="_blank">收藏</a> | <a href="?a=compare&m=setCompare&navid=<?php echo $this->_tpl_vars['value']->nav; ?>
 &goodsid=<?php echo $this->_tpl_vars['value']->id; ?>
 " target="_blank">比较</a></dd>
 			</dl>

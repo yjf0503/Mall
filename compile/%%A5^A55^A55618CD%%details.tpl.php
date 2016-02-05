@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-02-04 12:51:59
+<?php /* Smarty version 2.6.26, created on 2016-02-05 10:27:39
          compiled from default/public/details.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -164,7 +164,8 @@ unset($_smarty_tpl_vars);
 				<?php else: ?>
 					<strong class="is_up">此商品已下架</strong>
 				<?php endif; ?>
-				<img src="view/default/images/collect.gif" alt="收藏" title="收藏" /></dd>
+				<a href="?a=member&m=addCollect&id=<?php echo $this->_tpl_vars['FrontGoods'][0]->id; ?>
+"><img border="0" src="view/default/images/collect.gif" alt="收藏" title="收藏" /></a></dd>
 		</dl>
 	</form>
 	<div class="content">

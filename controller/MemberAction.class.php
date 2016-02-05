@@ -12,6 +12,9 @@ class MemberAction extends Action{
 	private $_address = null;
 	private $_order = null;
 	private $_commend = null;
+	private $_goods = null;
+	private $_collect = null;
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -20,6 +23,8 @@ class MemberAction extends Action{
 		$this->_address = new AddressModel();
 		$this->_order = new OrderModel();
 		$this->_commend = new CommendModel();
+		$this->_collect = new CollectModel();
+		$this->_goods = new GoodsModel();
 	}
 
 	public function index()
@@ -84,7 +89,45 @@ class MemberAction extends Action{
 		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
 		$this->_tpl->assign('MyCommend',$this->_commend->findMyCommend());
 		$this->_tpl->display(SMARTY_FRONT.'public/member_mycommend.tpl');
+	}
 
+	public function collect()
+	{
+		parent::page(20,$this->_goods);
+		$this->_tpl->assign('FrontTenNav',$this->_nav->findFrontTenNav());
+		$this->_tpl->assign('collectGoods',$this->_goods->collectGoods());
+		$this->_tpl->display(SMARTY_FRONT.'public/member_collect.tpl');
+	}
+
+	public function addCollect()
+	{
+		if(isset($_COOKIE['user']))
+		{
+			if($this->_collect->add())
+			{
+				$this->_redirect->succ('?a=member&m=collect');
+			}
+			else
+			{
+				$this->_redirect->error('收藏失败');
+			}
+		}
+		else
+		{
+			$this->_redirect->error('您未登录 <a href="?a=member&m=login">[登录]</a>');
+		}
+	}
+
+	public function delCollect()
+	{
+		if($this->_collect->delete())
+		{
+			$this->_redirect->succ('?a=member&m=collect');
+		}
+		else
+		{
+			$this->_redirect->error('取消收藏失败');
+		}
 	}
 
 	public function order_details()
