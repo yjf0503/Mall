@@ -50,6 +50,7 @@
 		<dd><a href="###">等级列表(自行完成)</a></dd>
 		<dd><a href="###">权限管理(自行完成)</a></dd>
 		<dd><a href="?a=edit" target="in">模版编辑器</a></dd>
+		<dd><a href="?a=pic" target="in">图片管理器</a></dd>
 	</dl>
 </div>
 

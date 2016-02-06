@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2016-02-05 18:36:54
+<?php /* Smarty version 2.6.26, created on 2016-02-06 09:48:57
          compiled from admin/public/admin.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -54,6 +54,7 @@
 		<dd><a href="###">等级列表(自行完成)</a></dd>
 		<dd><a href="###">权限管理(自行完成)</a></dd>
 		<dd><a href="?a=edit" target="in">模版编辑器</a></dd>
+		<dd><a href="?a=pic" target="in">图片管理器</a></dd>
 	</dl>
 </div>
 

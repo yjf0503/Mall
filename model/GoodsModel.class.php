@@ -313,6 +313,24 @@ class GoodsModel extends Model {
 		return $_inventoryGoodsCount[0]->count;
 	}
 
+	public function fileGoods($_file)
+	{
+		foreach($_file as $_key=>$_value)
+		{
+			$_goods = parent::select(array('id','nav','name'),
+									array('where'=>array("thumbnail='./uploads/{$_GET['file']}/$_value' OR
+														  thumbnail2='./uploads/{$_GET['file']}/$_value' OR
+														  content LIKE '%./uploads/{$_GET['file']}/$_value%'")));
+
+			if (!Validate::isNullArray($_goods))
+			{
+				$_goods[0]->pic = $_value;
+				$_file[$_key] = $_goods[0];
+			}
+		}
+		return $_file;
+	}
+
 	public function total()
 	{
 		if(Validate::isNullString($this->_R['navid']))
