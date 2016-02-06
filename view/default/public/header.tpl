@@ -1,3 +1,4 @@
+{*<script type="text/javascript" src="view/default/js/rewrite.js"></script>*}
 <div id="header">
 	<h1><a href="./">瓢城Web俱乐部</a></h1>
 	<div class="top">
