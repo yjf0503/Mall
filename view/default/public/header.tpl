@@ -1,6 +1,5 @@
 {*<script type="text/javascript" src="view/default/js/rewrite.js"></script>*}
 <div id="header">
-	<h1><a href="./">瓢城Web俱乐部</a></h1>
 	<div class="top">
 		{if $smarty.cookies.user}
 			您好，{$smarty.cookies.user}，欢迎再次光临，<a href="?a=member">个人中心</a> | <a href="?a=cart">购物车</a> | <a href="?a=member&m=logout">退出</a>
