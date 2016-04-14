@@ -8,7 +8,6 @@
 //管理员验证类
 class ManageCheck extends Check
 {
-    
     //用户名不得包含指定的非法词组，敏感词
     //密码不能纯数字，纯字母，或者必须包含特殊字符，或者必须大小写混拼
     public function addCheck(&$_model,Array $_param)
