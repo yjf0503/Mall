@@ -15,6 +15,9 @@
 	{/foreach}
 </div>
 
+tesast
+
+
 <div id="sidebar">
 	<h2>当月热销</h2>
 	<div style="margin:0 0 10px 0">
