@@ -2,11 +2,12 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="129a4bde-7a0f-48db-bfc9-704d6c2b1d3d" name="Online Mall" url="http://sk537.webcname.net">
-        <fileTransfer host="sk537.webcname.net" port="21" password="df9adf9fdf9adf99dff3dfcbdfc4dfcd" username="ftp458837">
+      <webServer id="129a4bde-7a0f-48db-bfc9-704d6c2b1d3d" name="Online Mall" url="http://sk587.webcname.net">
+        <fileTransfer host="sk587.webcname.net" port="21" password="df9adf9fdf9adf99dff3dfcbdfc4dfcd" username="ftp499066">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="21" />
         </fileTransfer>
       </webServer>
     </option>

@@ -12,9 +12,9 @@ define('SMARTY_LEFT_DELIMITER', '{');
 define('SMARTY_RIGHT_DELIMITER', '}');
 
 //设置数据库连接参数
-define('DB_DNS','mysql:host=localhost;dbname=mall');
-define('DB_USER','root');
-define('DB_PASS','root');
+define('DB_DNS','mysql:host=localhost;dbname=zjwdb_499066');
+define('DB_USER','zjwdb_499066');
+define('DB_PASS','0503Yang');
 define('DB_CHARSET','UTF8');
 define('DB_PREFIX','mall_');
 

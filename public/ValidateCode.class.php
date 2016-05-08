@@ -9,6 +9,12 @@
 		private $img;							//图形资源句柄
 		private $fontcolor;						//指定字体颜色
 
+
+		//生成背景
+		private function createBg()
+		{
+			$this->img = imagecreatefrompng(ROOT_PATH.'/view/default/images/bg_code'.mt_rand(1,3).'.png');
+		}
 		//生成随机码
 		private function createCode()
 		{
@@ -17,12 +23,6 @@
 			{
 				$this->code .= $this->charset[mt_rand(0,$_len)];
 			}
-		}
-		
-		//生成背景
-		private function createBg()
-		{
-			$this->img = imagecreatefrompng(ROOT_PATH.'/view/default/images/bg_code'.mt_rand(1,3).'.png');
 		}
 		
 		//生成文字
